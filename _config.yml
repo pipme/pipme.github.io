@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: PIPME
+title: "  PIPME  "
 
 # Short description of your site
 description: A mini recorder
@@ -24,7 +24,7 @@ description: A mini recorder
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  About Me: "aboutme"
+  About Me  : "aboutme"
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   #   - Learn markdown: "http://www.markdowntutorial.com/"
@@ -76,7 +76,7 @@ social-network-links:
   email: "sjtulck@gmail.com"
   facebook: li.kmcel
   github: pipme
-  linkedin: in/chengkun-li-62360612b/
+  linkedin: chengkun-li-62360612b
 #  reddit: yourname
 #  google-plus: +DeanAttali
 #  xing: yourname
