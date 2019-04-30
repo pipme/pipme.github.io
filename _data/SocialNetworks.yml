@@ -6,6 +6,11 @@
 #            site.social-network-links.<key>
 #   icon: Specify a valid fontawesome icon class
 
+500px:
+  name: "500px"
+  baseURL: "https://500px.com/"
+  icon: "fa-500px"
+
 facebook:
   name: "Facebook"
   baseURL: "https://www.facebook.com/"
