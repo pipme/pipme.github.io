@@ -184,6 +184,7 @@ defaults:
     values:
       layout: "page"
       show-avatar: true
+      ext-js: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
 
 # Use tags index page and make tags on each post clickable
 link-tags: true
