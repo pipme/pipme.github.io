@@ -10,15 +10,19 @@ comments: true
 One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and the Cantor pairing function turns out to be a neat way.
 
 Formally, the Cantor pairing function $\pi$ is defined as:
+
 $$
 \pi:\mathbb{N} \times \mathbb{N} \to \mathbb{N} \\
 \pi(k_1, k_2) := \frac{1}{2} (k_1 + k_2)(k_1 + k_2 + 1) + k2
 $$
+
 It can also be easily extended to multiple dimensions cases:
+
 $$
 \pi^{(n)}:\mathbb{N}^n \to \mathbb{N} \\
 \pi^{(n)}(k_1, \ldots, k_{n-1}, k_n) := \pi ( \pi^{(n-1)}(k_1, \ldots, k_{n-1}) , k_n), \quad n>2
 $$
+
 The Cantor pairing function is bijection. To prove that, we just need to invert it ([details](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function]) can be found  in Wikepidia). 
 
 Simple python and C++ implementations:
@@ -34,6 +38,7 @@ def cantor_pairing_nd(*args):
 
 print(cantor_pairing_nd(1,2,3))
 ```
+
 
 ```c++
 struct pair_hash
