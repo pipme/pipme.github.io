@@ -19,7 +19,7 @@ $$
 \pi^{(n)}:\mathbb{N}^n \to \mathbb{N} \\
 \pi^{(n)}(k_1, \ldots, k_{n-1}, k_n) := \pi ( \pi^{(n-1)}(k_1, \ldots, k_{n-1}) , k_n), \quad n>2
 $$
-The Cantor pairing function is bijection. To prove that, we just need to invert it ([details][https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function] can be found  in Wikepidia). 
+The Cantor pairing function is bijection. To prove that, we just need to invert it ([details](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function]) can be found  in Wikepidia). 
 
 Simple python and C++ implementations:
 
@@ -37,15 +37,15 @@ print(cantor_pairing_nd(1,2,3))
 
 ```c++
 struct pair_hash
+{
+	std::size_t operator() (const std::pair<int, int>& p) const
 	{
-		std::size_t operator() (const std::pair<int, int>& p) const
-		{
-			return (p.first + p.second) * (p.first + p.second + 1)/2 + p.second;
-		}
-	};
+		return (p.first + p.second) * (p.first + p.second + 1) / 2 + p.second;
+	}
+};
 
 unordered_map<pair<int, int>, int, pair_hash> um;
 um[make_pair(1,2)] = 0;
 ```
 
-To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. I write a simple [code][/code/cantor_pairing_function.py] to visualize the progression order based on the Cantor pairing function. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time): ![not found][/img/progression.png]
+To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. I write a simple [code](/code/cantor_pairing_function.py) to visualize the progression order based on the Cantor pairing function. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time): ![not found](/img/progression.png)
