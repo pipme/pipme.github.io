@@ -7,7 +7,7 @@ tags: [Cantor, hashing]
 comments: true
 ---
 
-One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and the Cantor pairing function turns out to be a neat way.
+One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.
 
 Formally, the Cantor pairing function $\pi$ is defined as:
 
@@ -38,8 +38,6 @@ def cantor_pairing_nd(*args):
 
 print(cantor_pairing_nd(1,2,3))
 ```
-
-
 ```c++
 struct pair_hash
 {

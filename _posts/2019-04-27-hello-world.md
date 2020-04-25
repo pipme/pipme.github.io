@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A small recorder
+title: A Small Recorder
 subtitle: Hello world
 # gh-repo: pipme/pipme.github.io
 # gh-badge: [star, fork, follow]
