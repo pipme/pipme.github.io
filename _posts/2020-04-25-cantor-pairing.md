@@ -48,4 +48,4 @@ unordered_map<pair<int, int>, int, pair_hash> um;
 um[make_pair(1,2)] = 0;
 ```
 
-To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. I write a simple [code](/code/cantor_pairing_function.py) to visualize the progression order based on the Cantor pairing function. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time): ![not found](/img/progression.png)
+To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. I write a simple [code](https://github.com/pipme/pipme.github.io/blob/master/code/cantor_pairing_function.py) to visualize the progression order based on the Cantor pairing function. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time): ![not found](/img/progression.png)
