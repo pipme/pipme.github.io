@@ -23,7 +23,7 @@ $$
 \pi^{(n)}(k_1, \ldots, k_{n-1}, k_n) := \pi ( \pi^{(n-1)}(k_1, \ldots, k_{n-1}) , k_n), \quad n>2
 $$
 
-The Cantor pairing function is a bijective. To prove that, we just need to invert it ([details](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function]) can be found  in Wikepidia). 
+The Cantor pairing function is bijective. To prove that, we just need to invert it ([details](https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function]) can be found  in Wikepidia). 
 
 Simple python and C++ implementations:
 
