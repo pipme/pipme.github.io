@@ -84,6 +84,18 @@
   </li>
 {%- endif -%}
 
+{%- if site.social-network-links.500px -%}
+  <li>
+    <a href="https://500px.com/p/{{ site.social-network-links.500px }}" title="500px">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-500px fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">500px</span>
+   </a>
+  </li>
+{%- endif -%}
+
 {%- if site.social-network-links.xing -%}
   <li>
     <a href="https://www.xing.com/profile/{{ site.social-network-links.xing }}" title="Xing">
