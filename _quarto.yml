@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  # favicon: 
+  title: "Chengkun's Personal Blog"
+  site-url: https://pipme.github.io
+  description: "Chengkun's Personal Blog"
+  open-graph: true
+  navbar:
+    right:
+      - href: about.qmd
+        text: About
+      - icon: github
+        href: https://github.com/pipme
+      - icon: rss
+        href: index.xml
+  google-analytics: "UA-139129595-1"
+  comments:
+    giscus:
+      repo: pipme/pipme.github.io
+      # dark theme issue will be fixed in quarto 1.4
+  page-footer:
+    center:
+      - text: "{{< ai google-scholar >}}"
+        href: https://scholar.google.com/citations?user=9mu6FKcAAAAJ&hl=en
+      - text: "{{< fa brands linkedin-in >}}"
+        href: https://www.linkedin.com/in/chengkun-li-62360612b/
+      - text: "{{< fa brands github >}}"
+        href: https://github.com/pipme
+      - text: "{{< fa brands 500px >}}" 
+        href: https://500px.com/p/sjtulck
+      - text: "{{< fa envelope >}}"
+        href: "mailto:sjtulck@gmail.com"
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    
+
+  
+

@@ -1,0 +1,14 @@
+---
+title: "Hi,"
+# format: 
+#   html: 
+#     css: ["_styles/hide_comments.css", "_styles/quote.css"]
+comments: false
+---
+
+> What I cannot create, I do not understand. 
+>
+> --- Richard Feynman
+
+# Contact
+
