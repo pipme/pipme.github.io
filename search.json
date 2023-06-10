@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/2021-04-25-Cantor-pairing-function/index.html",
+    "href": "posts/2021-04-25-Cantor-pairing-function/index.html",
+    "title": "The Cantor Pairing Function",
+    "section": "",
+    "text": "One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.\nFormally, the Cantor pairing function \\(\\pi\\) is defined as:\n\\[\n\\begin{gathered}\n\\pi:\\mathbb{N} \\times \\mathbb{N} \\to \\mathbb{N} \\\\\n\\pi(k_1, k_2) := \\frac{1}{2} (k_1 + k_2)(k_1 + k_2 + 1) + k2\n\\end{gathered}\n\\]\nIt can also be easily extended to multiple dimensions cases:\n\\[\n\\begin{gathered}\n\\pi^{(n)}:\\mathbb{N}^n \\to \\mathbb{N} \\\\\n\\pi^{(n)}(k_1, \\ldots, k_{n-1}, k_n) := \\pi ( \\pi^{(n-1)}(k_1, \\ldots, k_{n-1}) , k_n), \\quad n&gt;2\n\\end{gathered}\n\\]\nThe Cantor pairing function is bijective. To prove that, we just need to invert it (details can be found in Wikepidia).\nSimple python and C++ implementations:\n\nPythonC++\n\n\n\ndef cantor_pairing(x, y):\n    return int((x + y) * (x + y + 1) / 2 + y)\n\n\ndef cantor_pairing_nd(*args):\n    if len(args) == 2:\n        return cantor_pairing(args[0], args[1])\n    return cantor_pairing(cantor_pairing_nd(*args[:-1]), args[-1])\n\n\ncantor_pairing_nd(1, 2, 3)\n\n\n\nstruct pair_hash\n{\n    std::size_t operator() (const std::pair&lt;int, int&gt;& p) const\n    {\n        return (p.first + p.second) * (p.first + p.second + 1) / 2 + p.second;\n    }\n};\n\nunordered_map&lt;pair&lt;int, int&gt;, int, pair_hash&gt; um;\num[make_pair(1,2)] = 0;\n\n\n\nTo see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time):\n\n\nCode\nimport collections\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nd = {}\nfor i in range(1, 10):\n    for j in range(1, 10):\n        val = cantor_pairing(i, j)\n        d[val] = np.array((i, j))\nod = collections.OrderedDict(sorted(d.items()))\n\nplt.figure(facecolor=\"w\")\nplt.axis([0, 10, 0, 10])\nplt.axis(\"off\")\nfor k, v in od.items():\n    if v[0] == 9 and v[1] == 2:\n        break\n    plt.annotate(text=\"{}/{}\".format(*v), xy=v, ha=\"center\", va=\"center\")\n    if \"v0\" in locals():\n        plt.annotate(\n            text=\"\",\n            xy=v0 + (v - v0) * 0.2 / np.linalg.norm(v - v0),\n            xytext=v - (v - v0) * 0.2 / np.linalg.norm(v - v0),\n            arrowprops=dict(arrowstyle=\"&lt;-\"),\n        )\n    v0 = v\nplt.show()\n\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2021,\n  author = {Li, Chengkun},\n  title = {The {Cantor} {Pairing} {Function}},\n  date = {2021-04-25},\n  url = {https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2021. “The Cantor Pairing Function.” April\n25, 2021. https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function."
+  },
+  {
+    "objectID": "posts/2023-06-10-Quarto-set-up/index.html",
+    "href": "posts/2023-06-10-Quarto-set-up/index.html",
+    "title": "Start Blogging with Quarto",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\nThis extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an {{&lt; fa &gt;}} shortcode:\n\nMandatory &lt;icon-name&gt;:\n{{&lt; fa &lt;icon-name&gt; &gt;}}\nOptional &lt;group&gt;, &lt;size=...&gt;, and &lt;title=...&gt;:\n{{&lt; fa &lt;group&gt; &lt;icon-name&gt; &lt;size=...&gt; &lt;title=...&gt; &gt;}}\n\nFor example:\n\n\n\n\n\n\n\nShortcode\nIcon\n\n\n\n\n{{&lt; fa thumbs-up &gt;}}\n\n\n\n{{&lt; fa folder &gt;}}\n\n\n\n{{&lt; fa chess-pawn &gt;}}\n\n\n\n{{&lt; fa brands bluetooth &gt;}}\n\n\n\n{{&lt; fa brands twitter size=2xl &gt;}} (HTML only)\n\n\n\n{{&lt; fa brands github size=5x &gt;}} (HTML only)\n\n\n\n{{&lt; fa battery-half size=Huge &gt;}}\n\n\n\n{{&lt; fa envelope title=\"An envelope\" &gt;}}\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {Start {Blogging} with {Quarto}},\n  date = {2023-06-10},\n  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “Start Blogging with Quarto.” June 10,\n2023. https://pipme.github.io/posts/2023-06-10-Quarto-set-up."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "pipme.github.io",
+    "section": "",
+    "text": "Start Blogging with Quarto\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nChengkun Li\n\n\n\n\n\n\n  \n\n\n\n\nThe Cantor Pairing Function\n\n\n\n\n\n\n\nhashing\n\n\nset theory\n\n\n\n\n\n\n\n\n\n\n\nApr 25, 2021\n\n\nChengkun Li\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Hi,",
+    "section": "",
+    "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact"
+  }
+]
