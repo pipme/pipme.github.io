@@ -35,9 +35,16 @@
     "text": "Theorem: A sequence of random variables \\((x_1, x_2, \\dots)\\) is infinitely exchangeable iff, for all n, \\[\np(x_1, x_2, \\dots, x_n) = \\int \\prod^{n}_{i=1} p(x_i|\\theta) P(d\\theta),\n\\] for some measure \\(P\\) on \\(\\theta\\).\n(See Jordan and Broderick 2010)\n\n\n\n\nReferences\n\nJordan, Michael I, and Tamara Broderick. 2010. “Lecture 1: History and De Finetti’s Theorem.” 2010. https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf.\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {De {Finetti’s} {Theorem}},\n  date = {2023-06-11},\n  url = {https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “De Finetti’s Theorem.” June 11, 2023.\nhttps://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html."
   },
   {
+    "objectID": "blog+gist.html",
+    "href": "blog+gist.html",
+    "title": "All blogs and gists.",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s Theorem\n\n\n1 min\n\n\n\n\nJun 10, 2023\n\n\nStart Blogging with Quarto\n\n\n1 min\n\n\n\n\nApr 25, 2021\n\n\nThe Cantor Pairing Function\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "A Personal Blog",
+    "title": "Blogs",
     "section": "",
     "text": "Start Blogging with Quarto\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nChengkun Li\n\n\n\n\n\n\n  \n\n\n\n\nThe Cantor Pairing Function\n\n\n\n\n\n\n\nhashing\n\n\nset theory\n\n\n\n\n\n\n\n\n\n\n\nApr 25, 2021\n\n\nChengkun Li\n\n\n\n\n\n\nNo matching items"
   },
