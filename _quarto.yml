@@ -3,11 +3,15 @@ project:
 
 website:
   # favicon: 
-  title: "Chengkun's Personal Blog"
+  title: "My Personal Blog"
   site-url: https://pipme.github.io
-  description: "Chengkun's Personal Blog"
+  description: "Personal Blog"
   open-graph: true
   navbar:
+    title: false
+    left:
+      - href: index.qmd
+        text: Home
     right:
       - href: about.qmd
         text: About

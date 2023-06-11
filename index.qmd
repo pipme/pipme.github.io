@@ -1,5 +1,5 @@
 ---
-title: "pipme.github.io"
+title: "A Personal Blog"
 listing:
   contents: posts
   sort: "date desc"
