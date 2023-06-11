@@ -5,10 +5,10 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Chengkun&#39;s Personal Blog</title>
+<title>My Personal Blog</title>
 <link>https://pipme.github.io/index.html</link>
 <atom:link href="https://pipme.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<description>Chengkun&#39;s Personal Blog</description>
+<description>Personal Blog</description>
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Fri, 09 Jun 2023 21:00:00 GMT</lastBuildDate>
 <item>
@@ -20,72 +20,26 @@
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
-<p>This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an <code>{{&lt; fa &gt;}}</code> shortcode:</p>
-<ul>
-<li><p>Mandatory <code>&lt;icon-name&gt;</code>:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1">{{&lt; fa <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;icon-name&gt;</span> &gt;}}</span></code></pre></div></li>
-<li><p>Optional <code>&lt;group&gt;</code>, <code>&lt;size=...&gt;</code>, and <code>&lt;title=...&gt;</code>:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1">{{&lt; fa <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;group&gt;</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;icon-name&gt;</span> &lt;size=...&gt; &lt;title=...&gt; &gt;}}</span></code></pre></div></li>
-</ul>
-<p>For example:</p>
-<table class="table">
-<colgroup>
-<col style="width: 54%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Shortcode</th>
-<th>Icon</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>{{&lt; fa thumbs-up &gt;}}</code></td>
-<td><p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i></p></td>
-</tr>
-<tr class="even">
-<td><code>{{&lt; fa folder &gt;}}</code></td>
-<td><p><i class="fa-solid fa-folder" aria-label="folder"></i></p></td>
-</tr>
-<tr class="odd">
-<td><code>{{&lt; fa chess-pawn &gt;}}</code></td>
-<td><p><i class="fa-solid fa-chess-pawn" aria-label="chess-pawn"></i></p></td>
-</tr>
-<tr class="even">
-<td><code>{{&lt; fa brands bluetooth &gt;}}</code></td>
-<td><p><i class="fa-brands fa-bluetooth" aria-label="bluetooth"></i></p></td>
-</tr>
-<tr class="odd">
-<td><code>{{&lt; fa brands twitter size=2xl &gt;}}</code> (HTML only)</td>
-<td><p><i class="fa-brands fa-twitter fa-2xl" aria-label="twitter"></i></p></td>
-</tr>
-<tr class="even">
-<td><code>{{&lt; fa brands github size=5x &gt;}}</code> (HTML only)</td>
-<td><p><i class="fa-brands fa-github fa-5x" aria-label="github"></i></p></td>
-</tr>
-<tr class="odd">
-<td><code>{{&lt; fa battery-half size=Huge &gt;}}</code></td>
-<td><p><i class="fa-solid fa-battery-half fa-Huge" aria-label="battery-half"></i></p></td>
-</tr>
-<tr class="even">
-<td><code>{{&lt; fa envelope title="An envelope" &gt;}}</code></td>
-<td><p><i class="fa-solid fa-envelope" title="An envelope" aria-label="envelope"></i></p></td>
-</tr>
-</tbody>
-</table>
+<p>This is the first post in a Quarto blog. Welcome! <span class="citation" data-cites="wilsonBayesianDeepLearning2022 navarro2022">(Wilson and Izmailov 2022; Navarro 2022)</span></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page<sup>1</sup> of posts.<span class="citation" data-cites="navarro2022">(Navarro 2022)</span></p>
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-navarro2022" class="csl-entry">
+Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
+</div>
+<div id="ref-wilsonBayesianDeepLearning2022" class="csl-entry">
+Wilson, Andrew Gordon, and Pavel Izmailov. 2022. <span>“Bayesian <span>Deep Learning</span> and a <span>Probabilistic Perspective</span> of <span>Generalization</span>.”</span> March 30, 2022. <a href="http://arxiv.org/abs/2002.08791">http://arxiv.org/abs/2002.08791</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A FOOTNOTE↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Start {Blogging} with {Quarto}},
   date = {2023-06-10},

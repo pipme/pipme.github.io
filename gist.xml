@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>My Personal Blog</title>
+<link>https://pipme.github.io/gist.html</link>
+<atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
+<description>Personal Blog</description>
+<generator>quarto-1.3.361</generator>
+<lastBuildDate>Sat, 10 Jun 2023 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>De Finetti’s Theorem</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Theorem</strong>: A sequence of random variables <img src="https://latex.codecogs.com/png.latex?(x_1,%20x_2,%20%5Cdots)"> is infinitely exchangeable iff, for all n, <img src="https://latex.codecogs.com/png.latex?%0Ap(x_1,%20x_2,%20%5Cdots,%20x_n)%20=%20%5Cint%20%5Cprod%5E%7Bn%7D_%7Bi=1%7D%20p(x_i%7C%5Ctheta)%20P(d%5Ctheta),%0A"> for some measure <img src="https://latex.codecogs.com/png.latex?P"> on <img src="https://latex.codecogs.com/png.latex?%5Ctheta">.</p>
+<p><span class="citation" data-cites="jordanLectureHistoryFinetti2010">(See Jordan and Broderick 2010)</span></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-jordanLectureHistoryFinetti2010" class="csl-entry">
+Jordan, Michael I, and Tamara Broderick. 2010. <span>“Lecture 1: <span>History</span> and <span>De Finetti</span>’s <span>Theorem</span>.”</span> 2010. <a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf">https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {De {Finetti’s} {Theorem}},
+  date = {2023-06-11},
+  url = {https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
+<a href="https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html">https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>theorem</category>
+  <guid>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</guid>
+  <pubDate>Sat, 10 Jun 2023 21:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

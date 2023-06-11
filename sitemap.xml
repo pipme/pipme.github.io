@@ -2,18 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function/index.html</loc>
-    <lastmod>2023-06-10T11:18:25.785Z</lastmod>
+    <lastmod>2023-06-11T12:44:41.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/document-revealjs.html</loc>
+    <lastmod>2023-06-11T12:44:53.167Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-10T11:18:26.720Z</lastmod>
+    <lastmod>2023-06-11T12:44:53.347Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
+    <lastmod>2023-06-11T12:44:54.478Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-10T11:18:27.143Z</lastmod>
+    <lastmod>2023-06-11T12:44:54.938Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-10T11:18:27.471Z</lastmod>
+    <lastmod>2023-06-11T12:44:55.262Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/gist.html</loc>
+    <lastmod>2023-06-11T12:44:55.636Z</lastmod>
   </url>
 </urlset>
