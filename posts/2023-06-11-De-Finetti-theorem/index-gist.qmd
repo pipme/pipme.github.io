@@ -1,0 +1,17 @@
+---
+title: "De Finetti's Theorem"
+date: "2023-06-11"
+date-modified: last-modified
+categories: [theorem]
+bibliography: [../all.bib]
+format:
+  html: default
+---
+
+**Theorem**: A sequence of random variables $(x_1, x_2, \dots)$ is infinitely exchangeable iff, for all n,
+$$
+p(x_1, x_2, \dots, x_n) = \int \prod^{n}_{i=1} p(x_i|\theta) P(d\theta),
+$$
+for some measure $P$ on $\theta$.
+
+[See @jordanLectureHistoryFinetti2010]
