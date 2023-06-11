@@ -17,6 +17,9 @@ website:
     right:
       - href: about.qmd
         text: About
+      - icon: card-list
+        href: blog+gist.qmd
+        text: "\u200B"  # ZERO WIDTH SPACE
       - icon: github
         href: https://github.com/pipme
       - icon: rss

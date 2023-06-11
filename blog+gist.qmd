@@ -1,0 +1,15 @@
+---
+title: "All blogs and gists."
+listing:
+  contents: "posts/**/*.qmd"
+  sort: "date desc"
+  fields: [date, title, reading-time]
+  type: table
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true
+page-layout: full
+title-block-banner: false
+comments: false
+---
