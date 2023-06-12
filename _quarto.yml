@@ -28,6 +28,7 @@ website:
   comments:
     giscus:
       repo: pipme/pipme.github.io
+      loading: lazy
       # dark theme issue will be fixed in quarto 1.4
   page-footer:
     center:

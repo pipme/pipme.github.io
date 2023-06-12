@@ -1,5 +1,5 @@
 ---
-title: "De Finetti's Theorem"
+title: "De Finetti's theorem"
 date: "2023-06-11"
 date-modified: last-modified
 categories: [theorem]

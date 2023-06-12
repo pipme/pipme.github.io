@@ -4,11 +4,17 @@ all: report
 
 .PHONY: clean
 
-report:
+report-pdflatex:
 	pdflatex $(DOCNAME)
 	biber $(DOCNAME)
 	pdflatex $(DOCNAME)
 	pdflatex $(DOCNAME)
+
+report:
+	xelatex $(DOCNAME)
+	biber $(DOCNAME)
+	xelatex $(DOCNAME)
+	xelatex $(DOCNAME)
 
 view: report
 	open $(DOCNAME).pdf

@@ -27,4 +27,5 @@ author:
   - name: Chengkun Li
     url: https://pipme.github.io
 jupyter: test_forge
-bibliography: all.bib
+bibliography: [../all.bib]
+reference-section-title: References
