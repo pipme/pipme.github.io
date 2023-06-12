@@ -7,12 +7,16 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="Chengkun Li">
-  <meta name="dcterms.date" content="2023-06-10">
-  <title>My Personal Blog - Start Blogging with Quarto</title>
+  <meta name="dcterms.date" content="2023-06-11">
+  <title>My Personal Blog - Quarto tips</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -418,7 +422,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="My Personal Blog - Start Blogging with Quarto">
+<meta property="og:title" content="My Personal Blog - Quarto tips">
 <meta property="og:site-name" content="My Personal Blog">
 </head>
 <body class="quarto-light">
@@ -426,7 +430,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Start Blogging with Quarto</h1>
+  <h1 class="title">Quarto tips</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -436,95 +440,66 @@
 </div>
 </div>
 
-  <p class="date">2023-06-10</p>
+  <p class="date">2023-06-11</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li></li>
-<li><a href="#/algorithm-1" id="/toc-algorithm-1">Algorithm 1</a></li>
+<li><a href="#/building-the-website" id="/toc-building-the-website">Building the website</a></li>
+<li><a href="#/for-trials" id="/toc-for-trials">For trials</a></li>
+<li><a href="#/bibliography" id="/toc-bibliography">References</a></li>
 </ul>
 </nav>
 </section>
-<section class="slide level2">
+<section id="building-the-website" class="slide level2">
+<h2>Building the website</h2>
+<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item in the navigation bar with icon only. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
+<p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">.</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">├──</span> quarto-ext</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">│</span>   └── fontawesome</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="ex">└──</span> schochastics</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="ex">└──</span> academicons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- ## LaTeX
 
-<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decide to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
-<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../2023-06-11-Quarto-tips/index-gist.qmd">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (<a href="#/algorithm-1" role="doc-biblioref" onclick="">2022</a>)</span> for more workthrough details.</p>
-<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, undertanding things better and sharing knowledge.</p>
-<p>For Obsidian, I put some useful plugins <a href="../2023-06-11-Obsidian-Zotero-tips/">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
-<p>Welcome to my blog 😃 ✓ :grinning:! Here is some plain text.</p>
-<p>Next, let’s write some pseudo code. Note that you don’t <em>have</em> to specify a language if using plain backticks.</p>
-<pre><code>object &lt;- [some kind of calculation]</code></pre>
-<p>If you set <code>eval = FALSE</code> you can get the highlighted background</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>object <span class="ot">&lt;-</span> [some kind of calculation]</span>
-<span id="cb2-2"><a href="#cb2-2"></a>Note that this; is not valid R code</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You may find it interesting that your example works just fine for me.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>loop through each species</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    loop through each measurement of the current species</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    ...</span>
-<span id="cb3-4"><a href="#cb3-4"></a>etc.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="algorithm-1" class="title-slide slide level1 smaller scrollable">
-<h1>Algorithm 1</h1>
-Just a sample algorithmn
-<script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$','$'], ['\\(','\\)']],
-            displayMath: [['$$','$$'], ['\\[','\\]']],
-            processEscapes: true,
-            processEnvironments: true,
-        }
+### plain LaTeX
+Just a sample algorithm:
+
+```latex
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+\While{While condition}{
+    instructions\;
+    \eIf{condition}{
+        instructions1\;
+        instructions2\;
+    }{
+        instructions3\;
     }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" integrity="sha256-Cm3tWrvOEzMWWN0jnzQ4Kr0GSSx0txth6MqoES7FX6U=" crossorigin="anonymous" referrerpolicy="no-referrer">
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css">
-<script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js">
-</script>
-<pre id="quicksort" class="pseudocode">    % This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-    \begin{algorithm}
-    \caption{Quicksort}
-    \begin{algorithmic}
-    \PROCEDURE{Quicksort}{$A, p, r$}
-        \IF{$p &lt; r$} 
-            \STATE $q = $ \CALL{Partition}{$A, p, r$}
-            \STATE \CALL{Quicksort}{$A, p, q - 1$}
-            \STATE \CALL{Quicksort}{$A, q + 1, r$}
-        \ENDIF
-    \ENDPROCEDURE
-    \PROCEDURE{Partition}{$A, p, r$}
-        \STATE $x = A[r]$
-        \STATE $i = p - 1$
-        \FOR{$j = p$ \TO $r - 1$}
-            \IF{$A[j] &lt; x$}
-                \STATE $i = i + 1$
-                \STATE exchange
-                $A[i]$ with $A[j]$
-            \ENDIF
-            \STATE exchange $A[i]$ with $A[r]$
-        \ENDFOR
-    \ENDPROCEDURE
-    \end{algorithmic}
-    \end{algorithm}
-</pre>
-<script>
-    pseudocode.renderElement(document.getElementById("quicksort"));
-</script>
-<script>
-    pseudocode.renderClass("pseudocode");
-</script>
+}
+\caption{While loop with If/Else condition}
+\end{algorithm} 
+``` -->
+</section>
+<section id="for-trials" class="slide level2">
+<h2>For trials</h2>
+<p><span class="citation" data-cites="gentonClassesKernelsMachine2001">(<a href="#/bibliography" role="doc-biblioref" onclick="">Genton 2001</a>)</span></p>
 
 <div class="footer footer-default">
 
 </div>
+</section>
+<section id="bibliography" class="title-slide slide level1 unnumbered smaller scrollable">
+<h1>References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-navarro2022" class="csl-entry" role="listitem">
-Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
+<div id="ref-gentonClassesKernelsMachine2001" class="csl-entry" role="listitem">
+Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine Learning</span>: <span>A Statistics Perspective</span>.”</span> <em>Journal of Machine Learning Research</em> 2: 299–312. <a href="https://www.jmlr.org/papers/v2/genton01a">https://www.jmlr.org/papers/v2/genton01a</a>.
 </div>
 </div>
 </section>
@@ -884,6 +859,8 @@ Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> Ap
         }
       }
     });
+    </script>
+    <script src="https://giscus.app/client.js" data-repo="pipme/pipme.github.io" data-repo-id="R_kgDOJtreTA" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
     </script>
     
 

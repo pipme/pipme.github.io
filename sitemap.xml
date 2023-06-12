@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function/index.html</loc>
-    <lastmod>2023-06-11T18:32:20.017Z</lastmod>
+    <lastmod>2023-06-12T19:13:09.583Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/document-revealjs.html</loc>
-    <lastmod>2023-06-11T18:32:31.765Z</lastmod>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/document-revealjs.html</loc>
+    <lastmod>2023-06-12T19:13:20.395Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
+    <lastmod>2023-06-12T19:13:20.595Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-11T18:32:31.918Z</lastmod>
+    <lastmod>2023-06-12T19:13:21.910Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
+    <lastmod>2023-06-12T19:13:23.180Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
-    <lastmod>2023-06-11T18:32:33.108Z</lastmod>
+    <lastmod>2023-06-12T19:13:24.437Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/blog+gist.html</loc>
-    <lastmod>2023-06-11T18:32:33.518Z</lastmod>
+    <lastmod>2023-06-12T19:13:24.906Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-11T18:32:33.976Z</lastmod>
+    <lastmod>2023-06-12T19:13:25.385Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-11T18:32:34.303Z</lastmod>
+    <lastmod>2023-06-12T19:13:25.783Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/gist.html</loc>
-    <lastmod>2023-06-11T18:32:34.713Z</lastmod>
+    <lastmod>2023-06-12T19:13:26.385Z</lastmod>
   </url>
 </urlset>

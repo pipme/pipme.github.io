@@ -1,0 +1,21 @@
+---
+title: "Quarto tips"
+date: "2023-06-11"
+date-modified: last-modified
+categories: [tips]
+format:
+  html: default
+---
+
+Unicode `\u200B` for zero width space, e.g., in `_quarto.yml` I used it for an item in the navigation bar with icon only. Note that I tried HTML's `&#8203;` but it doesn't work.
+
+Extensions for adding icons such as google scholar {{< ai google-scholar >}} and 500px {{< fa brands 500px >}} (see the website's footer):
+```bash
+.
+├── quarto-ext
+│   └── fontawesome
+└── schochastics
+    └── academicons
+```
+
+

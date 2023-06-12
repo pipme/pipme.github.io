@@ -12,7 +12,7 @@
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Sat, 10 Jun 2023 21:00:00 GMT</lastBuildDate>
 <item>
-  <title>De Finetti’s Theorem</title>
+  <title>De Finetti’s theorem</title>
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</link>
   <description><![CDATA[ 
@@ -24,7 +24,10 @@
 <p><span class="citation" data-cites="jordanLectureHistoryFinetti2010">(See Jordan and Broderick 2010)</span></p>
 
 
+<section id="bibliography" class="level1 unnumbered">
 
+
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-jordanLectureHistoryFinetti2010" class="csl-entry">
@@ -32,7 +35,7 @@ Jordan, Michael I, and Tamara Broderick. 2010. <span>“Lecture 1: <span>History
 </div>
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
-  title = {De {Finetti’s} {Theorem}},
+  title = {De {Finetti’s} Theorem},
   date = {2023-06-11},
   url = {https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html},
   langid = {en}
@@ -43,6 +46,166 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
 </div></div></section></div> ]]></description>
   <category>theorem</category>
   <guid>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</guid>
+  <pubDate>Sat, 10 Jun 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Personal Obsidian and Zotero best practices</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="obsidan" class="level2">
+<h2 class="anchored" data-anchor-id="obsidan">Obsidan</h2>
+<p>The Obsidian plugins I am using:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">.</span></span>
+<span id="cb1-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> calendar</span>
+<span id="cb1-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> cm-editor-syntax-highlight-obsidian</span>
+<span id="cb1-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-citation-plugin</span>
+<span id="cb1-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-completr</span>
+<span id="cb1-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-latex</span>
+<span id="cb1-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-latex-suite</span>
+<span id="cb1-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-pandoc</span>
+<span id="cb1-9"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> obsidian-vault-statistics-plugin</span>
+<span id="cb1-10"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> periodic-notes</span>
+<span id="cb1-11"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> recent-files-obsidian</span>
+<span id="cb1-12"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> table-editor-obsidian</span></code></pre></div>
+</section>
+<section id="zotero" class="level2">
+<h2 class="anchored" data-anchor-id="zotero">Zotero</h2>
+<p>Zotero plugins:</p>
+<ul>
+<li>Zotfile</li>
+<li>Better BibTex</li>
+<li>MarkDBConnect</li>
+</ul>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {Personal {Obsidian} and {Zotero} Best Practices},
+  date = {2023-06-11},
+  url = {https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“Personal Obsidian and Zotero Best
+Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>tips</category>
+  <guid>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</guid>
+  <pubDate>Sat, 10 Jun 2023 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Quarto tips</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="building-the-website" class="level2">
+<h2 class="anchored" data-anchor-id="building-the-website">Building the website</h2>
+<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item in the navigation bar with icon only. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
+<p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">.</span></span>
+<span id="cb1-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> quarto-ext</span>
+<span id="cb1-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">│</span>   └── fontawesome</span>
+<span id="cb1-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> schochastics</span>
+<span id="cb1-5">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> academicons</span></code></pre></div>
+<!-- ## LaTeX
+
+### plain LaTeX
+Just a sample algorithm:
+
+```latex
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+\While{While condition}{
+    instructions\;
+    \eIf{condition}{
+        instructions1\;
+        instructions2\;
+    }{
+        instructions3\;
+    }
+}
+\caption{While loop with If/Else condition}
+\end{algorithm} 
+``` -->
+</section>
+<section id="for-trials" class="level2">
+<h2 class="anchored" data-anchor-id="for-trials">For trials</h2>
+<p><span class="citation" data-cites="gentonClassesKernelsMachine2001">(Genton 2001)</span></p>
+
+
+</section>
+<section id="bibliography" class="level1 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-gentonClassesKernelsMachine2001" class="csl-entry">
+Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine Learning</span>: <span>A Statistics Perspective</span>.”</span> <em>Journal of Machine Learning Research</em> 2: 299–312. <a href="https://www.jmlr.org/papers/v2/genton01a">https://www.jmlr.org/papers/v2/genton01a</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {Quarto Tips},
+  date = {2023-06-11},
+  url = {https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“Quarto Tips.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html">https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>tips</category>
+  <guid>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</guid>
   <pubDate>Sat, 10 Jun 2023 21:00:00 GMT</pubDate>
 </item>
 </channel>
