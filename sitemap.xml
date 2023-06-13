@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function/index.html</loc>
-    <lastmod>2023-06-13T07:54:17.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/document-revealjs.html</loc>
-    <lastmod>2023-06-13T07:54:28.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
-    <lastmod>2023-06-13T07:54:28.373Z</lastmod>
+    <loc>https://pipme.github.io/gist.html</loc>
+    <lastmod>2023-06-13T20:45:13.790Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-13T07:54:30.069Z</lastmod>
+    <lastmod>2023-06-13T20:45:15.770Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
-    <lastmod>2023-06-13T07:54:30.778Z</lastmod>
+    <lastmod>2023-06-13T20:45:16.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/document-revealjs.html</loc>
+    <lastmod>2023-06-13T20:46:24.603Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
+    <lastmod>2023-06-13T20:46:24.735Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
-    <lastmod>2023-06-13T07:54:31.477Z</lastmod>
+    <lastmod>2023-06-13T20:46:26.519Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/blog+gist.html</loc>
-    <lastmod>2023-06-13T07:54:31.997Z</lastmod>
+    <loc>https://pipme.github.io/posts/2021-04-25-Cantor-pairing-function/index.html</loc>
+    <lastmod>2023-06-13T20:46:28.095Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-13T07:54:33.589Z</lastmod>
+    <lastmod>2023-06-13T20:46:28.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/blog+gist.html</loc>
+    <lastmod>2023-06-13T20:46:29.107Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-13T07:54:34.117Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/gist.html</loc>
-    <lastmod>2023-06-13T07:54:34.607Z</lastmod>
+    <lastmod>2023-06-13T20:46:29.459Z</lastmod>
   </url>
 </urlset>
