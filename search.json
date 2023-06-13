@@ -11,7 +11,7 @@
     "href": "posts/2023-06-10-Quarto-set-up/index.html",
     "title": "Start Blogging with Quarto",
     "section": "",
-    "text": "Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decide to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.\nBuilding a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips here. See Navarro (2022) for more workthrough details.\nBy the way, I fell in love with writing in markdown since the birth of another great tool Obsidian and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, undertanding things better and sharing knowledge.\nFor Obsidian, I put some useful plugins here, together with Zotero’s. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.\nWelcome to my blog 😃!\n\n\n\n\n\n\n\nReferences\n\nNavarro, Danielle. 2022. “Porting a Distill Blog to Quarto.” April 20, 2022. https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto.\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {Start {Blogging} with {Quarto}},\n  date = {2023-06-10},\n  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “Start Blogging with Quarto.” June 10,\n2023. https://pipme.github.io/posts/2023-06-10-Quarto-set-up."
+    "text": "Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.\nBuilding a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips here. See Navarro (2022) for more work-through details.\nBy the way, I fell in love with writing in markdown since the birth of another great tool Obsidian and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.\nFor Obsidian, I put some useful plugins here, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.\nWelcome to my blog 😃!\n\n\n\n\n\n\n\nReferences\n\nNavarro, Danielle. 2022. “Porting a Distill Blog to Quarto.” April 20, 2022. https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto.\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {Start {Blogging} with {Quarto}},\n  date = {2023-06-10},\n  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “Start Blogging with Quarto.” June 10,\n2023. https://pipme.github.io/posts/2023-06-10-Quarto-set-up."
   },
   {
     "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html",
@@ -21,8 +21,8 @@
     "text": "The Obsidian plugins I am using:\n.\n├── calendar\n├── cm-editor-syntax-highlight-obsidian\n├── obsidian-citation-plugin\n├── obsidian-completr\n├── obsidian-latex\n├── obsidian-latex-suite\n├── obsidian-pandoc\n├── obsidian-vault-statistics-plugin\n├── periodic-notes\n├── recent-files-obsidian\n└── table-editor-obsidian"
   },
   {
-    "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidan",
-    "href": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidan",
+    "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidian",
+    "href": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidian",
     "title": "Personal Obsidian and Zotero best practices",
     "section": "",
     "text": "The Obsidian plugins I am using:\n.\n├── calendar\n├── cm-editor-syntax-highlight-obsidian\n├── obsidian-citation-plugin\n├── obsidian-completr\n├── obsidian-latex\n├── obsidian-latex-suite\n├── obsidian-pandoc\n├── obsidian-vault-statistics-plugin\n├── periodic-notes\n├── recent-files-obsidian\n└── table-editor-obsidian"
@@ -35,32 +35,39 @@
     "text": "Zotero\nZotero plugins:\n\nZotfile\nBetter BibTex\nMarkDBConnect"
   },
   {
-    "objectID": "posts/2023-06-11-Quarto-tips/document-revealjs.html#building-the-website",
-    "href": "posts/2023-06-11-Quarto-tips/document-revealjs.html#building-the-website",
+    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#building-the-website",
+    "href": "posts/2023-06-11-Quarto-tips/rjs.html#building-the-website",
     "title": "Quarto tips",
     "section": "Building the website",
-    "text": "Building the website\nUnicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item in the navigation bar with icon only. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons"
+    "text": "Building the website\nUnicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
   },
   {
-    "objectID": "posts/2023-06-11-Quarto-tips/document-revealjs.html#for-trials",
-    "href": "posts/2023-06-11-Quarto-tips/document-revealjs.html#for-trials",
+    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#for-trials",
+    "href": "posts/2023-06-11-Quarto-tips/rjs.html#for-trials",
     "title": "Quarto tips",
     "section": "For trials",
     "text": "For trials\n(Genton 2001)"
+  },
+  {
+    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#latex",
+    "href": "posts/2023-06-11-Quarto-tips/rjs.html#latex",
+    "title": "Quarto tips",
+    "section": "LaTeX",
+    "text": "LaTeX\nVisible in pdf only. ### plain LaTeX Just a sample algorithm:"
   },
   {
     "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html",
     "href": "posts/2023-06-11-Quarto-tips/index-gist.html",
     "title": "Quarto tips",
     "section": "",
-    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item in the navigation bar with icon only. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons"
+    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
   },
   {
     "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#building-the-website",
     "href": "posts/2023-06-11-Quarto-tips/index-gist.html#building-the-website",
     "title": "Quarto tips",
     "section": "",
-    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item in the navigation bar with icon only. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons"
+    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
   },
   {
     "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#for-trials",
@@ -68,6 +75,13 @@
     "title": "Quarto tips",
     "section": "For trials",
     "text": "For trials\n(Genton 2001)"
+  },
+  {
+    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#latex",
+    "href": "posts/2023-06-11-Quarto-tips/index-gist.html#latex",
+    "title": "Quarto tips",
+    "section": "LaTeX",
+    "text": "LaTeX\nVisible in pdf only. ### plain LaTeX Just a sample algorithm:"
   },
   {
     "objectID": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
@@ -102,6 +116,6 @@
     "href": "about.html",
     "title": "Hi,",
     "section": "",
-    "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact"
+    "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact\nFeel free to reach me via email: sjtulck@gmail.com."
   }
 ]

@@ -86,19 +86,14 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K0VMSWF7B9"></script>
 
 <script type="text/javascript">
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-139129595-1', 'auto');
-
-ga('send', {
-  hitType: 'pageview',
-  'anonymizeIp': true,
-});
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 </script>
 
 
@@ -144,11 +139,23 @@ ga('send', {
 </i> 
  <span class="menu-text"></span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-rss" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-rss">    
+        <li>
+    <a class="dropdown-item" href="../../index.xml" rel="" target="">
+ <span class="dropdown-text">blog</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../blog+gist.xml" rel="" target="">
+ <span class="dropdown-text">blog+gist</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -216,10 +223,10 @@ ga('send', {
 
 
 
-<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decide to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
-<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (<a href="#ref-navarro2022" role="doc-biblioref">2022</a>)</span> for more workthrough details.</p>
-<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, undertanding things better and sharing knowledge.</p>
-<p>For Obsidian, I put some useful plugins <a href="../../posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
+<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
+<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (<a href="#ref-navarro2022" role="doc-biblioref">2022</a>)</span> for more work-through details.</p>
+<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.</p>
+<p>For Obsidian, I put some useful plugins <a href="../../posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
 <p>Welcome to my blog 😃!</p>
 
 
@@ -591,7 +598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="pipme/pipme.github.io" data-repo-id="R_kgDOJtreTA" data-category="General" data-category-id="DIC_kwDOJtreTM4CXLJn" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+<script src="https://giscus.app/client.js" data-repo="pipme/pipme.github.io" data-repo-id="R_kgDOJtreTA" data-category="Announcements" data-category-id="DIC_kwDOJtreTM4CXLJm" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

@@ -57,8 +57,8 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
 
 
 
-<section id="obsidan" class="level2">
-<h2 class="anchored" data-anchor-id="obsidan">Obsidan</h2>
+<section id="obsidian" class="level2">
+<h2 class="anchored" data-anchor-id="obsidian">Obsidian</h2>
 <p>The Obsidian plugins I am using:</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
@@ -135,7 +135,7 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
 
 <section id="building-the-website" class="level2">
 <h2 class="anchored" data-anchor-id="building-the-website">Building the website</h2>
-<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item in the navigation bar with icon only. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
+<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item with only an icon <i class="bi bi-card-list"></i> in the navigation bar. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
 <p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
@@ -152,36 +152,20 @@ font-style: inherit;">└──</span> schochastics</span>
 <span id="cb1-5">    <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">└──</span> academicons</span></code></pre></div>
-<!-- ## LaTeX
-
-### plain LaTeX
-Just a sample algorithm:
-
-```latex
-\begin{algorithm}[H]
-\DontPrintSemicolon
-\SetAlgoLined
-\KwResult{Write here the result}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
-\Input{Write here the input}
-\Output{Write here the output}
-\BlankLine
-\While{While condition}{
-    instructions\;
-    \eIf{condition}{
-        instructions1\;
-        instructions2\;
-    }{
-        instructions3\;
-    }
-}
-\caption{While loop with If/Else condition}
-\end{algorithm} 
-``` -->
+<p>For publishing a Quarto website, I recommend using the second option in the <a href="https://quarto.org/docs/publishing/github-pages.html">official documentation</a>. After set up, simply call:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">quarto</span> publish gh-pages <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-prompt</span></span></code></pre></div>
 </section>
 <section id="for-trials" class="level2">
 <h2 class="anchored" data-anchor-id="for-trials">For trials</h2>
 <p><span class="citation" data-cites="gentonClassesKernelsMachine2001">(Genton 2001)</span></p>
+</section>
+<section id="latex" class="level2">
+<h2 class="anchored" data-anchor-id="latex">LaTeX</h2>
+<p>Visible in pdf only. ### plain LaTeX Just a sample algorithm:</p>
 
 
 </section>
@@ -217,10 +201,10 @@ Li, Chengkun. 2023. <span>“Quarto Tips.”</span> June 11, 2023. <a href="http
 
 
 
-<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decide to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
-<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (2022)</span> for more workthrough details.</p>
-<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, undertanding things better and sharing knowledge.</p>
-<p>For Obsidian, I put some useful plugins <a href="../../posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
+<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
+<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (2022)</span> for more work-through details.</p>
+<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.</p>
+<p>For Obsidian, I put some useful plugins <a href="../../posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
 <p>Welcome to my blog 😃!</p>
 
 

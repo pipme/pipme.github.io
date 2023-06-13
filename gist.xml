@@ -57,8 +57,8 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
 
 
 
-<section id="obsidan" class="level2">
-<h2 class="anchored" data-anchor-id="obsidan">Obsidan</h2>
+<section id="obsidian" class="level2">
+<h2 class="anchored" data-anchor-id="obsidian">Obsidian</h2>
 <p>The Obsidian plugins I am using:</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
@@ -135,7 +135,7 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
 
 <section id="building-the-website" class="level2">
 <h2 class="anchored" data-anchor-id="building-the-website">Building the website</h2>
-<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item in the navigation bar with icon only. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
+<p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item with only an icon <i class="bi bi-card-list"></i> in the navigation bar. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
 <p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
@@ -152,36 +152,20 @@ font-style: inherit;">└──</span> schochastics</span>
 <span id="cb1-5">    <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">└──</span> academicons</span></code></pre></div>
-<!-- ## LaTeX
-
-### plain LaTeX
-Just a sample algorithm:
-
-```latex
-\begin{algorithm}[H]
-\DontPrintSemicolon
-\SetAlgoLined
-\KwResult{Write here the result}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
-\Input{Write here the input}
-\Output{Write here the output}
-\BlankLine
-\While{While condition}{
-    instructions\;
-    \eIf{condition}{
-        instructions1\;
-        instructions2\;
-    }{
-        instructions3\;
-    }
-}
-\caption{While loop with If/Else condition}
-\end{algorithm} 
-``` -->
+<p>For publishing a Quarto website, I recommend using the second option in the <a href="https://quarto.org/docs/publishing/github-pages.html">official documentation</a>. After set up, simply call:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">quarto</span> publish gh-pages <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--no-prompt</span></span></code></pre></div>
 </section>
 <section id="for-trials" class="level2">
 <h2 class="anchored" data-anchor-id="for-trials">For trials</h2>
 <p><span class="citation" data-cites="gentonClassesKernelsMachine2001">(Genton 2001)</span></p>
+</section>
+<section id="latex" class="level2">
+<h2 class="anchored" data-anchor-id="latex">LaTeX</h2>
+<p>Visible in pdf only. ### plain LaTeX Just a sample algorithm:</p>
 
 
 </section>
