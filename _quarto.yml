@@ -23,11 +23,19 @@ website:
       - icon: github
         href: https://github.com/pipme
       - icon: rss
-        href: index.xml
-  google-analytics: "UA-139129595-1"
+        menu:
+          - href: index.xml
+            text: blog
+          - href: blog+gist.xml
+            text: blog+gist
+  google-analytics: "G-K0VMSWF7B9"
   comments:
     giscus:
       repo: pipme/pipme.github.io
+      repo-id: R_kgDOJtreTA
+      category: Announcements
+      category-id: DIC_kwDOJtreTM4CXLJm
+      mapping: pathname
       loading: lazy
       # dark theme issue will be fixed in quarto 1.4
   page-footer:

@@ -6,7 +6,7 @@ categories: [tips]
 format:
   html: default
 ---
-## Obsidan
+## Obsidian
 The Obsidian plugins I am using:
 
 ```bash
