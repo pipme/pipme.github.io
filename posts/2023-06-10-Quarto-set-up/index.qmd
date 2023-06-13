@@ -14,7 +14,7 @@ Building a site with Quarto is relatively easy and interesting. The documentatio
 
 By the way, I fell in love with writing in markdown since the birth of another great tool [Obsidian](https://obsidian.md/) and gradually realize that habitual writing is essential for a researcher, for building one's second brain, undertanding things better and sharing knowledge.
 
-For Obsidian, I put some useful plugins [here](../2023-06-11-Obsidian-Zotero-tips/), together with Zotero's. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.
+For Obsidian, I put some useful plugins [here](../2023-06-11-Obsidian-Zotero-tips/index-gist.qmd), together with Zotero's. Maybe I could write a blog for sharing my workflows in an academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.
 
 Welcome to my blog 😃!
 
