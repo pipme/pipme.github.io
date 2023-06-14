@@ -1,6 +1,6 @@
 ---
 title: "The Cantor Pairing Function"
-date: "2021-04-25"
+date: "2020-04-25"
 categories: [hashing, set theory]
 ---
 
