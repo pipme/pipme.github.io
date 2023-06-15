@@ -41,6 +41,9 @@ For publishing a Quarto website, I recommend using the second option in the [off
 quarto publish gh-pages --no-prompt
 ```
 
+## Known issues
+No option to hide `Edit this page` or enforce it to be on the left sidebar when the table of contents is empty. [Issue#5283](https://github.com/quarto-dev/quarto-cli/issues/5283)
+
 ## For trials
 [@gentonClassesKernelsMachine2001]
 

@@ -5,6 +5,8 @@ website:
   # favicon: 
   title: "My Personal Blog"
   site-url: https://pipme.github.io
+  repo-url: https://github.com/pipme/pipme.github.io
+  repo-actions: [edit]
   description: "Personal Blog"
   open-graph: true
   navbar:

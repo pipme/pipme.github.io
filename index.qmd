@@ -13,4 +13,10 @@ title-block-banner: false
 comments: false
 ---
 
+<style>
+.toc-actions {
+    display: none;
+}
+</style>
+
 
