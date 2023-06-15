@@ -2,6 +2,8 @@
 title: "The Cantor Pairing Function"
 date: "2020-04-25"
 categories: [hashing, set theory]
+aliases: 
+  - ../../2020-04-25-cantor-pairing/index.html
 ---
 
 
