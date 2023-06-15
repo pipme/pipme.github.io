@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pipme.github.io/gist.html</loc>
-    <lastmod>2023-06-15T09:21:26.516Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-15T09:21:28.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
-    <lastmod>2023-06-15T09:21:29.496Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</loc>
-    <lastmod>2023-06-15T09:21:30.336Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/rjs.html</loc>
-    <lastmod>2023-06-15T09:22:42.289Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
-    <lastmod>2023-06-15T09:22:42.437Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
-    <lastmod>2023-06-15T09:22:43.721Z</lastmod>
-  </url>
-  <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-15T09:22:44.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/blog+gist.html</loc>
-    <lastmod>2023-06-15T09:22:45.137Z</lastmod>
+    <lastmod>2023-06-15T09:54:33.614Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-15T09:22:45.501Z</lastmod>
+    <lastmod>2023-06-15T09:54:33.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
+    <lastmod>2023-06-15T09:54:34.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
+    <lastmod>2023-06-15T09:54:35.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/rjs.html</loc>
+    <lastmod>2023-06-15T09:55:48.296Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
+    <lastmod>2023-06-15T09:55:48.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</loc>
+    <lastmod>2023-06-15T09:55:49.984Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
+    <lastmod>2023-06-15T09:55:50.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/gist.html</loc>
+    <lastmod>2023-06-15T09:55:51.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/blog+gist.html</loc>
+    <lastmod>2023-06-15T09:55:51.648Z</lastmod>
   </url>
 </urlset>
