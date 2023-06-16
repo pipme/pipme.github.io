@@ -10,7 +10,41 @@
 <atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sun, 11 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tobit likelihood</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<ul>
+<li>Latent variable: <img src="https://latex.codecogs.com/png.latex?f_i"></li>
+<li>Observation: <img src="https://latex.codecogs.com/png.latex?y_i"></li>
+</ul>
+<p>Suppose the observation is censored from above at <img src="https://latex.codecogs.com/png.latex?y_U"> and below at <img src="https://latex.codecogs.com/png.latex?y_L"> (type I Tobit model), i.e., <img src="https://latex.codecogs.com/png.latex?%0Ay_i=%20%5Cbegin%7Bcases%7Dy_i%5E*%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_L%3Cy_i%5E*%3Cy_U,%20%5C%5C%20y_L%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_i%5E*%20%5Cleq%20y_L,%20%5C%5C%20y_U%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_i%5E*%20%5Cgeq%20y_U.%20%5Cend%7Bcases%7D%0A"> If <img src="https://latex.codecogs.com/png.latex?y_i%5E%5Cstar%20%5Csim%20%5Cmathcal%7BN%7D(f_i,%5Csigma_i%5E2)">, then the Tobit likelihood is, <img src="https://latex.codecogs.com/png.latex?%0Ap(y_i%20%7C%20f_i)%20=%20%5Cbegin%7Bcases%7D%0A%5CPhi(y_L%20%7C%20f_i,%20%5Csigma_i%5E2)%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_L%3Cy_i%5E*%3Cy_U,%20%5C%5C%0A%5Cmathcal%7BN%7D(y_i%7Cf_i,%20%5Csigma_i%5E2)%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_i%5E*%20%5Cleq%20y_L,%20%5C%5C%0A1%20-%20%5CPhi(y_U%20%7C%20f_i,%20%5Csigma_i%5E2)%20&amp;%20%5Ctext%20%7B%20if%20%7D%20y_i%5E*%20%5Cgeq%20y_U,%0A%5Cend%7Bcases%7D%0A"> where <img src="https://latex.codecogs.com/png.latex?%5CPhi"> is the CDF of standard normal, <img src="https://latex.codecogs.com/png.latex?%5CPhi(y_L%20%7C%20f_i,%20%5Csigma_i%5E2)%20%5Ctriangleq%20%5CPhi(%5Cfrac%7By_L%20-%20f_i%7D%7B%5Csigma_i%7D)">.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {Tobit Likelihood},
+  date = {2023-06-16},
+  url = {https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href="https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html">https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>likelihood</category>
+  <guid>https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>De Finetti’s theorem</title>
   <dc:creator>Chengkun Li</dc:creator>

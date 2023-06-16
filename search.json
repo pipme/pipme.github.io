@@ -14,6 +14,20 @@
     "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact\nFeel free to reach me via email: sjtulck@gmail.com."
   },
   {
+    "objectID": "posts/2023-06-13-Tobit-likelihood/index-gist.html",
+    "href": "posts/2023-06-13-Tobit-likelihood/index-gist.html",
+    "title": "Tobit likelihood",
+    "section": "",
+    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
+  },
+  {
+    "objectID": "posts/2023-06-13-Tobit-likelihood/index-gist.html#definition",
+    "href": "posts/2023-06-13-Tobit-likelihood/index-gist.html#definition",
+    "title": "Tobit likelihood",
+    "section": "",
+    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
+  },
+  {
     "objectID": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
     "href": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
     "title": "De Finetti’s theorem",
@@ -123,13 +137,13 @@
     "href": "gist.html",
     "title": "Gists collection.",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nJun 16, 2023\n\n\nTobit likelihood\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog+gist.html",
     "href": "blog+gist.html",
     "title": "All blogs and gists.",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\nJun 10, 2023\n\n\nStart Blogging with Quarto\n\n\n1 min\n\n\n\n\nApr 25, 2020\n\n\nThe Cantor Pairing Function\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nJun 16, 2023\n\n\nTobit likelihood\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\nJun 10, 2023\n\n\nStart Blogging with Quarto\n\n\n1 min\n\n\n\n\nApr 25, 2020\n\n\nThe Cantor Pairing Function\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

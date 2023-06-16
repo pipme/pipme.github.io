@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Chengkun Li">
-<meta name="dcterms.date" content="2023-06-10">
+<meta name="dcterms.date" content="2023-06-16">
 
-<title>My Personal Blog - Start Blogging with Quarto</title>
+<title>My Personal Blog - Tobit likelihood</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -96,9 +77,11 @@ gtag('js', new Date());
 gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="My Personal Blog - Start Blogging with Quarto">
+<meta property="og:title" content="My Personal Blog - Tobit likelihood">
 <meta property="og:description" content="">
 <meta property="og:site-name" content="My Personal Blog">
 </head>
@@ -168,9 +151,9 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Start Blogging with Quarto</h1>
+      <h1 class="title">Tobit likelihood</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">likelihood</div>
               </div>
                   </div>
   </div>
@@ -188,7 +171,7 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 10, 2023</p>
+        <p class="date">June 16, 2023</p>
       </div>
     </div>
     
@@ -209,9 +192,9 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link active" data-scroll-target="#bibliography">References</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/pipme/pipme.github.io/edit/main/posts/2023-06-10-Quarto-set-up/index.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/pipme/pipme.github.io/edit/main/posts/2023-06-13-Tobit-likelihood/index-gist.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
@@ -223,32 +206,34 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 
 
 
-<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
-<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (<a href="#ref-navarro2022" role="doc-biblioref">2022</a>)</span> for more work-through details.</p>
-<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.</p>
-<p>For Obsidian, I put some useful plugins <a href="../../posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
-<p>Welcome to my blog 😃!</p>
-
-
-<section id="bibliography" class="level1 unnumbered">
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<ul>
+<li>Latent variable: <span class="math inline">\(f_i\)</span></li>
+<li>Observation: <span class="math inline">\(y_i\)</span></li>
+</ul>
+<p>Suppose the observation is censored from above at <span class="math inline">\(y_U\)</span> and below at <span class="math inline">\(y_L\)</span> (type I Tobit model), i.e., <span class="math display">\[
+y_i= \begin{cases}y_i^* &amp; \text { if } y_L&lt;y_i^*&lt;y_U, \\ y_L &amp; \text { if } y_i^* \leq y_L, \\ y_U &amp; \text { if } y_i^* \geq y_U. \end{cases}
+\]</span> If <span class="math inline">\(y_i^\star \sim \mathcal{N}(f_i,\sigma_i^2)\)</span>, then the Tobit likelihood is, <span class="math display">\[
+p(y_i | f_i) = \begin{cases}
+\Phi(y_L | f_i, \sigma_i^2) &amp; \text { if } y_L&lt;y_i^*&lt;y_U, \\
+\mathcal{N}(y_i|f_i, \sigma_i^2) &amp; \text { if } y_i^* \leq y_L, \\
+1 - \Phi(y_U | f_i, \sigma_i^2) &amp; \text { if } y_i^* \geq y_U,
+\end{cases}
+\]</span> where <span class="math inline">\(\Phi\)</span> is the CDF of standard normal, <span class="math inline">\(\Phi(y_L | f_i, \sigma_i^2) \triangleq \Phi(\frac{y_L - f_i}{\sigma_i})\)</span>.</p>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-navarro2022" class="csl-entry" role="listitem">
-Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
-</div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
-  title = {Start {Blogging} with {Quarto}},
-  date = {2023-06-10},
-  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},
+  title = {Tobit Likelihood},
+  date = {2023-06-16},
+  url = {https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
-2023. <a href="https://pipme.github.io/posts/2023-06-10-Quarto-set-up">https://pipme.github.io/posts/2023-06-10-Quarto-set-up</a>.
+Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href="https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html">https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-15T09:54:33.614Z</lastmod>
+    <lastmod>2023-06-16T10:13:31.603Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-15T09:54:33.986Z</lastmod>
+    <lastmod>2023-06-16T10:13:31.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</loc>
+    <lastmod>2023-06-16T10:13:32.475Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
-    <lastmod>2023-06-15T09:54:34.606Z</lastmod>
+    <lastmod>2023-06-16T10:13:33.063Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
-    <lastmod>2023-06-15T09:54:35.250Z</lastmod>
+    <lastmod>2023-06-16T10:13:33.595Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/rjs.html</loc>
-    <lastmod>2023-06-15T09:55:48.296Z</lastmod>
+    <lastmod>2023-06-16T10:14:38.151Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
-    <lastmod>2023-06-15T09:55:48.448Z</lastmod>
+    <lastmod>2023-06-16T10:14:38.279Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</loc>
-    <lastmod>2023-06-15T09:55:49.984Z</lastmod>
+    <lastmod>2023-06-16T10:14:39.651Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-15T09:55:50.676Z</lastmod>
+    <lastmod>2023-06-16T10:14:40.255Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/gist.html</loc>
-    <lastmod>2023-06-15T09:55:51.148Z</lastmod>
+    <lastmod>2023-06-16T10:14:40.723Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/blog+gist.html</loc>
-    <lastmod>2023-06-15T09:55:51.648Z</lastmod>
+    <lastmod>2023-06-16T10:14:41.191Z</lastmod>
   </url>
 </urlset>
