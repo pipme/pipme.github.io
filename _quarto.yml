@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  # favicon: 
+  # favicon:
   title: "My Personal Blog"
   site-url: https://pipme.github.io
   repo-url: https://github.com/pipme/pipme.github.io
@@ -21,7 +21,7 @@ website:
         text: About
       - icon: card-list
         href: blog+gist.qmd
-        text: "\u200B"  # ZERO WIDTH SPACE
+        text: "\u200B" # ZERO WIDTH SPACE
       - icon: github
         href: https://github.com/pipme
       - icon: rss
@@ -48,7 +48,7 @@ website:
         href: https://www.linkedin.com/in/chengkun-li-62360612b/
       - text: "{{< fa brands github >}}"
         href: https://github.com/pipme
-      - text: "{{< fa brands 500px >}}" 
+      - text: "{{< fa brands 500px >}}"
         href: https://500px.com/p/sjtulck
       - text: "{{< fa envelope >}}"
         href: "mailto:sjtulck@gmail.com"
@@ -58,7 +58,3 @@ format:
       light: cosmo
       dark: darkly
     css: styles.css
-    
-
-  
-
