@@ -14,20 +14,6 @@
     "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact\nFeel free to reach me via email: sjtulck@gmail.com."
   },
   {
-    "objectID": "posts/2023-06-13-Tobit-likelihood/index-gist.html",
-    "href": "posts/2023-06-13-Tobit-likelihood/index-gist.html",
-    "title": "Tobit likelihood",
-    "section": "",
-    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
-  },
-  {
-    "objectID": "posts/2023-06-13-Tobit-likelihood/index-gist.html#definition",
-    "href": "posts/2023-06-13-Tobit-likelihood/index-gist.html#definition",
-    "title": "Tobit likelihood",
-    "section": "",
-    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
-  },
-  {
     "objectID": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
     "href": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
     "title": "De Finetti’s theorem",
@@ -131,6 +117,20 @@
     "title": "Start Blogging with Quarto",
     "section": "",
     "text": "Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.\nBuilding a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips here. See Navarro (2022) for more work-through details.\nBy the way, I fell in love with writing in markdown since the birth of another great tool Obsidian and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.\nFor Obsidian, I put some useful plugins here, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.\nWelcome to my blog 😃!\n\n\n\n\n\n\n\nReferences\n\nNavarro, Danielle. 2022. “Porting a Distill Blog to Quarto.” April 20, 2022. https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto.\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {Start {Blogging} with {Quarto}},\n  date = {2023-06-10},\n  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “Start Blogging with Quarto.” June 10,\n2023. https://pipme.github.io/posts/2023-06-10-Quarto-set-up."
+  },
+  {
+    "objectID": "posts/2023-06-16-Tobit-likelihood/index-gist.html",
+    "href": "posts/2023-06-16-Tobit-likelihood/index-gist.html",
+    "title": "Tobit likelihood",
+    "section": "",
+    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
+  },
+  {
+    "objectID": "posts/2023-06-16-Tobit-likelihood/index-gist.html#definition",
+    "href": "posts/2023-06-16-Tobit-likelihood/index-gist.html#definition",
+    "title": "Tobit likelihood",
+    "section": "",
+    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_i^* \\leq y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i^* \\geq y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
   },
   {
     "objectID": "gist.html",

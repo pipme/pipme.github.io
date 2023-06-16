@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pipme.github.io/index.html</loc>
-    <lastmod>2023-06-16T10:13:31.603Z</lastmod>
+    <lastmod>2023-06-16T10:16:02.799Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2023-06-16T10:13:31.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/2023-06-13-Tobit-likelihood/index-gist.html</loc>
-    <lastmod>2023-06-16T10:13:32.475Z</lastmod>
+    <lastmod>2023-06-16T10:16:03.151Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
-    <lastmod>2023-06-16T10:13:33.063Z</lastmod>
+    <lastmod>2023-06-16T10:16:03.751Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</loc>
-    <lastmod>2023-06-16T10:13:33.595Z</lastmod>
+    <lastmod>2023-06-16T10:16:04.407Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/rjs.html</loc>
-    <lastmod>2023-06-16T10:14:38.151Z</lastmod>
+    <lastmod>2023-06-16T10:17:21.888Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</loc>
-    <lastmod>2023-06-16T10:14:38.279Z</lastmod>
+    <lastmod>2023-06-16T10:17:22.020Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</loc>
-    <lastmod>2023-06-16T10:14:39.651Z</lastmod>
+    <lastmod>2023-06-16T10:17:23.496Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</loc>
-    <lastmod>2023-06-16T10:14:40.255Z</lastmod>
+    <lastmod>2023-06-16T10:17:24.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/2023-06-16-Tobit-likelihood/index-gist.html</loc>
+    <lastmod>2023-06-16T10:17:24.808Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/gist.html</loc>
-    <lastmod>2023-06-16T10:14:40.723Z</lastmod>
+    <lastmod>2023-06-16T10:17:25.268Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/blog+gist.html</loc>
-    <lastmod>2023-06-16T10:14:41.191Z</lastmod>
+    <lastmod>2023-06-16T10:17:25.772Z</lastmod>
   </url>
 </urlset>
