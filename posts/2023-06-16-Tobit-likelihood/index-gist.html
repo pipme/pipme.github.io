@@ -216,9 +216,9 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 y_i= \begin{cases}y_i^* &amp; \text { if } y_L&lt;y_i^*&lt;y_U, \\ y_L &amp; \text { if } y_i^* \leq y_L, \\ y_U &amp; \text { if } y_i^* \geq y_U. \end{cases}
 \]</span> If <span class="math inline">\(y_i^\star \sim \mathcal{N}(f_i,\sigma_i^2)\)</span>, then the Tobit likelihood is, <span class="math display">\[
 p(y_i | f_i) = \begin{cases}
-\Phi(y_L | f_i, \sigma_i^2) &amp; \text { if } y_L&lt;y_i^*&lt;y_U, \\
-\mathcal{N}(y_i|f_i, \sigma_i^2) &amp; \text { if } y_i^* \leq y_L, \\
-1 - \Phi(y_U | f_i, \sigma_i^2) &amp; \text { if } y_i^* \geq y_U,
+\mathcal{N}(y_i|f_i, \sigma_i^2) &amp; \text { if } y_L&lt;y_i &lt;y_U, \\
+\Phi(y_L | f_i, \sigma_i^2) &amp; \text { if } y_i = y_L, \\
+1 - \Phi(y_U | f_i, \sigma_i^2) &amp; \text { if } y_i = y_U,
 \end{cases}
 \]</span> where <span class="math inline">\(\Phi\)</span> is the CDF of standard normal, <span class="math inline">\(\Phi(y_L | f_i, \sigma_i^2) \triangleq \Phi(\frac{y_L - f_i}{\sigma_i})\)</span>.</p>
 
