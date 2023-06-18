@@ -31,6 +31,7 @@ website:
           - href: blog+gist.xml
             text: blog+gist
   google-analytics: "G-K0VMSWF7B9"
+  cookie-consent: true
   comments:
     giscus:
       repo: pipme/pipme.github.io
