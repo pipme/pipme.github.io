@@ -9,8 +9,39 @@
 <link>https://pipme.github.io/blog+gist.html</link>
 <atom:link href="https://pipme.github.io/blog+gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.3.361</generator>
-<lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.433</generator>
+<lastBuildDate>Mon, 17 Jul 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Python tools</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="ruff-linter" class="level2">
+<h2 class="anchored" data-anchor-id="ruff-linter">Ruff linter</h2>
+<p><a href="https://github.com/astral-sh/ruff">Ruff</a> is an incredibly fast linter. It’s since Ruff that I actually start to use a Python linter instead of turning off the annoying warnings.</p>
+<p>For VSCode integration I use <a href="https://github.com/astral-sh/ruff-vscode">ruff-vscode</a>.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {Python Tools},
+  date = {2023-07-17},
+  url = {https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html">https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>tips</category>
+  <guid>https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</guid>
+  <pubDate>Mon, 17 Jul 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Tobit likelihood</title>
   <dc:creator>Chengkun Li</dc:creator>
