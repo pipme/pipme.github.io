@@ -29,3 +29,7 @@ author:
 jupyter: test_forge
 bibliography: [../all.bib]
 reference-section-title: References
+
+format:
+  html:
+    include-before-body: ../_utils/mathjax_preamble.html

@@ -1,0 +1,23 @@
+---
+title: "MathJax macros"
+date: "2023-08-06"
+date-modified: last-modified
+categories: [tips]
+format:
+  html: default
+---
+
+As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a [preamble file](https://github.com/pipme/pipme.github.io/_utils/mathjax_preamble.html) and include it by:
+```yaml
+format:
+  html:
+    include-before-body: ../_utils/mathjax_preamble.html
+```
+
+Example: 
+$$
+\pdv{\rho}{t} + \div (\rho \u) = 0
+$$
+
+
+
