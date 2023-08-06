@@ -128,17 +128,63 @@ cookieconsent.run({
 });
 </script> 
   
+<meta property="og:title" content="My Personal Blog - MathJax macros">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="My Personal Blog">
+</head><body class="floating nav-fixed"><div display="none">
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
+</div>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="My Personal Blog - MathJax macros">
-<meta property="og:description" content="">
-<meta property="og:site-name" content="My Personal Blog">
-</head>
 
-<body class="floating nav-fixed">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -248,50 +294,6 @@ cookieconsent.run({
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 

@@ -16,50 +16,6 @@
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
@@ -109,50 +65,6 @@ Li, Chengkun. 2023. <span>“MathJax Macros.”</span> August 6, 2023. <a href="
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
@@ -184,50 +96,6 @@ Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="htt
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-16-Tobit-likelihood/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
@@ -262,50 +130,6 @@ Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href=
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
@@ -343,50 +167,6 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
@@ -463,50 +243,6 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</link>
   <description><![CDATA[ 
-<p hidden="">\(
-\require{mathtools}
-\require{ams}
-\require{physics}
-
-
-\let\div\divergence
-
-% Bold symbol
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\f}{\mathbf{f}}
-\newcommand{\u}{\mathbf{u}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\w}{\mathbf{w}}
-
-\newcommand{\xx}{\mathbf{X}}
-\newcommand{\yy}{\mathbf{Y}}
-\newcommand{\zz}{\mathbf{Z}}
-
-% Shorthand
-\newcommand\bf{\mathbf}
-\newcommand\mbf{\mathbf}
-\newcommand\tbf{\textbf}
-% Number field 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-% Probability
-\newcommand{\E}{\mathrm{E}}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Normal}{\mathcal{N}}
-
-% Trace
-\DeclareMathOperator{\Tr}{Tr}
-% Norm
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
-
-\)</p>
 
 
 
