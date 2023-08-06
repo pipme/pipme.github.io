@@ -9,13 +9,150 @@
 <link>https://pipme.github.io/gist.html</link>
 <atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.3.433</generator>
-<lastBuildDate>Mon, 17 Jul 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Sun, 06 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>MathJax macros</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</link>
+  <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
+
+
+
+
+<p>As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a <a href="https://github.com/pipme/pipme.github.io/_utils/mathjax_preamble.html">preamble file</a> and include it by:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">include-before-body</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ../_utils/mathjax_preamble.html</span></span></code></pre></div>
+<p>Example: <img src="https://latex.codecogs.com/png.latex?%0A%5Cpdv%7B%5Crho%7D%7Bt%7D%20+%20%5Cdiv%20(%5Crho%20%5Cu)%20=%200%0A"></p>
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {MathJax Macros},
+  date = {2023-08-06},
+  url = {https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“MathJax Macros.”</span> August 6, 2023. <a href="https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html">https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>tips</category>
+  <guid>https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</guid>
+  <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Python tools</title>
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</link>
   <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
 
 
 
@@ -47,6 +184,50 @@ Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="htt
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-16-Tobit-likelihood/index-gist.html</link>
   <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
 
 
 
@@ -81,6 +262,50 @@ Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href=
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</link>
   <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
 
 
 
@@ -118,6 +343,50 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</link>
   <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
 
 
 
@@ -194,6 +463,50 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</link>
   <description><![CDATA[ 
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
 
 
 
