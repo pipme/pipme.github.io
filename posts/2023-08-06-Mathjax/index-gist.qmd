@@ -7,7 +7,7 @@ format:
   html: default
 ---
 
-As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a [preamble file](https://github.com/pipme/pipme.github.io/_utils/mathjax_preamble.html) and include it by:
+As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a [preamble file](https://github.com/pipme/pipme.github.io/blob/main/_utils/mathjax_preamble.html) and include it by:
 ```yaml
 format:
   html:
