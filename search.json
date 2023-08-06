@@ -46,7 +46,7 @@
     "href": "posts/2023-08-06-Mathjax/index-gist.html",
     "title": "MathJax macros",
     "section": "",
-    "text": "As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a preamble file and include it by:\nformat:\n  html:\n    include-before-body: ../_utils/mathjax_preamble.html\nExample: \\[\n\\pdv{\\rho}{t} + \\div (\\rho \\u) = 0\n\\]\n\n\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {MathJax Macros},\n  date = {2023-08-06},\n  url = {https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “MathJax Macros.” August 6, 2023. https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html."
+    "text": "As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a preamble file and include it by:\nformat:\n  html:\n    include-in-header: ../_utils/mathjax_preamble.html\nExample: \\[\n\\pdv{\\rho}{t} + \\div (\\rho \\u) = 0\n\\]\n\n\n\nReusehttps://creativecommons.org/licenses/by/4.0/CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {MathJax Macros},\n  date = {2023-08-06},\n  url = {https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “MathJax Macros.” August 6, 2023. https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html."
   },
   {
     "objectID": "about.html",
