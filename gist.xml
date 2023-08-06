@@ -64,7 +64,7 @@
 
 
 
-<p>As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a <a href="https://github.com/pipme/pipme.github.io/_utils/mathjax_preamble.html">preamble file</a> and include it by:</p>
+<p>As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a <a href="https://github.com/pipme/pipme.github.io/blob/main/_utils/mathjax_preamble.html">preamble file</a> and include it by:</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
