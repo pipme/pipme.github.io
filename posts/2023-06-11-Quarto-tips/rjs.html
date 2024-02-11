@@ -14,7 +14,7 @@
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Chengkun Li">
   <meta name="dcterms.date" content="2023-06-11">
@@ -38,7 +38,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -105,6 +105,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -143,6 +144,8 @@
     "notice_banner_reject_button_hide":false,
     "preferences_center_close_button_hide":false,
     "website_name":""
+    ,
+  "language":"en"
     });
   });
   </script> 
@@ -272,7 +275,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -436,7 +440,7 @@
     }
   </style>
 <meta property="og:title" content="My Personal Blog - Quarto tips">
-<meta property="og:site-name" content="My Personal Blog">
+<meta property="og:site_name" content="My Personal Blog">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -470,13 +474,13 @@
 <h2>Building the website</h2>
 <p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item with only an icon <i class="bi bi-card-list"></i> in the navigation bar. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
 <p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">.</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">├──</span> quarto-ext</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">│</span>   └── fontawesome</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="ex">└──</span> schochastics</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="ex">└──</span> academicons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="bu">.</span></span>
+<span id="cb1-2"><a></a><span class="ex">├──</span> quarto-ext</span>
+<span id="cb1-3"><a></a><span class="ex">│</span>   └── fontawesome</span>
+<span id="cb1-4"><a></a><span class="ex">└──</span> schochastics</span>
+<span id="cb1-5"><a></a>    <span class="ex">└──</span> academicons</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For publishing a Quarto website, I recommend using the second option in the <a href="https://quarto.org/docs/publishing/github-pages.html">official documentation</a>. After set up, simply call:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> publish gh-pages <span class="at">--no-prompt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">quarto</span> publish gh-pages <span class="at">--no-prompt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="known-issues" class="slide level2">
 <h2>Known issues</h2>
@@ -490,13 +494,15 @@
 <h2>LaTeX</h2>
 <p>Visible in pdf only. ### plain LaTeX Just a sample algorithm:</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
 <section id="bibliography" class="title-slide slide level1 unnumbered smaller scrollable">
 <h1>References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-gentonClassesKernelsMachine2001" class="csl-entry" role="listitem">
 Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine Learning</span>: <span>A Statistics Perspective</span>.”</span> <em>Journal of Machine Learning Research</em> 2: 299–312. <a href="https://www.jmlr.org/papers/v2/genton01a">https://www.jmlr.org/papers/v2/genton01a</a>.
 </div>
@@ -528,7 +534,6 @@ Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -789,10 +794,9 @@ Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -802,8 +806,17 @@ Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -861,6 +874,8 @@ Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine
     </script>
     <script src="https://giscus.app/client.js" data-repo="pipme/pipme.github.io" data-repo-id="R_kgDOJtreTA" data-category="Announcements" data-category-id="DIC_kwDOJtreTM4CXLJm" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
     </script>
+    <input type="hidden" id="giscus-base-theme" value="light">
+    <input type="hidden" id="giscus-alt-theme" value="dark">
     
 
 </body></html>

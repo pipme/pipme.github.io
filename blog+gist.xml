@@ -9,13 +9,49 @@
 <link>https://pipme.github.io/blog+gist.html</link>
 <atom:link href="https://pipme.github.io/blog+gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.3.450</generator>
-<lastBuildDate>Sun, 06 Aug 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Sun, 11 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>MathJax macros</title>
+  <title>Search frequentist and Bayesian in GitHub</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Search results of keywords “frequentist” and “Bayesian” in Github. Are Bayesians coding more?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/image.png" class="img-fluid figure-img"></p>
+<figcaption>Search result</figcaption>
+</figure>
+</div>
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2024,
+  author = {Li, Chengkun},
+  title = {Search Frequentist and {Bayesian} in {GitHub}},
+  date = {2024-02-11},
+  url = {https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2024" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2024. <span>“Search Frequentist and Bayesian in
+GitHub.”</span> February 11, 2024. <a href="https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html">https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>github</category>
+  <guid>https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html</guid>
+  <pubDate>Sun, 11 Feb 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>MathJax macros in Quarto</title>
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -46,18 +82,20 @@ font-style: inherit;"> ../_utils/mathjax_preamble.html</span></span></code></pre
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
-  title = {MathJax Macros},
+  title = {MathJax Macros in {Quarto}},
   date = {2023-08-06},
   url = {https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
-Li, Chengkun. 2023. <span>“MathJax Macros.”</span> August 6, 2023. <a href="https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html">https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</a>.
+Li, Chengkun. 2023. <span>“MathJax Macros in Quarto.”</span> August 6,
+2023. <a href="https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html">https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</a>.
 </div></div></section></div> ]]></description>
   <category>tips</category>
   <category>MathJax</category>
+  <category>Quarto</category>
   <guid>https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html</guid>
   <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
 </item>
@@ -70,6 +108,7 @@ Li, Chengkun. 2023. <span>“MathJax Macros.”</span> August 6, 2023. <a href="
 
 
 
+
 <section id="ruff-linter" class="level2">
 <h2 class="anchored" data-anchor-id="ruff-linter">Ruff linter</h2>
 <p><a href="https://github.com/astral-sh/ruff">Ruff</a> is an incredibly fast linter. It’s since Ruff that I actually start to use a Python linter instead of turning off the annoying warnings.</p>
@@ -78,7 +117,7 @@ Li, Chengkun. 2023. <span>“MathJax Macros.”</span> August 6, 2023. <a href="
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Python Tools},
   date = {2023-07-17},
@@ -101,6 +140,7 @@ Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="htt
 
 
 
+
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <ul>
@@ -112,7 +152,7 @@ Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="htt
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Tobit Likelihood},
   date = {2023-06-16},
@@ -135,6 +175,7 @@ Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href=
 
 
 
+
 <p><strong>Theorem</strong>: A sequence of random variables <img src="https://latex.codecogs.com/png.latex?(x_1,%20x_2,%20%5Cdots)"> is infinitely exchangeable iff, for all n, <img src="https://latex.codecogs.com/png.latex?%0Ap(x_1,%20x_2,%20%5Cdots,%20x_n)%20=%20%5Cint%20%5Cprod%5E%7Bn%7D_%7Bi=1%7D%20p(x_i%7C%5Ctheta)%20P(d%5Ctheta),%0A"> for some measure <img src="https://latex.codecogs.com/png.latex?P"> on <img src="https://latex.codecogs.com/png.latex?%5Ctheta">.</p>
 <p><span class="citation" data-cites="jordanLectureHistoryFinetti2010">(See Jordan and Broderick 2010)</span></p>
 
@@ -144,11 +185,11 @@ Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href=
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-jordanLectureHistoryFinetti2010" class="csl-entry">
 Jordan, Michael I, and Tamara Broderick. 2010. <span>“Lecture 1: <span>History</span> and <span>De Finetti</span>’s <span>Theorem</span>.”</span> 2010. <a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf">https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {De {Finetti’s} Theorem},
   date = {2023-06-11},
@@ -168,6 +209,7 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -224,7 +266,7 @@ font-style: inherit;">└──</span> table-editor-obsidian</span></code></pre>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Personal {Obsidian} and {Zotero} Best Practices},
   date = {2023-06-11},
@@ -244,6 +286,7 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-Quarto-tips/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -293,11 +336,11 @@ font-style: inherit;">--no-prompt</span></span></code></pre></div>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-gentonClassesKernelsMachine2001" class="csl-entry">
 Genton, Marc G. 2001. <span>“Classes of <span>Kernels</span> for <span>Machine Learning</span>: <span>A Statistics Perspective</span>.”</span> <em>Journal of Machine Learning Research</em> 2: 299–312. <a href="https://www.jmlr.org/papers/v2/genton01a">https://www.jmlr.org/papers/v2/genton01a</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Quarto Tips},
   date = {2023-06-11},
@@ -314,8 +357,9 @@ Li, Chengkun. 2023. <span>“Quarto Tips.”</span> June 11, 2023. <a href="http
 <item>
   <title>Start Blogging with Quarto</title>
   <dc:creator>Chengkun Li</dc:creator>
-  <link>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</link>
+  <link>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -332,11 +376,11 @@ Li, Chengkun. 2023. <span>“Quarto Tips.”</span> June 11, 2023. <a href="http
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-navarro2022" class="csl-entry">
 Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
   title = {Start {Blogging} with {Quarto}},
   date = {2023-06-10},
@@ -348,14 +392,15 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 2023. <a href="https://pipme.github.io/posts/2023-06-10-Quarto-set-up">https://pipme.github.io/posts/2023-06-10-Quarto-set-up</a>.
 </div></div></section></div> ]]></description>
   <category>news</category>
-  <guid>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/index.html</guid>
+  <guid>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/</guid>
   <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Cantor Pairing Function</title>
   <dc:creator>Chengkun Li</dc:creator>
-  <link>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</link>
+  <link>https://pipme.github.io/posts/2020-04-25-cantor-pairing/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -452,9 +497,7 @@ background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb2-3">    <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">std::</span>size_t<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+font-style: inherit;">std::</span>size_t <span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">operator</span><span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -573,7 +616,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 </div>
 <p>To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time):</p>
 <div class="cell" data-execution_count="2">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
@@ -756,13 +799,17 @@ font-style: inherit;">=</span> v</span>
 <span id="cb3-27">plt.show()</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="https://pipme.github.io/posts/2020-04-25-cantor-pairing/index_files/figure-html/cell-3-output-1.png" width="540" height="382"></p>
+<div>
+<figure class="figure">
+<p><img src="https://pipme.github.io/posts/2020-04-25-cantor-pairing/index_files/figure-html/cell-3-output-1.png" width="540" height="382" class="figure-img"></p>
+</figure>
 </div>
 </div>
+</div>
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2020,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2020,
   author = {Li, Chengkun},
   title = {The {Cantor} {Pairing} {Function}},
   date = {2020-04-25},
@@ -775,7 +822,7 @@ Li, Chengkun. 2020. <span>“The Cantor Pairing Function.”</span> April
 </div></div></section></div> ]]></description>
   <category>hashing</category>
   <category>set theory</category>
-  <guid>https://pipme.github.io/posts/2020-04-25-cantor-pairing/index.html</guid>
+  <guid>https://pipme.github.io/posts/2020-04-25-cantor-pairing/</guid>
   <pubDate>Sat, 25 Apr 2020 00:00:00 GMT</pubDate>
 </item>
 </channel>
