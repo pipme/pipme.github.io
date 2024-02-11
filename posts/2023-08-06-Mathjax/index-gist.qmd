@@ -1,8 +1,8 @@
 ---
-title: "MathJax macros"
+title: "MathJax macros in Quarto"
 date: "2023-08-06"
 date-modified: last-modified
-categories: [tips, MathJax]
+categories: [tips, MathJax, Quarto]
 format:
   html: default
 ---
