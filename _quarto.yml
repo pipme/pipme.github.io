@@ -21,7 +21,8 @@ website:
         text: About
       - icon: card-list
         href: blog+gist.qmd
-        text: "\u200B" # ZERO WIDTH SPACE
+        text: All
+        # text: "\u200B" # ZERO WIDTH SPACE, it seems causing non-alignment problem in Safari
       - icon: github
         href: https://github.com/pipme
       - icon: rss
