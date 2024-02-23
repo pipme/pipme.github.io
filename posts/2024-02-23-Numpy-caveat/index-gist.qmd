@@ -1,6 +1,6 @@
 ---
 title: "A Numpy caveat when referencing elements of an array"
-date: "2024-02-24"
+date: "2024-02-23"
 date-modified: last-modified
 categories: [github]
 format:
