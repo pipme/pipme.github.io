@@ -10,11 +10,11 @@
 <atom:link href="https://pipme.github.io/blog+gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Sat, 24 Feb 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 23 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Numpy caveat when referencing elements of an array</title>
   <dc:creator>Chengkun Li</dc:creator>
-  <link>https://pipme.github.io/posts/2024-02-24-Numpy-caveat/index-gist.html</link>
+  <link>https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html</link>
   <description><![CDATA[ 
 
 
@@ -204,17 +204,17 @@ b = a[0:1], changed</code></pre>
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2024,
   author = {Li, Chengkun},
   title = {A {Numpy} Caveat When Referencing Elements of an Array},
-  date = {2024-02-24},
-  url = {https://pipme.github.io/posts/2024-02-24-Numpy-caveat/index-gist.html},
+  date = {2024-02-23},
+  url = {https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2024" class="csl-entry quarto-appendix-citeas">
 Li, Chengkun. 2024. <span>“A Numpy Caveat When Referencing Elements of
-an Array.”</span> February 24, 2024. <a href="https://pipme.github.io/posts/2024-02-24-Numpy-caveat/index-gist.html">https://pipme.github.io/posts/2024-02-24-Numpy-caveat/index-gist.html</a>.
+an Array.”</span> February 23, 2024. <a href="https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html">https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html</a>.
 </div></div></section></div> ]]></description>
   <category>github</category>
-  <guid>https://pipme.github.io/posts/2024-02-24-Numpy-caveat/index-gist.html</guid>
-  <pubDate>Sat, 24 Feb 2024 00:00:00 GMT</pubDate>
+  <guid>https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html</guid>
+  <pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Search frequentist and Bayesian in GitHub</title>
