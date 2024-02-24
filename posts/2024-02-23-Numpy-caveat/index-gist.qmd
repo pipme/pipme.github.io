@@ -2,7 +2,7 @@
 title: "A Numpy caveat when referencing elements of an array"
 date: "2024-02-23"
 date-modified: last-modified
-categories: [github]
+categories: [Numpy, Python]
 format:
   html: default
 ---
@@ -18,7 +18,6 @@ def print_result(test_array):
     a = test_array.copy()
     b = a[0]
     b += 1
-    "a is changed"
     print(
         f'b = a[0], {"unchanged" if np.allclose(a, test_array) else "changed"}',
     )
