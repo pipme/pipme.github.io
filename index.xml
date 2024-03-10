@@ -9,7 +9,7 @@
 <link>https://pipme.github.io/</link>
 <atom:link href="https://pipme.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.4.550</generator>
+<generator>quarto-1.4.551</generator>
 <lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Start Blogging with Quarto</title>
