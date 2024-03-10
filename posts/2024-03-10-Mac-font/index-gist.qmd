@@ -1,0 +1,12 @@
+---
+title: "Mac OTF fonts installation"
+date: "2024-03-10"
+date-modified: last-modified
+categories: [Mac, font, LaTeX]
+format:
+  html: default
+---
+
+Download the required OTF fonts files, e.g., [source-han-serif](https://github.com/adobe-fonts/source-han-serif/tree/release/OTF/SimplifiedChinese). Then simply move `.otf` files to `~/Library/Fonts` folder. In `Font Book` application, now one can see the fonts in `My Fonts`.
+
+
