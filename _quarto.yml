@@ -16,6 +16,8 @@ website:
         text: Home
       - href: gist.qmd
         text: Gist
+      - href: ./tools/index.qmd
+        text: Tool
     right:
       - href: about.qmd
         text: About

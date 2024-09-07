@@ -1,0 +1,6 @@
+---
+title: "Tools"
+comments: false
+---
+
+[Array memory size calculator](./np/index.qmd)

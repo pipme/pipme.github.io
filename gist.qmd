@@ -1,5 +1,5 @@
 ---
-title: "Gists collection."
+title: "Gist collection."
 listing:
   contents: "posts/**/*gist.qmd"
   sort: "date desc"

@@ -65,7 +65,7 @@ format: html
     font-size: 18px;
   }
 </style>
-
+<center>
 <div class="container">
   <h1>NumPy Memory Size Calculator</h1>
   <form id="numpyForm">
@@ -87,8 +87,14 @@ format: html
 
   <div class="result" id="result"></div>
 </div>
-
+</center>
 <script>
+  document.getElementById("shape").addEventListener("keydown", function(event) {
+    if (event.key === "Tab") {
+      event.preventDefault(); // Prevent the default tab behavior
+      this.value = "1000,1000"; // Auto-fill the input with 1000,1000
+    }
+  });
   function calculateMemorySize() {
     const dtype = document.getElementById("dtype").value;
     const shapeInput = document.getElementById("shape").value;
