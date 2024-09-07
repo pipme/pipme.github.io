@@ -112,18 +112,25 @@
     "text": "What I cannot create, I do not understand.\n— Richard Feynman\n\n\nContact\nFeel free to reach me via email: sjtulck@gmail.com."
   },
   {
-    "objectID": "tools/np/index.html",
-    "href": "tools/np/index.html",
-    "title": "\nNumPy Memory Size Calculator\n",
+    "objectID": "tools/index.html",
+    "href": "tools/index.html",
+    "title": "Tools",
     "section": "",
-    "text": "NumPy Memory Size Calculator\n\n\nSelect Data Type:  int8 int16 int32 int64 float32 float64 \nArray Shape (comma-separated): \n\nCalculate"
+    "text": "Array memory size calculator"
   },
   {
     "objectID": "gist.html",
     "href": "gist.html",
-    "title": "Gists collection.",
+    "title": "Gist collection.",
     "section": "",
     "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nMar 10, 2024\n\n\nMac OTF fonts installation\n\n\n1 min\n\n\n\n\nFeb 23, 2024\n\n\nA Numpy caveat when referencing elements of an array\n\n\n1 min\n\n\n\n\nFeb 11, 2024\n\n\nSearch frequentist and Bayesian in GitHub\n\n\n1 min\n\n\n\n\nAug 6, 2023\n\n\nMathJax macros in Quarto\n\n\n1 min\n\n\n\n\nJul 17, 2023\n\n\nPython tools\n\n\n1 min\n\n\n\n\nJun 16, 2023\n\n\nTobit likelihood\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "tools/np/index.html",
+    "href": "tools/np/index.html",
+    "title": "\nNumPy Memory Size Calculator\n",
+    "section": "",
+    "text": "NumPy Memory Size Calculator\n\n\nSelect Data Type:  int8 int16 int32 int64 float32 float64  \nArray Shape (comma-separated): \n\nCalculate"
   },
   {
     "objectID": "index.html",

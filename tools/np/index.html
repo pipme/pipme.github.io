@@ -128,6 +128,10 @@ cookieconsent.run({
     <a class="nav-link" href="../../gist.html"> 
 <span class="menu-text">Gist</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tools/index.html"> 
+<span class="menu-text">Tool</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -242,12 +246,13 @@ cookieconsent.run({
     font-size: 18px;
   }
 </style>
+<center>
 <div class="container">
 <h1>
 NumPy Memory Size Calculator
 </h1>
 <form id="numpyForm">
-<p><label for="dtype">Select Data Type:</label> <select id="dtype"> <option value="int8">int8</option> <option value="int16">int16</option> <option value="int32">int32</option> <option value="int64">int64</option> <option value="float32">float32</option> <option value="float64">float64</option> </select></p>
+<p><label for="dtype">Select Data Type:</label> <select id="dtype"> <option value="int8">int8</option> <option value="int16">int16</option> <option value="int32">int32</option> <option value="int64">int64</option> <option value="float32">float32</option> <option value="float64" selected="">float64</option> <!-- Default value set to float64 --> </select></p>
 <p><label for="shape">Array Shape (comma-separated):</label> <input type="text" id="shape" placeholder="e.g., 1000, 1000"></p>
 <button type="button" onclick="calculateMemorySize()">
 Calculate
@@ -257,7 +262,14 @@ Calculate
 
 </div>
 </div>
+</center>
 <script>
+  document.getElementById("shape").addEventListener("keydown", function(event) {
+    if (event.key === "Tab") {
+      event.preventDefault(); // Prevent the default tab behavior
+      this.value = "1000,1000"; // Auto-fill the input with 1000,1000
+    }
+  });
   function calculateMemorySize() {
     const dtype = document.getElementById("dtype").value;
     const shapeInput = document.getElementById("shape").value;
