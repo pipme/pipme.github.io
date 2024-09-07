@@ -1,0 +1,117 @@
+---
+title: ""
+format: html
+---
+
+<style>
+  /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  .container {
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  } */
+  form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  select, input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  .result {
+    background-color: #e9ffe9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+</style>
+
+<div class="container">
+  <h1>NumPy Memory Size Calculator</h1>
+  <form id="numpyForm">
+    <label for="dtype">Select Data Type:</label>
+    <select id="dtype">
+      <option value="int8">int8</option>
+      <option value="int16">int16</option>
+      <option value="int32">int32</option>
+      <option value="int64">int64</option>
+      <option value="float32">float32</option>
+      <option value="float64">float64</option>
+    </select>
+    
+    <label for="shape">Array Shape (comma-separated):</label>
+    <input type="text" id="shape" placeholder="e.g., 1000, 1000">
+    
+    <button type="button" onclick="calculateMemorySize()">Calculate</button>
+  </form>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateMemorySize() {
+    const dtype = document.getElementById("dtype").value;
+    const shapeInput = document.getElementById("shape").value;
+
+    if (!shapeInput) {
+      document.getElementById("result").innerHTML = "Please enter a valid array shape.";
+      return;
+    }
+
+    const shape = shapeInput.split(',').map(Number);
+    const size = shape.reduce((a, b) => a * b, 1);
+
+    const dtypeSizes = {
+      int8: 1,
+      int16: 2,
+      int32: 4,
+      int64: 8,
+      float32: 4,
+      float64: 8
+    };
+
+    const memorySize = size * dtypeSizes[dtype];
+    document.getElementById("result").innerHTML = 
+      `Memory size: ${memorySize.toLocaleString()} bytes (${(memorySize / (1024 ** 2)).toFixed(2)} MB)`;
+  }
+</script>
