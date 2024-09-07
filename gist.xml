@@ -9,7 +9,7 @@
 <link>https://pipme.github.io/gist.html</link>
 <atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.4.551</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Sun, 10 Mar 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Mac OTF fonts installation</title>
@@ -69,6 +69,7 @@ font-style: inherit;">"Numpy version: "</span>, np.__version__)</span>
 <span id="cb1-5"></span>
 <span id="cb1-6"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> print_result(test_array):</span>
 <span id="cb1-7">    a <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -94,10 +95,12 @@ font-style: inherit;">{</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"unchanged"</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> np<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span>allclose(a, test_array) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"changed"</span><span class="sc" style="color: #5E5E5E;
@@ -131,10 +134,12 @@ font-style: inherit;">{</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"unchanged"</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> np<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span>allclose(a, test_array) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"changed"</span><span class="sc" style="color: #5E5E5E;
@@ -170,10 +175,12 @@ font-style: inherit;">{</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"unchanged"</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> np<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span>allclose(a, test_array) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"changed"</span><span class="sc" style="color: #5E5E5E;
@@ -295,6 +302,7 @@ GitHub.”</span> February 11, 2024. <a href="https://pipme.github.io/posts/2024
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb1-2"><span class="at" style="color: #657422;
 background-color: null;
@@ -302,6 +310,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb1-3"><span class="at" style="color: #657422;
 background-color: null;
@@ -309,6 +318,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include-in-header</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> ../_utils/mathjax_preamble.html</span></span></code></pre></div>

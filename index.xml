@@ -9,7 +9,7 @@
 <link>https://pipme.github.io/</link>
 <atom:link href="https://pipme.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.4.551</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Start Blogging with Quarto</title>
@@ -41,12 +41,12 @@ Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> Ap
   author = {Li, Chengkun},
   title = {Start {Blogging} with {Quarto}},
   date = {2023-06-10},
-  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up},
+  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
 Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
-2023. <a href="https://pipme.github.io/posts/2023-06-10-Quarto-set-up">https://pipme.github.io/posts/2023-06-10-Quarto-set-up</a>.
+2023. <a href="https://pipme.github.io/posts/2023-06-10-Quarto-set-up/">https://pipme.github.io/posts/2023-06-10-Quarto-set-up/</a>.
 </div></div></section></div> ]]></description>
   <category>news</category>
   <guid>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/</guid>
@@ -76,9 +76,11 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cantor_pairing(x, y):</span>
 <span id="cb1-2">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">int</span>((x <span class="op" style="color: #5E5E5E;
@@ -102,11 +104,13 @@ font-style: inherit;">+</span> y)</span>
 <span id="cb1-4"></span>
 <span id="cb1-5"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cantor_pairing_nd(<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span>args):</span>
 <span id="cb1-6">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">len</span>(args) <span class="op" style="color: #5E5E5E;
@@ -116,6 +120,7 @@ background-color: null;
 font-style: inherit;">2</span>:</span>
 <span id="cb1-7">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> cantor_pairing(args[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>], args[<span class="dv" style="color: #AD0000;
@@ -123,6 +128,7 @@ background-color: null;
 font-style: inherit;">1</span>])</span>
 <span id="cb1-8">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> cantor_pairing(cantor_pairing_nd(<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span>args[:<span class="op" style="color: #5E5E5E;
@@ -148,6 +154,7 @@ font-style: inherit;">3</span>)</span></code></pre></div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">struct</span> pair_hash</span>
 <span id="cb2-2"><span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -156,6 +163,7 @@ font-style: inherit;">{</span></span>
 background-color: null;
 font-style: inherit;">std::</span>size_t <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">operator</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">()</span> <span class="op" style="color: #5E5E5E;
@@ -184,6 +192,7 @@ background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb2-5">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span>p<span class="op" style="color: #5E5E5E;
@@ -294,8 +303,10 @@ background-color: null;
 font-style: inherit;">=</span> {}</span>
 <span id="cb3-6"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -305,8 +316,10 @@ background-color: null;
 font-style: inherit;">10</span>):</span>
 <span id="cb3-7">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -345,11 +358,14 @@ background-color: null;
 font-style: inherit;">"off"</span>)</span>
 <span id="cb3-15"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> k, v <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> od.items():</span>
 <span id="cb3-16">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> v[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>] <span class="op" style="color: #5E5E5E;
@@ -358,6 +374,7 @@ font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">and</span> v[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
@@ -367,6 +384,7 @@ background-color: null;
 font-style: inherit;">2</span>:</span>
 <span id="cb3-17">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span></span>
 <span id="cb3-18">    plt.annotate(text<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -397,10 +415,12 @@ background-color: null;
 font-style: inherit;">"center"</span>)</span>
 <span id="cb3-19">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"v0"</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">locals</span>():</span>
@@ -470,12 +490,12 @@ font-style: inherit;">=</span> v</span>
   author = {Li, Chengkun},
   title = {The {Cantor} {Pairing} {Function}},
   date = {2020-04-25},
-  url = {https://pipme.github.io/posts/2020-04-25-cantor-pairing},
+  url = {https://pipme.github.io/posts/2020-04-25-cantor-pairing/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2020" class="csl-entry quarto-appendix-citeas">
 Li, Chengkun. 2020. <span>“The Cantor Pairing Function.”</span> April
-25, 2020. <a href="https://pipme.github.io/posts/2020-04-25-cantor-pairing">https://pipme.github.io/posts/2020-04-25-cantor-pairing</a>.
+25, 2020. <a href="https://pipme.github.io/posts/2020-04-25-cantor-pairing/">https://pipme.github.io/posts/2020-04-25-cantor-pairing/</a>.
 </div></div></section></div> ]]></description>
   <category>hashing</category>
   <category>set theory</category>
