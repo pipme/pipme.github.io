@@ -76,7 +76,7 @@ format: html
       <option value="int32">int32</option>
       <option value="int64">int64</option>
       <option value="float32">float32</option>
-      <option value="float64">float64</option>
+      <option value="float64" selected>float64</option> <!-- Default value set to float64 -->
     </select>
     
     <label for="shape">Array Shape (comma-separated):</label>
