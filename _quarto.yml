@@ -12,15 +12,15 @@ website:
   navbar:
     title: false
     left:
-      - href: index.qmd
-        text: Home
+      - href: about.qmd
+        text: About
+      - href: blog.qmd
+        text: Blog
       - href: gist.qmd
         text: Gist
       - href: ./tools/index.qmd
         text: Tool
     right:
-      - href: about.qmd
-        text: About
       - icon: card-list
         href: blog+gist.qmd
         text: All
@@ -56,6 +56,11 @@ website:
         href: https://500px.com/p/sjtulck
       - text: "{{< fa envelope >}}"
         href: "mailto:sjtulck@gmail.com"
+  search: 
+    location: navbar
+    type: textbox
+    keyboard-shortcut: "?"
+  back-to-top-navigation: true
 format:
   html:
     theme:

@@ -4,12 +4,20 @@ title: "Hi,"
 #   html: 
 #     css: ["_styles/hide_comments.css", "_styles/quote.css"]
 comments: false
+# aliases: 
+#   - "./index.html"
 ---
 
+I am Chengkun, currently a PhD student at the [University of Helsinki](https://www.helsinki.fi/en/researchgroups/machine-and-human-intelligence), supervised by [Luigi Acerbi](https://lacerbi.github.io/). My research focuses on Bayesian posterior computation, namely, 
+$$p(\text{parameters})p(\text{data}|\text{parameters}) \rightarrow p(\text{parameters}|\text{data}),$$ 
+exploring an alternative path other than MCMC sampling and variational inference. I used to work on computer vision and robotics too.
+
+# About the site
+
+This website is a personal initiative to encourage more writing, both as a tool for memory retention and to deepen my understanding of reality. As Richard Feynman once said:
+
 > What I cannot create, I do not understand. 
->
-> --- Richard Feynman
 
 # Contact
 
-Feel free to reach me via email: [sjtulck@gmail.com](mailto:sjtulck@gmail.com).
+Feel free to reach me via email: [sjtulck@gmail.com](mailto:sjtulck@gmail.com). 😉
