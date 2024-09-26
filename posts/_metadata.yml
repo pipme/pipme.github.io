@@ -34,3 +34,7 @@ reference-section-title: References
 format:
   html:
     include-in-header: ../_utils/mathjax_preamble.html
+    code-tools:
+      source: repo
+      toggle: true
+      caption: none

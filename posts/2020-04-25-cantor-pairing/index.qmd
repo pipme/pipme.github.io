@@ -4,6 +4,10 @@ date: "2020-04-25"
 categories: [hashing, set theory]
 aliases: 
   - ../../2020-04-25-cantor-pairing/index.html
+format:
+  html:
+    code-tools:
+      source: https://github.com/pipme/pipme.github.io/blob/main/posts/2020-04-25-cantor-pairing/index.qmd
 ---
 
 
@@ -54,10 +58,10 @@ cantor_pairing_nd(1, 2, 3)
 ```c++
 struct pair_hash
 {
-	std::size_t operator() (const std::pair<int, int>& p) const
-	{
-		return (p.first + p.second) * (p.first + p.second + 1) / 2 + p.second;
-	}
+    std::size_t operator() (const std::pair<int, int>& p) const
+    {
+        return (p.first + p.second) * (p.first + p.second + 1) / 2 + p.second;
+    }
 };
 
 unordered_map<pair<int, int>, int, pair_hash> um;
