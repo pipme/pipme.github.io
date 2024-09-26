@@ -60,5 +60,5 @@ format:
   html:
     theme:
       light: cosmo
-      dark: darkly
+      dark: darkly  # https://github.com/quarto-dev/quarto-cli/issues/6741
     css: styles.css

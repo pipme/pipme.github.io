@@ -1,7 +1,7 @@
 ---
 title: "All blogs and gists."
 listing:
-  contents: "posts/**/*.qmd"
+  contents: ["posts/**/*.qmd", "posts/**/*.ipynb"]
   sort: "date desc"
   fields: [date, title, reading-time]
   type: table
