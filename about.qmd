@@ -4,8 +4,8 @@ title: "Hi,"
 #   html: 
 #     css: ["_styles/hide_comments.css", "_styles/quote.css"]
 comments: false
-# aliases: 
-#   - "./index.html"
+aliases: 
+  - "./index.html"
 ---
 
 I am Chengkun, currently a PhD student at the [University of Helsinki](https://www.helsinki.fi/en/researchgroups/machine-and-human-intelligence), supervised by [Luigi Acerbi](https://lacerbi.github.io/). My research focuses on Bayesian posterior computation, namely, 
