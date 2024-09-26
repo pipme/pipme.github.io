@@ -52,14 +52,11 @@ ul.task-list li input[type="checkbox"] {
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
-  "type": "overlay",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
+    "?"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -102,6 +99,35 @@ cookieconsent.run({
 </script> 
   
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Hi, – My Personal Blog">
@@ -122,8 +148,12 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./gist.html"> 
@@ -135,10 +165,6 @@ cookieconsent.run({
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./blog+gist.html"> <i class="bi bi-card-list" role="img">
 </i> 
@@ -201,18 +227,22 @@ cookieconsent.run({
 </header>
 
 
+<p>I am Chengkun, currently a PhD student at the <a href="https://www.helsinki.fi/en/researchgroups/machine-and-human-intelligence">University of Helsinki</a>, supervised by <a href="https://lacerbi.github.io/">Luigi Acerbi</a>. My research focuses on Bayesian posterior computation, namely, <span class="math display">\[p(\text{parameters})p(\text{data}|\text{parameters}) \rightarrow p(\text{parameters}|\text{data}),\]</span> exploring an alternative path other than MCMC sampling and variational inference. I used to work on computer vision and robotics too.</p>
+<section id="about-the-site" class="level1">
+<h1>About the site</h1>
+<p>This website is a personal initiative to encourage more writing, both as a tool for memory retention and to deepen my understanding of reality. As Richard Feynman once said:</p>
 <blockquote class="blockquote">
 <p>What I cannot create, I do not understand.</p>
-<p>— Richard Feynman</p>
 </blockquote>
+</section>
 <section id="contact" class="level1">
 <h1>Contact</h1>
-<p>Feel free to reach me via email: <a href="mailto:sjtulck@gmail.com">sjtulck@gmail.com</a>.</p>
+<p>Feel free to reach me via email: <a href="mailto:sjtulck@gmail.com">sjtulck@gmail.com</a>. 😉</p>
 
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
