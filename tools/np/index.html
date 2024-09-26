@@ -182,40 +182,24 @@ cookieconsent.run({
 
 
 <style>
-  /* body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  } */
-  .container {
+  .container-custom {
     max-width: 600px;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  /* h1 {
-    color: #333;
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-  } */
-  form {
+  .container-custom form {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
   }
-  label {
+  .container-custom label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
   }
-  select, input {
+  .container-custom select, .container-custom input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -223,7 +207,7 @@ cookieconsent.run({
     border-radius: 4px;
     box-sizing: border-box;
   }
-  button {
+  .container-custom button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -232,10 +216,10 @@ cookieconsent.run({
     cursor: pointer;
     width: 100%;
   }
-  button:hover {
+  .container-custom button:hover {
     background-color: #45a049;
   }
-  .result {
+  .container-custom .result {
     background-color: #e9ffe9;
     padding: 15px;
     border-radius: 4px;
@@ -244,20 +228,26 @@ cookieconsent.run({
   }
 </style>
 <center>
-<div class="container">
-<h1>
-NumPy Memory Size Calculator
-</h1>
-<form id="numpyForm">
-<p><label for="dtype">Select Data Type:</label> <select id="dtype"> <option value="int8">int8</option> <option value="int16">int16</option> <option value="int32">int32</option> <option value="int64">int64</option> <option value="float32">float32</option> <option value="float64" selected="">float64</option> <!-- Default value set to float64 --> </select></p>
-<p><label for="shape">Array Shape (comma-separated):</label> <input type="text" id="shape" placeholder="e.g., 1000, 1000"></p>
-<button type="button" onclick="calculateMemorySize()">
-Calculate
-</button>
-</form>
-<div id="result" class="result">
+<div class="container-custom">
+  <h1>NumPy Memory Size Calculator</h1>
+  <form id="numpyForm">
+    <label for="dtype">Select Data Type:</label>
+    <select id="dtype">
+      <option value="int8">int8</option>
+      <option value="int16">int16</option>
+      <option value="int32">int32</option>
+      <option value="int64">int64</option>
+      <option value="float32">float32</option>
+      <option value="float64" selected="">float64</option> <!-- Default value set to float64 -->
+    </select>
+    
+    <label for="shape">Array Shape (comma-separated):</label>
+    <input type="text" id="shape" placeholder="e.g., 1000, 1000">
+    
+    <button type="button" onclick="calculateMemorySize()">Calculate</button>
+  </form>
 
-</div>
+  <div class="result" id="result"></div>
 </div>
 </center>
 <script>

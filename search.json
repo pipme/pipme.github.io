@@ -114,9 +114,9 @@
   {
     "objectID": "tools/np/index.html",
     "href": "tools/np/index.html",
-    "title": "\nNumPy Memory Size Calculator\n",
+    "title": "NumPy Memory Size Calculator",
     "section": "",
-    "text": "NumPy Memory Size Calculator\n\n\nSelect Data Type:  int8 int16 int32 int64 float32 float64  \nArray Shape (comma-separated): \n\nCalculate\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "NumPy Memory Size Calculator\n  \n    Select Data Type:\n    \n      int8\n      int16\n      int32\n      int64\n      float32\n      float64 \n    \n    \n    Array Shape (comma-separated):\n    \n    \n    Calculate\n  \n\n  \n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "blog+gist.html",
