@@ -10,7 +10,7 @@ aliases:
 
 I am Chengkun, currently a PhD student at the [University of Helsinki](https://www.helsinki.fi/en/researchgroups/machine-and-human-intelligence), supervised by [Luigi Acerbi](https://lacerbi.github.io/). My research focuses on Bayesian posterior computation, namely, 
 $$p(\text{parameters})p(\text{data}|\text{parameters}) \rightarrow p(\text{parameters}|\text{data}),$$ 
-exploring an alternative path other than MCMC sampling and variational inference. I used to work on computer vision and robotics too.
+exploring an alternative path other than direct MCMC sampling and variational inference. I used to work on computer vision and robotics too.
 
 # About the site
 
