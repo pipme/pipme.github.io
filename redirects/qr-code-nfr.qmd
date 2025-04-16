@@ -1,7 +1,10 @@
 ---
-title: "QR code (normalizing flow regression)"
+title: ""
 format: html
+page-layout: custom
+navbar: false
 ---
 
-<meta http-equiv="refresh" content="0; url=https://github.com/acerbilab/normalizing-flow-regression">
-<p>If you are not redirected, <a href="https://github.com/acerbilab/normalizing-flow-regression">click here</a>.</p>
+<script>
+  window.location.replace("https://github.com/acerbilab/normalizing-flow-regression");
+</script>
