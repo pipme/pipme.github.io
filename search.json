@@ -208,12 +208,5 @@
     "title": "Mac OTF fonts installation",
     "section": "",
     "text": "Download the required OTF fonts files, e.g., source-han-serif. Then simply move .otf files to ~/Library/Fonts folder. In Font Book application, now one can see the fonts in My Fonts.\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2024,\n  author = {Li, Chengkun},\n  title = {Mac {OTF} Fonts Installation},\n  date = {2024-03-10},\n  url = {https://pipme.github.io/posts/2024-03-10-Mac-font/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2024. “Mac OTF Fonts Installation.” March 10,\n2024. https://pipme.github.io/posts/2024-03-10-Mac-font/index-gist.html."
-  },
-  {
-    "objectID": "redirects/qr-code-nfr.html",
-    "href": "redirects/qr-code-nfr.html",
-    "title": "QR code (normalizing flow regression)",
-    "section": "",
-    "text": "If you are not redirected, click here.\n\n\n\n\n Back to top"
   }
 ]
