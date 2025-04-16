@@ -3,6 +3,8 @@ title: ""
 format: html
 page-layout: custom
 navbar: false
+comments: false
+cookie-consent: false
 ---
 
 <script>
