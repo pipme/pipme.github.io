@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>My Personal Blog</title>
+<title>Chengkun Li</title>
 <link>https://pipme.github.io/gist.html</link>
 <atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.6.43</generator>
 <lastBuildDate>Thu, 26 Sep 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>exp(x) overflow/underflow in Numpy (float64)</title>

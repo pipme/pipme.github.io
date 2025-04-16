@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/2023-06-10-Quarto-set-up/index.html",
+      "/posts/2020-04-25-cantor-pairing/index.html"
+    ]
+  },
+  {
     "listing": "/blog+gist.html",
     "items": [
       "/posts/2024-09-26-Float64/index-gist.html",
@@ -12,13 +19,6 @@
       "/posts/2023-06-11-De-Finetti-theorem/index-gist.html",
       "/posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html",
       "/posts/2023-06-11-Quarto-tips/index-gist.html",
-      "/posts/2023-06-10-Quarto-set-up/index.html",
-      "/posts/2020-04-25-cantor-pairing/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
       "/posts/2023-06-10-Quarto-set-up/index.html",
       "/posts/2020-04-25-cantor-pairing/index.html"
     ]
