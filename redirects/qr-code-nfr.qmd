@@ -8,5 +8,5 @@ cookie-consent: false
 ---
 
 <script>
-  window.location.replace("https://github.com/acerbilab/normalizing-flow-regression");
+  window.location.replace("http://arxiv.org/abs/2504.11554");
 </script>
