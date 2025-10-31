@@ -9,13 +9,14 @@
 <link>https://pipme.github.io/blog.html</link>
 <atom:link href="https://pipme.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.6.43</generator>
+<generator>quarto-1.8.25</generator>
 <lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Start Blogging with Quarto</title>
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-10-Quarto-set-up/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -62,6 +63,7 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 
 
 
+
 <p>One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.</p>
 <p>Formally, the Cantor pairing function <img src="https://latex.codecogs.com/png.latex?%5Cpi"> is defined as:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bgathered%7D%0A%5Cpi:%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Cto%20%5Cmathbb%7BN%7D%20%5C%5C%0A%5Cpi(k_1,%20k_2)%20:=%20%5Cfrac%7B1%7D%7B2%7D%20(k_1%20+%20k_2)(k_1%20+%20k_2%20+%201)%20+%20k2%0A%5Cend%7Bgathered%7D%0A"></p>
@@ -70,11 +72,11 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 <p>The Cantor pairing function is bijective. To prove that, we just need to invert it (<a href="https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function%5D">details</a> can be found in Wikepidia).</p>
 <p>Simple python and C++ implementations:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">C++</a></li></ul>
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">C++</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> cantor_pairing(x, y):</span>
@@ -148,11 +150,11 @@ font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>)</span></code></pre></div>
+font-style: inherit;">3</span>)</span></code></pre></div></div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">struct</span> pair_hash</span>
@@ -276,7 +278,7 @@ font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 </div>
 </div>
 </div>
@@ -284,7 +286,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <div class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> collections</span>
 <span id="cb3-2"><span class="im" style="color: #00769E;
@@ -473,7 +475,7 @@ font-style: inherit;">"&lt;-"</span>),</span>
 <span id="cb3-26">    v0 <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> v</span>
-<span id="cb3-27">plt.show()</span></code></pre></div>
+<span id="cb3-27">plt.show()</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>

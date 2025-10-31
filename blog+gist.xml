@@ -9,8 +9,152 @@
 <link>https://pipme.github.io/blog+gist.html</link>
 <atom:link href="https://pipme.github.io/blog+gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.6.43</generator>
-<lastBuildDate>Thu, 26 Sep 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>BibTeX and natbib: Zotero arXiv article entry fix</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>When exporting references from Zotero to BibTeX (using Better BibTeX), arXiv articles may not be formatted correctly in LaTeX-generated PDFs, as BibTeX <a href="https://tex.stackexchange.com/a/429140">is by default unaware of arXiv/preprint type</a>. For example, currently (2025) an arXiv article entry from Zotero would look like this:<sup>1</sup></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">@misc</span>{<span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">betancourtConceptualIntroductionHamiltonian2018</span>,</span>
+<span id="cb1-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">title</span> = {A Conceptual Introduction to {{Hamiltonian Monte Carlo}}},</span>
+<span id="cb1-3">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">author</span> = {Betancourt, Michael},</span>
+<span id="cb1-4">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">year</span> = 2018,</span>
+<span id="cb1-5">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">month</span> = <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">jul</span>,</span>
+<span id="cb1-6">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">number</span> = {arXiv:1701.02434},</span>
+<span id="cb1-7">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">eprint</span> = {1701.02434},</span>
+<span id="cb1-8">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">primaryclass</span> = {stat},</span>
+<span id="cb1-9">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">publisher</span> = {arXiv},</span>
+<span id="cb1-10">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">doi</span> = {10.48550/arXiv.1701.02434},</span>
+<span id="cb1-11">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">archiveprefix</span> = {arXiv},</span>
+<span id="cb1-12">}</span></code></pre></div></div>
+<p>The above would appear in the references section as:</p>
+<pre><code>Michael Betancourt. A conceptual introduction to Hamiltonian Monte Carlo,
+July 2018.</code></pre>
+<p>A simple fix is to add a <code>note</code> field in the BibTeX entry with the arXiv identifier <code>arXiv:1701.02434</code>, so that the reference would look like:</p>
+<pre><code>Michael Betancourt. A conceptual introduction to Hamiltonian Monte Carlo,
+July 2018. arXiv:1701.02434.</code></pre>
+<p>This can be automated by adding a postscript to the Better BibTeX export preferences in Zotero:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> (Translator<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">BetterTeX</span>) {</span>
+<span id="cb4-2">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> (zotero<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">itemType</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"preprint"</span>) {</span>
+<span id="cb4-3">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">var</span> arxivID <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> zotero<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">number</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb4-4">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Zotero.debug(JSON.stringify(arxivID))</span></span>
+<span id="cb4-5">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Zotero.debug(JSON.stringify(zotero))</span></span>
+<span id="cb4-6">  tex<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add</span>({ <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'note'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">value</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> arxivID})<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb4-7">  }</span>
+<span id="cb4-8">}</span></code></pre></div></div>
+<p>I hadn’t noticed this issue with arXiv articles before, as I usually relied on journal or conference templates that handled them correctly. When templates are unavailable, it might be preferable to switch to BibLaTeX instead of BibTeX + natbib, which provides more robust handling of preprint and arXiv entries.</p>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Previously, these entries were exported as <code>@article</code> types in Zotero, but they now default to <code>@misc</code> types.↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2025,
+  author = {Li, Chengkun},
+  title = {BibTeX and Natbib: {Zotero} {arXiv} Article Entry Fix},
+  date = {2025-10-31},
+  url = {https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2025" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2025. <span>“BibTeX and Natbib: Zotero arXiv Article Entry
+Fix.”</span> October 31, 2025. <a href="https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html">https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html</a>.
+</div></div></section></div> ]]></description>
+  <category>BibTeX</category>
+  <category>Zotero</category>
+  <category>LaTeX</category>
+  <category>Better BibTeX</category>
+  <guid>https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html</guid>
+  <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>exp(x) overflow/underflow in Numpy (float64)</title>
   <dc:creator>Chengkun Li</dc:creator>
@@ -21,10 +165,11 @@
 
 
 
+
 <div id="65950641" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
@@ -43,7 +188,7 @@ font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Numpy float info:"</span>, np.finfo(<span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">float</span>))</span></code></pre></div>
+font-style: inherit;">float</span>))</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Numpy float info: Machine parameters for float64
@@ -62,7 +207,7 @@ smallest_normal = 2.2250738585072014e-308   smallest_subnormal = 4.9406564584124
 <div id="a2453c9d" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Binary search</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Binary search: find the minimal integer x such that np.exp(x) is not zero</span></span>
 <span id="cb3-2"><span class="kw" style="color: #003B4F;
@@ -189,11 +334,11 @@ font-style: inherit;">return</span> right</span>
 <span id="cb3-29"></span>
 <span id="cb3-30">max_int <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> find_maximal_exp_x()</span></code></pre></div>
+font-style: inherit;">=</span> find_maximal_exp_x()</span></code></pre></div></div>
 </details>
 </div>
 <div id="728c922f" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
 background-color: null;
@@ -238,14 +383,14 @@ font-style: inherit;">.</span>exp(min_int)<span class="sc" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.exp(-746) = 0.0
 np.exp(-745) = 5e-324</code></pre>
 </div>
 </div>
 <div id="0b9d06a5" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
 background-color: null;
@@ -290,7 +435,7 @@ font-style: inherit;">.</span>exp(max_int)<span class="sc" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.exp(709) = 8.218407461554972e+307
 np.exp(710) = inf</code></pre>
@@ -320,6 +465,7 @@ Li, Chengkun. 2024. <span>“`Exp(x)` Overflow/Underflow in Numpy
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2024-03-10-Mac-font/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -356,9 +502,10 @@ Li, Chengkun. 2024. <span>“Mac OTF Fonts Installation.”</span> March 10,
 
 
 
+
 <p>Understanding when a view or copy for a Numpy array is returned is important, or else the array may be modified in place by mistake. An example below:</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
@@ -521,7 +668,7 @@ font-style: inherit;">"For 2D array:"</span>)</span>
 background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>)))</span></code></pre></div>
+font-style: inherit;">2</span>)))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Numpy version:  1.23.1
 For 1D array:
@@ -566,6 +713,7 @@ an Array.”</span> February 23, 2024. <a href="https://pipme.github.io/posts/20
 
 
 
+
 <p>Search results of keywords “frequentist” and “Bayesian” in Github. Are Bayesians coding more?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -601,8 +749,9 @@ GitHub.”</span> February 11, 2024. <a href="https://pipme.github.io/posts/2024
 
 
 
+
 <p>As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a <a href="https://github.com/pipme/pipme.github.io/blob/main/_utils/mathjax_preamble.html">preamble file</a> and include it by:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -625,7 +774,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> ../_utils/mathjax_preamble.html</span></span></code></pre></div>
+font-style: inherit;"> ../_utils/mathjax_preamble.html</span></span></code></pre></div></div>
 <p>Example: <img src="https://latex.codecogs.com/png.latex?%0A%5Cpdv%7B%5Crho%7D%7Bt%7D%20+%20%5Cdiv%20(%5Crho%20%5Cu)%20=%200%0A"></p>
 
 
@@ -652,6 +801,7 @@ Li, Chengkun. 2023. <span>“MathJax Macros in Quarto.”</span> August 6,
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-07-17-Python-tools/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -689,6 +839,7 @@ Li, Chengkun. 2023. <span>“Python Tools.”</span> July 17, 2023. <a href="htt
 
 
 
+
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <ul>
@@ -719,6 +870,7 @@ Li, Chengkun. 2023. <span>“Tobit Likelihood.”</span> June 16, 2023. <a href=
   <dc:creator>Chengkun Li</dc:creator>
   <link>https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -762,10 +914,11 @@ Li, Chengkun. 2023. <span>“De Finetti’s Theorem.”</span> June 11, 2023.
 
 
 
+
 <section id="obsidian" class="level2">
 <h2 class="anchored" data-anchor-id="obsidian">Obsidian</h2>
 <p>The Obsidian plugins I am using:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb1-2"><span class="ex" style="color: null;
@@ -800,7 +953,7 @@ background-color: null;
 font-style: inherit;">├──</span> recent-files-obsidian</span>
 <span id="cb1-12"><span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> table-editor-obsidian</span></code></pre></div>
+font-style: inherit;">└──</span> table-editor-obsidian</span></code></pre></div></div>
 </section>
 <section id="zotero" class="level2">
 <h2 class="anchored" data-anchor-id="zotero">Zotero</h2>
@@ -839,11 +992,12 @@ Practices.”</span> June 11, 2023. <a href="https://pipme.github.io/posts/2023-
 
 
 
+
 <section id="building-the-website" class="level2">
 <h2 class="anchored" data-anchor-id="building-the-website">Building the website</h2>
 <p>Unicode <code>\u200B</code> for zero width space, e.g., in <code>_quarto.yml</code> I used it for an item with only an icon <i class="bi bi-card-list"></i> in the navigation bar. Note that I tried HTML’s <code>&amp;#8203;</code> but it doesn’t work.</p>
 <p>Extensions for adding icons such as google scholar <i class="ai  ai-google-scholar"></i> and 500px <i class="fa-brands fa-500px" aria-label="500px"></i> (see the website’s footer):</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb1-2"><span class="ex" style="color: null;
@@ -857,13 +1011,13 @@ background-color: null;
 font-style: inherit;">└──</span> schochastics</span>
 <span id="cb1-5">    <span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> academicons</span></code></pre></div>
+font-style: inherit;">└──</span> academicons</span></code></pre></div></div>
 <p>For publishing a Quarto website, I recommend using the second option in the <a href="https://quarto.org/docs/publishing/github-pages.html">official documentation</a>. After set up, simply call:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">quarto</span> publish gh-pages <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">--no-prompt</span></span></code></pre></div>
+font-style: inherit;">--no-prompt</span></span></code></pre></div></div>
 </section>
 <section id="known-issues" class="level2">
 <h2 class="anchored" data-anchor-id="known-issues">Known issues</h2>
@@ -912,6 +1066,7 @@ Li, Chengkun. 2023. <span>“Quarto Tips.”</span> June 11, 2023. <a href="http
 
 
 
+
 <p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
 <p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../../posts/2023-06-11-Quarto-tips/index-gist.html">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (2022)</span> for more work-through details.</p>
 <p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.</p>
@@ -953,6 +1108,7 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 
 
 
+
 <p>One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.</p>
 <p>Formally, the Cantor pairing function <img src="https://latex.codecogs.com/png.latex?%5Cpi"> is defined as:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bgathered%7D%0A%5Cpi:%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Cto%20%5Cmathbb%7BN%7D%20%5C%5C%0A%5Cpi(k_1,%20k_2)%20:=%20%5Cfrac%7B1%7D%7B2%7D%20(k_1%20+%20k_2)(k_1%20+%20k_2%20+%201)%20+%20k2%0A%5Cend%7Bgathered%7D%0A"></p>
@@ -961,11 +1117,11 @@ Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
 <p>The Cantor pairing function is bijective. To prove that, we just need to invert it (<a href="https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function%5D">details</a> can be found in Wikepidia).</p>
 <p>Simple python and C++ implementations:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">C++</a></li></ul>
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">C++</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> cantor_pairing(x, y):</span>
@@ -1039,11 +1195,11 @@ font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>)</span></code></pre></div>
+font-style: inherit;">3</span>)</span></code></pre></div></div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">struct</span> pair_hash</span>
@@ -1167,7 +1323,7 @@ font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 </div>
 </div>
 </div>
@@ -1175,7 +1331,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <div class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> collections</span>
 <span id="cb3-2"><span class="im" style="color: #00769E;
@@ -1364,7 +1520,7 @@ font-style: inherit;">"&lt;-"</span>),</span>
 <span id="cb3-26">    v0 <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> v</span>
-<span id="cb3-27">plt.show()</span></code></pre></div>
+<span id="cb3-27">plt.show()</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>

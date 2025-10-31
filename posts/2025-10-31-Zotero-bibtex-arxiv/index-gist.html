@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Chengkun Li">
+<meta name="dcterms.date" content="2025-10-31">
 
-<title>index – Chengkun Li</title>
+<title>BibTeX and natbib: Zotero arXiv article entry fix – Chengkun Li</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -102,14 +139,10 @@ cookieconsent.run({
 });
 </script> 
   
-
-
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="– Chengkun Li">
+<meta property="og:title" content="BibTeX and natbib: Zotero arXiv article entry fix – Chengkun Li">
+<meta property="og:description" content="Personal Blog">
 <meta property="og:site_name" content="Chengkun Li">
-</head>
-
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -271,10 +304,61 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><div display="none">
+<p hidden="">\(
+\require{mathtools}
+\require{ams}
+\require{physics}
+
+
+\let\div\divergence
+
+% Bold symbol
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\u}{\mathbf{u}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\w}{\mathbf{w}}
+
+\newcommand{\xx}{\mathbf{X}}
+\newcommand{\yy}{\mathbf{Y}}
+\newcommand{\zz}{\mathbf{Z}}
+
+% Shorthand
+\newcommand\bf{\mathbf}
+\newcommand\mbf{\mathbf}
+\newcommand\tbf{\textbf}
+% Number field 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% Probability
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Normal}{\mathcal{N}}
+
+% Trace
+\DeclareMathOperator{\Tr}{Tr}
+% Norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{#1}
+
+\)</p>
+</div>
+
+
+<link rel="stylesheet" href="../../styles.css">
+
+
+
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -341,123 +425,112 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">BibTeX and natbib: Zotero arXiv article entry fix</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/pipme/pipme.github.io/blob/main/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.qmd"><i class="bi"></i></button></div></div>
+                                <div class="quarto-categories">
+                <div class="quarto-category">BibTeX</div>
+                <div class="quarto-category">Zotero</div>
+                <div class="quarto-category">LaTeX</div>
+                <div class="quarto-category">Better BibTeX</div>
+              </div>
+                  </div>
+  </div>
     
-<!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">NumPy Memory Size Calculator</h1></header>
-
-
-
-
-
-<style>
-  .container-custom {
-    max-width: 600px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  .container-custom form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  .container-custom label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-  }
-  .container-custom select, .container-custom input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .container-custom button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  .container-custom button:hover {
-    background-color: #45a049;
-  }
-  .container-custom .result {
-    background-color: #e9ffe9;
-    padding: 15px;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 18px;
-  }
-</style>
-<center>
-<div class="container-custom">
   
-  <form id="numpyForm">
-    <label for="dtype">Select Data Type:</label>
-    <select id="dtype">
-      <option value="int8">int8</option>
-      <option value="int16">int16</option>
-      <option value="int32">int32</option>
-      <option value="int64">int64</option>
-      <option value="float32">float32</option>
-      <option value="float64" selected="">float64</option> <!-- Default value set to float64 -->
-    </select>
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://pipme.github.io">Chengkun Li</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 31, 2025</p>
+      </div>
+    </div>
     
-    <label for="shape">Array Shape (comma-separated):</label>
-    <input type="text" id="shape" placeholder="e.g., 1000, 1000">
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">October 31, 2025</p>
+      </div>
+    </div>
+      
+    </div>
     
-    <button type="button" onclick="calculateMemorySize()">Calculate</button>
-  </form>
-
-  <div class="result" id="result"></div>
-</div>
-</center>
-<script>
-  document.getElementById("shape").addEventListener("keydown", function(event) {
-    if (event.key === "Tab") {
-      event.preventDefault(); // Prevent the default tab behavior
-      this.value = "1000,1000"; // Auto-fill the input with 1000,1000
-    }
-  });
-  function calculateMemorySize() {
-    const dtype = document.getElementById("dtype").value;
-    const shapeInput = document.getElementById("shape").value;
-
-    if (!shapeInput) {
-      document.getElementById("result").innerHTML = "Please enter a valid array shape.";
-      return;
-    }
-
-    const shape = shapeInput.split(',').map(Number);
-    const size = shape.reduce((a, b) => a * b, 1);
-
-    const dtypeSizes = {
-      int8: 1,
-      int16: 2,
-      int32: 4,
-      int64: 8,
-      float32: 4,
-      float64: 8
-    };
-
-    const memorySize = size * dtypeSizes[dtype];
-    document.getElementById("result").innerHTML = 
-      `Memory size: ${memorySize.toLocaleString()} bytes (${(memorySize / (1024 ** 2)).toFixed(2)} MB)`;
-  }
-</script>
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+
+
+<p>When exporting references from Zotero to BibTeX (using Better BibTeX), arXiv articles may not be formatted correctly in LaTeX-generated PDFs, as BibTeX <a href="https://tex.stackexchange.com/a/429140">is by default unaware of arXiv/preprint type</a>. For example, currently (2025) an arXiv article entry from Zotero would look like this:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">betancourtConceptualIntroductionHamiltonian2018</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {A Conceptual Introduction to {{Hamiltonian Monte Carlo}}},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Betancourt, Michael},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = 2018,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">month</span> = <span class="st">jul</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span> = {arXiv:1701.02434},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprint</span> = {1701.02434},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">primaryclass</span> = {stat},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publisher</span> = {arXiv},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span> = {10.48550/arXiv.1701.02434},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">archiveprefix</span> = {arXiv},</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The above would appear in the references section as:</p>
+<pre><code>Michael Betancourt. A conceptual introduction to Hamiltonian Monte Carlo,
+July 2018.</code></pre>
+<p>A simple fix is to add a <code>note</code> field in the BibTeX entry with the arXiv identifier <code>arXiv:1701.02434</code>, so that the reference would look like:</p>
+<pre><code>Michael Betancourt. A conceptual introduction to Hamiltonian Monte Carlo,
+July 2018. arXiv:1701.02434.</code></pre>
+<p>This can be automated by adding a postscript to the Better BibTeX export preferences in Zotero:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (Translator<span class="op">.</span><span class="at">BetterTeX</span>) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (zotero<span class="op">.</span><span class="at">itemType</span> <span class="op">==</span> <span class="st">"preprint"</span>) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> arxivID <span class="op">=</span> zotero<span class="op">.</span><span class="at">number</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Zotero.debug(JSON.stringify(arxivID))</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Zotero.debug(JSON.stringify(zotero))</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  tex<span class="op">.</span><span class="fu">add</span>({ <span class="dt">name</span><span class="op">:</span> <span class="st">'note'</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> arxivID})<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>I hadn’t noticed this issue with arXiv articles before, as I usually relied on journal or conference templates that handled them correctly. When templates are unavailable, it might be preferable to switch to BibLaTeX instead of BibTeX + natbib, which provides more robust handling of preprint and arXiv entries.</p>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Previously, these entries were exported as <code>@article</code> types in Zotero, but they now default to <code>@misc</code> types.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2025,
+  author = {Li, Chengkun},
+  title = {BibTeX and Natbib: {Zotero} {arXiv} Article Entry Fix},
+  date = {2025-10-31},
+  url = {https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Li, Chengkun. 2025. <span>“BibTeX and Natbib: Zotero arXiv Article Entry
+Fix.”</span> October 31, 2025. <a href="https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html">https://pipme.github.io/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -541,6 +614,57 @@ cookieconsent.run({
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -937,7 +1061,7 @@ cookieconsent.run({
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/pipme/pipme.github.io/edit/main/tools/np/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/pipme/pipme.github.io/edit/main/posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
