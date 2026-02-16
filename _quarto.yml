@@ -31,7 +31,7 @@ website:
         href: https://github.com/pipme
       - icon: rss
         menu:
-          - href: index.xml
+          - href: blog.xml
             text: blog
           - href: blog+gist.xml
             text: blog+gist
