@@ -18,203 +18,21 @@
     "href": "blog+gist.html",
     "title": "All blogs and gists.",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nReading Time\n\n\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nOct 31, 2025\n\n\nBibTeX and natbib: Zotero arXiv article entry fix\n\n\n2 min\n\n\n\n\n\n\nSep 26, 2024\n\n\nexp(x) overflow/underflow in Numpy (float64)\n\n\n1 min\n\n\n\n\n\n\nMar 10, 2024\n\n\nMac OTF fonts installation\n\n\n1 min\n\n\n\n\n\n\nFeb 23, 2024\n\n\nA Numpy caveat when referencing elements of an array\n\n\n1 min\n\n\n\n\n\n\nFeb 11, 2024\n\n\nSearch frequentist and Bayesian in GitHub\n\n\n1 min\n\n\n\n\n\n\nAug 6, 2023\n\n\nMathJax macros in Quarto\n\n\n1 min\n\n\n\n\n\n\nJul 17, 2023\n\n\nPython tools\n\n\n1 min\n\n\n\n\n\n\nJun 16, 2023\n\n\nTobit likelihood\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\n\n\nJun 10, 2023\n\n\nStart Blogging with Quarto\n\n\n1 min\n\n\n\n\n\n\nApr 25, 2020\n\n\nThe Cantor Pairing Function\n\n\n3 min\n\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "posts/2024-09-26-Float64/index-gist.html",
-    "href": "posts/2024-09-26-Float64/index-gist.html",
-    "title": "exp(x) overflow/underflow in Numpy (float64)",
-    "section": "",
-    "text": "Code\nimport numpy as np\n\nnp.seterr(all=\"ignore\")\nprint(\"Numpy float info:\", np.finfo(float))\n\n\nNumpy float info: Machine parameters for float64\n---------------------------------------------------------------\nprecision =  15   resolution = 1.0000000000000001e-15\nmachep =    -52   eps =        2.2204460492503131e-16\nnegep =     -53   epsneg =     1.1102230246251565e-16\nminexp =  -1022   tiny =       2.2250738585072014e-308\nmaxexp =   1024   max =        1.7976931348623157e+308\nnexp =       11   min =        -max\nsmallest_normal = 2.2250738585072014e-308   smallest_subnormal = 4.9406564584124654e-324\n---------------------------------------------------------------\n\n\n\n\n\nBinary search\n# Binary search: find the minimal integer x such that np.exp(x) is not zero\ndef find_minimal_exp_x():\n    left = -10000\n    right = 0\n    while right - left &gt; 1:\n        mid = (left + right) // 2\n        if np.exp(mid) == 0:\n            left = mid\n        else:\n            right = mid\n    return right\n\n\nmin_int = find_minimal_exp_x()\n\n\n# Binary search: find the maximal integer x such that np.exp(x) is not infinity\ndef find_maximal_exp_x():\n    left = 0\n    right = 10000\n    while right - left &gt; 1:\n        mid = (left + right) // 2\n        if np.exp(mid) != np.inf:\n            left = mid\n        else:\n            right = mid\n    return right\n\n\nmax_int = find_maximal_exp_x()\n\n\n\nprint(f\"np.exp({min_int - 1}) = {np.exp(min_int - 1)}\")\nprint(f\"np.exp({min_int}) = {np.exp(min_int)}\")\n\nnp.exp(-746) = 0.0\nnp.exp(-745) = 5e-324\n\n\n\nprint(f\"np.exp({max_int - 1}) = {np.exp(max_int - 1)}\")\nprint(f\"np.exp({max_int}) = {np.exp(max_int)}\")\n\nnp.exp(709) = 8.218407461554972e+307\nnp.exp(710) = inf\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2024,\n  author = {Li, Chengkun},\n  title = {`Exp(x)` Overflow/Underflow in {Numpy} (Float64)},\n  date = {2024-09-26},\n  url = {https://pipme.github.io/posts/2024-09-26-Float64/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2024. “`Exp(x)` Overflow/Underflow in Numpy\n(Float64).” September 26, 2024. https://pipme.github.io/posts/2024-09-26-Float64/index-gist.html."
-  },
-  {
-    "objectID": "posts/2023-08-06-Mathjax/index-gist.html",
-    "href": "posts/2023-08-06-Mathjax/index-gist.html",
-    "title": "MathJax macros in Quarto",
-    "section": "",
-    "text": "As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a preamble file and include it by:\nformat:\n  html:\n    include-in-header: ../_utils/mathjax_preamble.html\nExample: \\[\n\\pdv{\\rho}{t} + \\div (\\rho \\u) = 0\n\\]\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {MathJax Macros in {Quarto}},\n  date = {2023-08-06},\n  url = {https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “MathJax Macros in Quarto.” August 6,\n2023. https://pipme.github.io/posts/2023-08-06-Mathjax/index-gist.html."
-  },
-  {
-    "objectID": "posts/2023-06-16-Tobit-likelihood/index-gist.html",
-    "href": "posts/2023-06-16-Tobit-likelihood/index-gist.html",
-    "title": "Tobit likelihood",
-    "section": "",
-    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i &lt;y_U, \\\\\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_i = y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i = y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
-  },
-  {
-    "objectID": "posts/2023-06-16-Tobit-likelihood/index-gist.html#definition",
-    "href": "posts/2023-06-16-Tobit-likelihood/index-gist.html#definition",
-    "title": "Tobit likelihood",
-    "section": "",
-    "text": "Latent variable: \\(f_i\\)\nObservation: \\(y_i\\)\n\nSuppose the observation is censored from above at \\(y_U\\) and below at \\(y_L\\) (type I Tobit model), i.e., \\[\ny_i= \\begin{cases}y_i^* & \\text { if } y_L&lt;y_i^*&lt;y_U, \\\\ y_L & \\text { if } y_i^* \\leq y_L, \\\\ y_U & \\text { if } y_i^* \\geq y_U. \\end{cases}\n\\] If \\(y_i^\\star \\sim \\mathcal{N}(f_i,\\sigma_i^2)\\), then the Tobit likelihood is, \\[\np(y_i | f_i) = \\begin{cases}\n\\mathcal{N}(y_i|f_i, \\sigma_i^2) & \\text { if } y_L&lt;y_i &lt;y_U, \\\\\n\\Phi(y_L | f_i, \\sigma_i^2) & \\text { if } y_i = y_L, \\\\\n1 - \\Phi(y_U | f_i, \\sigma_i^2) & \\text { if } y_i = y_U,\n\\end{cases}\n\\] where \\(\\Phi\\) is the CDF of standard normal, \\(\\Phi(y_L | f_i, \\sigma_i^2) \\triangleq \\Phi(\\frac{y_L - f_i}{\\sigma_i})\\)."
-  },
-  {
-    "objectID": "posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html",
-    "href": "posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html",
-    "title": "Search frequentist and Bayesian in GitHub",
-    "section": "",
-    "text": "Search results of keywords “frequentist” and “Bayesian” in Github. Are Bayesians coding more?\n\n\n\nSearch result\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2024,\n  author = {Li, Chengkun},\n  title = {Search Frequentist and {Bayesian} in {GitHub}},\n  date = {2024-02-11},\n  url = {https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2024. “Search Frequentist and Bayesian in\nGitHub.” February 11, 2024. https://pipme.github.io/posts/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html."
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html",
-    "href": "posts/2023-06-11-Quarto-tips/index-gist.html",
-    "title": "Quarto tips",
-    "section": "",
-    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#building-the-website",
-    "href": "posts/2023-06-11-Quarto-tips/index-gist.html#building-the-website",
-    "title": "Quarto tips",
-    "section": "",
-    "text": "Unicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#known-issues",
-    "href": "posts/2023-06-11-Quarto-tips/index-gist.html#known-issues",
-    "title": "Quarto tips",
-    "section": "Known issues",
-    "text": "Known issues\nNo option to hide Edit this page or enforce it to be on the left sidebar when the table of contents is empty. Issue#5283"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#for-trials",
-    "href": "posts/2023-06-11-Quarto-tips/index-gist.html#for-trials",
-    "title": "Quarto tips",
-    "section": "For trials",
-    "text": "For trials\n(Genton 2001)"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/index-gist.html#latex",
-    "href": "posts/2023-06-11-Quarto-tips/index-gist.html#latex",
-    "title": "Quarto tips",
-    "section": "LaTeX",
-    "text": "LaTeX\nVisible in pdf only. ### plain LaTeX Just a sample algorithm:"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#building-the-website",
-    "href": "posts/2023-06-11-Quarto-tips/rjs.html#building-the-website",
-    "title": "Quarto tips",
-    "section": "Building the website",
-    "text": "Building the website\nUnicode \\u200B for zero width space, e.g., in _quarto.yml I used it for an item with only an icon  in the navigation bar. Note that I tried HTML’s &#8203; but it doesn’t work.\nExtensions for adding icons such as google scholar  and 500px  (see the website’s footer):\n.\n├── quarto-ext\n│   └── fontawesome\n└── schochastics\n    └── academicons\nFor publishing a Quarto website, I recommend using the second option in the official documentation. After set up, simply call:\nquarto publish gh-pages --no-prompt"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#known-issues",
-    "href": "posts/2023-06-11-Quarto-tips/rjs.html#known-issues",
-    "title": "Quarto tips",
-    "section": "Known issues",
-    "text": "Known issues\nNo option to hide Edit this page or enforce it to be on the left sidebar when the table of contents is empty. Issue#5283"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#for-trials",
-    "href": "posts/2023-06-11-Quarto-tips/rjs.html#for-trials",
-    "title": "Quarto tips",
-    "section": "For trials",
-    "text": "For trials\n(Genton 2001)"
-  },
-  {
-    "objectID": "posts/2023-06-11-Quarto-tips/rjs.html#latex",
-    "href": "posts/2023-06-11-Quarto-tips/rjs.html#latex",
-    "title": "Quarto tips",
-    "section": "LaTeX",
-    "text": "LaTeX\nVisible in pdf only. ### plain LaTeX Just a sample algorithm:"
-  },
-  {
-    "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html",
-    "href": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html",
-    "title": "Personal Obsidian and Zotero best practices",
-    "section": "",
-    "text": "The Obsidian plugins I am using:\n.\n├── calendar\n├── cm-editor-syntax-highlight-obsidian\n├── obsidian-citation-plugin\n├── obsidian-completr\n├── obsidian-latex\n├── obsidian-latex-suite\n├── obsidian-pandoc\n├── obsidian-vault-statistics-plugin\n├── periodic-notes\n├── recent-files-obsidian\n└── table-editor-obsidian"
-  },
-  {
-    "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidian",
-    "href": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#obsidian",
-    "title": "Personal Obsidian and Zotero best practices",
-    "section": "",
-    "text": "The Obsidian plugins I am using:\n.\n├── calendar\n├── cm-editor-syntax-highlight-obsidian\n├── obsidian-citation-plugin\n├── obsidian-completr\n├── obsidian-latex\n├── obsidian-latex-suite\n├── obsidian-pandoc\n├── obsidian-vault-statistics-plugin\n├── periodic-notes\n├── recent-files-obsidian\n└── table-editor-obsidian"
-  },
-  {
-    "objectID": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#zotero",
-    "href": "posts/2023-06-11-Obsidian-Zotero-tips/index-gist.html#zotero",
-    "title": "Personal Obsidian and Zotero best practices",
-    "section": "Zotero",
-    "text": "Zotero\nZotero plugins:\n\nZotfile\nBetter BibTex\nMarkDBConnect"
+    "text": "Date\nTitle\nReading Time\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blogs",
     "section": "",
-    "text": "Start Blogging with Quarto\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJun 10, 2023\n\n\nChengkun Li\n\n\n\n\n\n\n\n\n\n\n\n\nThe Cantor Pairing Function\n\n\n\nhashing\n\nset theory\n\n\n\n\n\n\n\n\n\nApr 25, 2020\n\n\nChengkun Li\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "posts/2020-04-25-cantor-pairing/index.html",
-    "href": "posts/2020-04-25-cantor-pairing/index.html",
-    "title": "The Cantor Pairing Function",
-    "section": "",
-    "text": "One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.\nFormally, the Cantor pairing function \\(\\pi\\) is defined as:\n\\[\n\\begin{gathered}\n\\pi:\\mathbb{N} \\times \\mathbb{N} \\to \\mathbb{N} \\\\\n\\pi(k_1, k_2) := \\frac{1}{2} (k_1 + k_2)(k_1 + k_2 + 1) + k2\n\\end{gathered}\n\\]\nIt can also be easily extended to multiple dimensions cases:\n\\[\n\\begin{gathered}\n\\pi^{(n)}:\\mathbb{N}^n \\to \\mathbb{N} \\\\\n\\pi^{(n)}(k_1, \\ldots, k_{n-1}, k_n) := \\pi ( \\pi^{(n-1)}(k_1, \\ldots, k_{n-1}) , k_n), \\quad n&gt;2\n\\end{gathered}\n\\]\nThe Cantor pairing function is bijective. To prove that, we just need to invert it (details can be found in Wikepidia).\nSimple python and C++ implementations:\n\nPythonC++\n\n\n\ndef cantor_pairing(x, y):\n    return int((x + y) * (x + y + 1) / 2 + y)\n\n\ndef cantor_pairing_nd(*args):\n    if len(args) == 2:\n        return cantor_pairing(args[0], args[1])\n    return cantor_pairing(cantor_pairing_nd(*args[:-1]), args[-1])\n\n\ncantor_pairing_nd(1, 2, 3)\n\n\n\nstruct pair_hash\n{\n    std::size_t operator() (const std::pair&lt;int, int&gt;& p) const\n    {\n        return (p.first + p.second) * (p.first + p.second + 1) / 2 + p.second;\n    }\n};\n\nunordered_map&lt;pair&lt;int, int&gt;, int, pair_hash&gt; um;\num[make_pair(1,2)] = 0;\n\n\n\nTo see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time):\n\n\nCode\nimport collections\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nd = {}\nfor i in range(1, 10):\n    for j in range(1, 10):\n        val = cantor_pairing(i, j)\n        d[val] = np.array((i, j))\nod = collections.OrderedDict(sorted(d.items()))\n\nplt.figure(facecolor=\"w\")\nplt.axis([0, 10, 0, 10])\nplt.axis(\"off\")\nfor k, v in od.items():\n    if v[0] == 9 and v[1] == 2:\n        break\n    plt.annotate(text=\"{}/{}\".format(*v), xy=v, ha=\"center\", va=\"center\")\n    if \"v0\" in locals():\n        plt.annotate(\n            text=\"\",\n            xy=v0 + (v - v0) * 0.2 / np.linalg.norm(v - v0),\n            xytext=v - (v - v0) * 0.2 / np.linalg.norm(v - v0),\n            arrowprops=dict(arrowstyle=\"&lt;-\"),\n        )\n    v0 = v\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2020,\n  author = {Li, Chengkun},\n  title = {The {Cantor} {Pairing} {Function}},\n  date = {2020-04-25},\n  url = {https://pipme.github.io/posts/2020-04-25-cantor-pairing/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2020. “The Cantor Pairing Function.” April\n25, 2020. https://pipme.github.io/posts/2020-04-25-cantor-pairing/."
-  },
-  {
-    "objectID": "posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html",
-    "href": "posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html",
-    "title": "BibTeX and natbib: Zotero arXiv article entry fix",
-    "section": "",
-    "text": "When exporting references from Zotero to BibTeX (using Better BibTeX), arXiv articles may not be formatted correctly in LaTeX-generated PDFs, as BibTeX is by default unaware of arXiv/preprint type. For example, currently (2025) an arXiv article entry from Zotero would look like this:1\nThe above would appear in the references section as:\nA simple fix is to add a note field in the BibTeX entry with the arXiv identifier arXiv:1701.02434, so that the reference would look like:\nThis can be automated by adding a postscript to the Better BibTeX export preferences in Zotero:\nI hadn’t noticed this issue with arXiv articles before, as I usually relied on journal or conference templates that handled them correctly. When templates are unavailable, it might be preferable to switch to BibLaTeX instead of BibTeX + natbib, which provides more robust handling of preprint and arXiv entries."
-  },
-  {
-    "objectID": "posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html#footnotes",
-    "href": "posts/2025-10-31-Zotero-bibtex-arxiv/index-gist.html#footnotes",
-    "title": "BibTeX and natbib: Zotero arXiv article entry fix",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nPreviously, these entries were exported as @article types in Zotero, but they now default to @misc types.↩︎"
-  },
-  {
-    "objectID": "posts/2023-06-10-Quarto-set-up/index.html",
-    "href": "posts/2023-06-10-Quarto-set-up/index.html",
-    "title": "Start Blogging with Quarto",
-    "section": "",
-    "text": "Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.\nBuilding a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips here. See Navarro (2022) for more work-through details.\nBy the way, I fell in love with writing in markdown since the birth of another great tool Obsidian and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.\nFor Obsidian, I put some useful plugins here, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.\nWelcome to my blog 😃!\n\n\n\n\n\n\n\n Back to topReferences\n\nNavarro, Danielle. 2022. “Porting a Distill Blog to Quarto.” April 20, 2022. https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto.\n\nReuseCC BY 4.0CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {Start {Blogging} with {Quarto}},\n  date = {2023-06-10},\n  url = {https://pipme.github.io/posts/2023-06-10-Quarto-set-up/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “Start Blogging with Quarto.” June 10,\n2023. https://pipme.github.io/posts/2023-06-10-Quarto-set-up/."
-  },
-  {
-    "objectID": "posts/2024-03-10-Mac-font/index-gist.html",
-    "href": "posts/2024-03-10-Mac-font/index-gist.html",
-    "title": "Mac OTF fonts installation",
-    "section": "",
-    "text": "Download the required OTF fonts files, e.g., source-han-serif. Then simply move .otf files to ~/Library/Fonts folder. In Font Book application, now one can see the fonts in My Fonts.\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2024,\n  author = {Li, Chengkun},\n  title = {Mac {OTF} Fonts Installation},\n  date = {2024-03-10},\n  url = {https://pipme.github.io/posts/2024-03-10-Mac-font/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2024. “Mac OTF Fonts Installation.” March 10,\n2024. https://pipme.github.io/posts/2024-03-10-Mac-font/index-gist.html."
-  },
-  {
-    "objectID": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
-    "href": "posts/2023-06-11-De-Finetti-theorem/index-gist.html",
-    "title": "De Finetti’s theorem",
-    "section": "",
-    "text": "Theorem: A sequence of random variables \\((x_1, x_2, \\dots)\\) is infinitely exchangeable iff, for all n, \\[\np(x_1, x_2, \\dots, x_n) = \\int \\prod^{n}_{i=1} p(x_i|\\theta) P(d\\theta),\n\\] for some measure \\(P\\) on \\(\\theta\\).\n(See Jordan and Broderick 2010)\n\n\n\n\n\n\n\n Back to topReferences\n\nJordan, Michael I, and Tamara Broderick. 2010. “Lecture 1: History and De Finetti’s Theorem.” 2010. https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf.\n\nReuseCC BY 4.0CitationBibTeX citation:@online{li2023,\n  author = {Li, Chengkun},\n  title = {De {Finetti’s} Theorem},\n  date = {2023-06-11},\n  url = {https://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2023. “De Finetti’s Theorem.” June 11, 2023.\nhttps://pipme.github.io/posts/2023-06-11-De-Finetti-theorem/index-gist.html."
-  },
-  {
-    "objectID": "posts/2024-02-23-Numpy-caveat/index-gist.html",
-    "href": "posts/2024-02-23-Numpy-caveat/index-gist.html",
-    "title": "A Numpy caveat when referencing elements of an array",
-    "section": "",
-    "text": "Understanding when a view or copy for a Numpy array is returned is important, or else the array may be modified in place by mistake. An example below:\n\nimport numpy as np\n\nprint(\"Numpy version: \", np.__version__)\n\n\ndef print_result(test_array):\n    a = test_array.copy()\n    b = a[0]\n    b += 1\n    print(\n        f'b = a[0], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n    a = test_array.copy()\n    b = a[[0]]\n    b += 1\n    print(\n        f'b = a[[0]], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n    a = test_array.copy()\n    b = a[0:1]\n    b += 1\n    print(\n        f'b = a[0:1], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n\nprint(\"For 1D array:\")\nprint_result(np.zeros(2))\nprint(\"-\" * 10)\nprint(\"For 2D array:\")\nprint_result(np.zeros((2, 2)))\n\nNumpy version:  1.23.1\nFor 1D array:\nb = a[0], unchanged\nb = a[[0]], unchanged\nb = a[0:1], changed\n----------\nFor 2D array:\nb = a[0], changed\nb = a[[0]], unchanged\nb = a[0:1], changed\n\n\nNote that the result is different for 1D or 2D Numpy arrays.\nFor more, check Numpy docs Copies and views.\n\n\n\n Back to topReuseCC BY 4.0CitationBibTeX citation:@online{li2024,\n  author = {Li, Chengkun},\n  title = {A {Numpy} Caveat When Referencing Elements of an Array},\n  date = {2024-02-23},\n  url = {https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLi, Chengkun. 2024. “A Numpy Caveat When Referencing Elements of\nan Array.” February 23, 2024. https://pipme.github.io/posts/2024-02-23-Numpy-caveat/index-gist.html."
-  },
-  {
-    "objectID": "posts/2023-07-17-Python-tools/index-gist.html",
-    "href": "posts/2023-07-17-Python-tools/index-gist.html",
-    "title": "Python tools",
-    "section": "",
-    "text": "Ruff is an incredibly fast linter. It’s since Ruff that I actually start to use a Python linter instead of turning off the annoying warnings.\nFor VSCode integration I use ruff-vscode."
-  },
-  {
-    "objectID": "posts/2023-07-17-Python-tools/index-gist.html#ruff-linter",
-    "href": "posts/2023-07-17-Python-tools/index-gist.html#ruff-linter",
-    "title": "Python tools",
-    "section": "",
-    "text": "Ruff is an incredibly fast linter. It’s since Ruff that I actually start to use a Python linter instead of turning off the annoying warnings.\nFor VSCode integration I use ruff-vscode."
+    "text": "No matching items\n Back to top"
   },
   {
     "objectID": "gist.html",
     "href": "gist.html",
     "title": "Gist collection.",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nReading Time\n\n\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nOct 31, 2025\n\n\nBibTeX and natbib: Zotero arXiv article entry fix\n\n\n2 min\n\n\n\n\n\n\nSep 26, 2024\n\n\nexp(x) overflow/underflow in Numpy (float64)\n\n\n1 min\n\n\n\n\n\n\nMar 10, 2024\n\n\nMac OTF fonts installation\n\n\n1 min\n\n\n\n\n\n\nFeb 23, 2024\n\n\nA Numpy caveat when referencing elements of an array\n\n\n1 min\n\n\n\n\n\n\nFeb 11, 2024\n\n\nSearch frequentist and Bayesian in GitHub\n\n\n1 min\n\n\n\n\n\n\nAug 6, 2023\n\n\nMathJax macros in Quarto\n\n\n1 min\n\n\n\n\n\n\nJul 17, 2023\n\n\nPython tools\n\n\n1 min\n\n\n\n\n\n\nJun 16, 2023\n\n\nTobit likelihood\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nDe Finetti’s theorem\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nPersonal Obsidian and Zotero best practices\n\n\n1 min\n\n\n\n\n\n\nJun 11, 2023\n\n\nQuarto tips\n\n\n1 min\n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Date\nTitle\nReading Time\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "tools/index.html",

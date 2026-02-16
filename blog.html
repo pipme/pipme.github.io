@@ -87,9 +87,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -402,7 +402,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aGFzaGluZw==">hashing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2V0JTIwdGhlb3J5">set theory <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -437,68 +437,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686689262000" data-listing-date-modified-sort="1686689262000" data-listing-reading-time-sort="1" data-listing-word-count-sort="176">
-<div class="thumbnail"><a href="./posts/2023-06-10-Quarto-set-up/index.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-06-10-Quarto-set-up/index.html" class="no-external">Start Blogging with Quarto</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2023-06-10-Quarto-set-up/index.html" class="no-external">
-Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-06-10-Quarto-set-up/index.html" class="no-external">
-<div class="listing-date">
-Jun 10, 2023
-</div>
-<div class="listing-author">
-Chengkun Li
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="aGFzaGluZyUyQ3NldCUyMHRoZW9yeQ==" data-listing-date-sort="1587772800000" data-listing-file-modified-sort="1727371949000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
-<div class="thumbnail"><a href="./posts/2020-04-25-cantor-pairing/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/2020-04-25-cantor-pairing/index_files/figure-html/cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2020-04-25-cantor-pairing/index.html" class="no-external">The Cantor Pairing Function</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aGFzaGluZw=='); return false;">hashing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2V0JTIwdGhlb3J5'); return false;">set theory</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2020-04-25-cantor-pairing/index.html" class="no-external">
-One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2020-04-25-cantor-pairing/index.html" class="no-external">
-<div class="listing-date">
-Apr 25, 2020
-</div>
-<div class="listing-author">
-Chengkun Li
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
