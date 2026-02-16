@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "tools/horse-greeting/index.html"
 
 website:
   # favicon:
