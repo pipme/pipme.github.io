@@ -487,16 +487,25 @@
         function spawnItem(timestamp) {
             if (!gameActive) return;
 
-            const baseRate = feverMode ? 100 : 800;
-            const spawnInterval = Math.max(feverMode ? 50 : 300, baseRate - score * 8);
+            // 动态调整速度与频率：随着得分增加，频率变高，但速度设上限
+            const difficultyScale = Math.min(1, score / 500); // 500分达到最高难度
+            const baseInterval = feverMode ? 120 : (800 - 600 * difficultyScale);
+            const spawnInterval = Math.max(feverMode ? 60 : 150, baseInterval);
+
             if (timestamp - lastSpawn < spawnInterval) return;
             lastSpawn = timestamp;
 
-            const isGolden = feverMode || Math.random() < 0.15; // All golden in fever mode
+            const isGolden = feverMode || Math.random() < 0.15;
+            const x = Math.random() * (canvas.width - 60);
+
+            // 速度上限设定，防止由于掉落过快穿透判定区
+            const maxSpeed = feverMode ? 14 : 10;
+            const currentSpeed = Math.min(maxSpeed, 3.5 + Math.random() * 3.5 + (score / 40));
+
             const item = {
-                x: Math.random() * (canvas.width - 60),
-                y: -80,
-                speed: 3.5 + Math.random() * 3.5 + (score / 15),
+                x: x,
+                y: -100,
+                speed: currentSpeed,
                 rotation: Math.random() * 360,
                 rotationSpeed: (Math.random() - 0.5) * 8,
                 symbol: blessings[Math.floor(Math.random() * blessings.length)],
@@ -663,11 +672,18 @@
                     Math.pow(itemCenterY - horseCenterY, 2)
                 );
 
-                // 祥瑞磁铁效果：当距离较近或处于狂暴模式时，物品会被马“吸”过去
-                // 这样在高速下玩家更有“掌控感”
-                if (distance < 250) {
-                    const pullStrength = feverMode ? 0.2 : 0.08;
-                    item.x += (horseCenterX - itemCenterX) * pullStrength;
+                // 祥瑞磁铁效果：距离越近吸力越强，且在高难度下给予更多帮助
+                if (distance < 280) {
+                    const pullFactor = (1 - distance / 280); // 0 (far) to 1 (close)
+                    const baseStrength = feverMode ? 0.3 : 0.12;
+                    const finalPull = baseStrength * pullFactor;
+
+                    item.x += (horseCenterX - itemCenterX) * finalPull;
+
+                    // 当极接近时，纵向也给予微弱吸引力，确保护符准确掉入“囊中”
+                    if (distance < 120) {
+                        item.y += (horseCenterY - itemCenterY) * finalPull;
+                    }
                 }
 
                 // 动态判定区：速度越快，判定范围稍微扩大，补偿反应时间
