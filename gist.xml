@@ -9,7 +9,7 @@
 <link>https://pipme.github.io/gist.html</link>
 <atom:link href="https://pipme.github.io/gist.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.8.25</generator>
+<generator>quarto-1.8.27</generator>
 <lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>BibTeX and natbib: Zotero arXiv article entry fix</title>
