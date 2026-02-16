@@ -10,6 +10,499 @@
 <atom:link href="https://pipme.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Mon, 16 Feb 2026 19:21:57 GMT</lastBuildDate>
+<lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Start Blogging with Quarto</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>Quarto seems to be a great choice for posting with executable codes and it’s nice that one can generate pdfs, slides etc. from a quasi-markdown file with unified styles (qmd). So I decided to start blogging with Quarto and probably make slides with it in the future as the web-based solution (revealjs) looks elegant and promising in the long run.</p>
+<p>Building a site with Quarto is relatively easy and interesting. The documentation is very nicely written. You could find some useful tips <a href="../2023-06-11-Quarto-tips/index-gist.qmd">here</a>. See <span class="citation" data-cites="navarro2022">Navarro (2022)</span> for more work-through details.</p>
+<p>By the way, I fell in love with writing in markdown since the birth of another great tool <a href="https://obsidian.md/">Obsidian</a> and gradually realize that habitual writing is essential for a researcher, for building one’s second brain, understanding things better and sharing knowledge.</p>
+<p>For Obsidian, I put some useful plugins <a href="../2023-06-11-Obsidian-Zotero-tips/index-gist.qmd">here</a>, together with Zotero’s. Maybe I could write a blog for sharing my workflows in academic life. I will probably wait until I get more familiar with Quarto and see how they fit with daily needs.</p>
+<p>Welcome to my blog 😃!</p>
+
+
+<section id="bibliography" class="level1 unnumbered">
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-navarro2022" class="csl-entry">
+Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
+  author = {Li, Chengkun},
+  title = {Start {Blogging} with {Quarto}},
+  date = {2023-06-10},
+  url = {https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
+2023. <a href="https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/">https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</a>.
+</div></div></section></div> ]]></description>
+  <category>news</category>
+  <guid>https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</guid>
+  <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The Cantor Pairing Function</title>
+  <dc:creator>Chengkun Li</dc:creator>
+  <link>https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>One surprising fact from set theory is that integers and rational numbers have the same cardinality as natural numbers. This can be proved by a standard trick named diagonal progression invented by Cantor. The underlying function is the Cantor pairing function. Yesterday I was writing codes to hash two integers and using the Cantor pairing function turns out to be a neat way.</p>
+<p>Formally, the Cantor pairing function <img src="https://latex.codecogs.com/png.latex?%5Cpi"> is defined as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bgathered%7D%0A%5Cpi:%5Cmathbb%7BN%7D%20%5Ctimes%20%5Cmathbb%7BN%7D%20%5Cto%20%5Cmathbb%7BN%7D%20%5C%5C%0A%5Cpi(k_1,%20k_2)%20:=%20%5Cfrac%7B1%7D%7B2%7D%20(k_1%20+%20k_2)(k_1%20+%20k_2%20+%201)%20+%20k2%0A%5Cend%7Bgathered%7D%0A"></p>
+<p>It can also be easily extended to multiple dimensions cases:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bgathered%7D%0A%5Cpi%5E%7B(n)%7D:%5Cmathbb%7BN%7D%5En%20%5Cto%20%5Cmathbb%7BN%7D%20%5C%5C%0A%5Cpi%5E%7B(n)%7D(k_1,%20%5Cldots,%20k_%7Bn-1%7D,%20k_n)%20:=%20%5Cpi%20(%20%5Cpi%5E%7B(n-1)%7D(k_1,%20%5Cldots,%20k_%7Bn-1%7D)%20,%20k_n),%20%5Cquad%20n%3E2%0A%5Cend%7Bgathered%7D%0A"></p>
+<p>The Cantor pairing function is bijective. To prove that, we just need to invert it (<a href="https://en.wikipedia.org/wiki/Pairing_function#Inverting_the_Cantor_pairing_function%5D">details</a> can be found in Wikepidia).</p>
+<p>Simple python and C++ implementations:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">C++</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<div id="c9a53f4e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> cantor_pairing(x, y):</span>
+<span id="cb1-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>((x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> y) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> y)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> cantor_pairing_nd(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>args):</span>
+<span id="cb1-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(args) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>:</span>
+<span id="cb1-7">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> cantor_pairing(args[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>], args[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>])</span>
+<span id="cb1-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> cantor_pairing(cantor_pairing_nd(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>args[:<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]), args[<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>])</span>
+<span id="cb1-9"></span>
+<span id="cb1-10"></span>
+<span id="cb1-11">cantor_pairing_nd(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span></code></pre></div></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">struct</span> pair_hash</span>
+<span id="cb2-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-3">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">std::</span>size_t <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">operator</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">()</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">const</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">std::</span>pair<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&amp;</span> p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">const</span></span>
+<span id="cb2-4">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>first <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>second<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>first <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>second <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>second<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-6">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb2-7"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">};</span></span>
+<span id="cb2-8"></span>
+<span id="cb2-9">unordered_map<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>pair<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;,</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> pair_hash<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> um<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-10">um<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span>make_pair<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)]</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></div>
+</div>
+</div>
+</div>
+<p>To see the connection between the diagonal progression and the Cantor pairing function, we can do a formal analysis or directly visualize its graphical shape. The arrow direction indicates the monotonic increase of the Cantor pairing function (by 1 each time):</p>
+<div id="d03934a9" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> collections</span>
+<span id="cb3-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb3-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb3-4"></span>
+<span id="cb3-5">d <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb3-6"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>):</span>
+<span id="cb3-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>):</span>
+<span id="cb3-8">        val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> cantor_pairing(i, j)</span>
+<span id="cb3-9">        d[val] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array((i, j))</span>
+<span id="cb3-10">od <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> collections.OrderedDict(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sorted</span>(d.items()))</span>
+<span id="cb3-11"></span>
+<span id="cb3-12">plt.figure(facecolor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"w"</span>)</span>
+<span id="cb3-13">plt.axis([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>])</span>
+<span id="cb3-14">plt.axis(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"off"</span>)</span>
+<span id="cb3-15"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> k, v <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> od.items():</span>
+<span id="cb3-16">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> v[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">and</span> v[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>:</span>
+<span id="cb3-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">break</span></span>
+<span id="cb3-18">    plt.annotate(text<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>v), xy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>v, ha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"center"</span>, va<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"center"</span>)</span>
+<span id="cb3-19">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"v0"</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">locals</span>():</span>
+<span id="cb3-20">        plt.annotate(</span>
+<span id="cb3-21">            text<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>,</span>
+<span id="cb3-22">            xy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>v0 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> (v <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> v0) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> np.linalg.norm(v <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> v0),</span>
+<span id="cb3-23">            xytext<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>v <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> (v <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> v0) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> np.linalg.norm(v <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> v0),</span>
+<span id="cb3-24">            arrowprops<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">dict</span>(arrowstyle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&lt;-"</span>),</span>
+<span id="cb3-25">        )</span>
+<span id="cb3-26">    v0 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> v</span>
+<span id="cb3-27">plt.show()</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/index_files/figure-html/cell-3-output-1.png" width="540" height="389" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2020,
+  author = {Li, Chengkun},
+  title = {The {Cantor} {Pairing} {Function}},
+  date = {2020-04-25},
+  url = {https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2020" class="csl-entry quarto-appendix-citeas">
+Li, Chengkun. 2020. <span>“The Cantor Pairing Function.”</span> April
+25, 2020. <a href="https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/">https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/</a>.
+</div></div></section></div> ]]></description>
+  <category>hashing</category>
+  <category>set theory</category>
+  <guid>https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/</guid>
+  <pubDate>Sat, 25 Apr 2020 00:00:00 GMT</pubDate>
+</item>
 </channel>
 </rss>

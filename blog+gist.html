@@ -87,9 +87,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -402,7 +402,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(13)</span></div><div class="category" data-category="QmV0dGVyJTIwQmliVGVY">Better BibTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmliVGVY">BibTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm9udA==">font <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2l0aHVi">github <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFzaGluZw==">hashing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFUZVg=">LaTeX <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGlrZWxpaG9vZA==">likelihood <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFj">Mac <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWF0aEpheA==">MathJax <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TnVtcHk=">Numpy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2V0JTIwdGhlb3J5">set theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGhlb3JlbQ==">theorem <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGlwcw==">tips <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Wm90ZXJv">Zotero <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -432,20 +432,216 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Date</th>
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Reading Time</th>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Reading Time
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-categories="QmliVGVYJTJDWm90ZXJvJTJDTGFUZVglMkNCZXR0ZXIlMjBCaWJUZVg=" data-listing-date-sort="1761868800000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="2" data-listing-word-count-sort="248" data-listing-title-sort="BibTeX and natbib: Zotero arXiv article entry fix" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Oct 31, 2025</span>
+</td>
+<td>
+<a href="./posts/gists/2025-10-31-Zotero-bibtex-arxiv/index-gist.html" class="title listing-title">BibTeX and natbib: Zotero arXiv article entry fix</a>
+</td>
+<td>
+<span class="listing-reading-time">2 min</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="TnVtcHklMkNQeXRob24=" data-listing-date-sort="1727308800000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="`exp(x)` overflow/underflow in Numpy (float64)" data-listing-filename-sort="index-gist.ipynb">
+<td>
+<span class="listing-date">Sep 26, 2024</span>
+</td>
+<td>
+<a href="./posts/gists/2024-09-26-Float64/index-gist.html" class="title listing-title"><code>exp(x)</code> overflow/underflow in Numpy (float64)</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="TWFjJTJDZm9udCUyQ0xhVGVY" data-listing-date-sort="1710028800000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="29" data-listing-title-sort="Mac OTF fonts installation" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Mar 10, 2024</span>
+</td>
+<td>
+<a href="./posts/gists/2024-03-10-Mac-font/index-gist.html" class="title listing-title">Mac OTF fonts installation</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="TnVtcHklMkNQeXRob24=" data-listing-date-sort="1708646400000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="186" data-listing-title-sort="A Numpy caveat when referencing elements of an array" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Feb 23, 2024</span>
+</td>
+<td>
+<a href="./posts/gists/2024-02-23-Numpy-caveat/index-gist.html" class="title listing-title">A Numpy caveat when referencing elements of an array</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="Z2l0aHVi" data-listing-date-sort="1707609600000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="14" data-listing-title-sort="Search frequentist and Bayesian in GitHub" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Feb 11, 2024</span>
+</td>
+<td>
+<a href="./posts/gists/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html" class="title listing-title">Search frequentist and Bayesian in GitHub</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="dGlwcyUyQ01hdGhKYXglMkNRdWFydG8=" data-listing-date-sort="1691280000000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="40" data-listing-title-sort="MathJax macros in Quarto" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Aug 6, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-08-06-Mathjax/index-gist.html" class="title listing-title">MathJax macros in Quarto</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="dGlwcw==" data-listing-date-sort="1689552000000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="30" data-listing-title-sort="Python tools" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Jul 17, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-07-17-Python-tools/index-gist.html" class="title listing-title">Python tools</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="bGlrZWxpaG9vZA==" data-listing-date-sort="1686873600000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="114" data-listing-title-sort="Tobit likelihood" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Jun 16, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-06-16-Tobit-likelihood/index-gist.html" class="title listing-title">Tobit likelihood</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="dGlwcw==" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="23" data-listing-title-sort="Personal Obsidian and Zotero best practices" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Jun 11, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-06-11-Obsidian-Zotero-tips/index-gist.html" class="title listing-title">Personal Obsidian and Zotero best practices</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="dGlwcw==" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="184" data-listing-title-sort="Quarto tips" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Jun 11, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-06-11-Quarto-tips/index-gist.html" class="title listing-title">Quarto tips</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="dGhlb3JlbQ==" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="30" data-listing-title-sort="De Finetti's theorem" data-listing-filename-sort="index-gist.qmd">
+<td>
+<span class="listing-date">Jun 11, 2023</span>
+</td>
+<td>
+<a href="./posts/gists/2023-06-11-De-Finetti-theorem/index-gist.html" class="title listing-title">De Finetti’s theorem</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="bmV3cw==" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="1771269697000" data-listing-reading-time-sort="1" data-listing-word-count-sort="176" data-listing-title-sort="Start Blogging with Quarto" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 10, 2023</span>
+</td>
+<td>
+<a href="./posts/blogs/2023-06-10-Quarto-set-up/index.html" class="title listing-title">Start Blogging with Quarto</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="aGFzaGluZyUyQ3NldCUyMHRoZW9yeQ==" data-listing-date-sort="1587772800000" data-listing-file-modified-sort="1771269697000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454" data-listing-title-sort="The Cantor Pairing Function" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Apr 25, 2020</span>
+</td>
+<td>
+<a href="./posts/blogs/2020-04-25-Cantor-pairing/index.html" class="title listing-title">The Cantor Pairing Function</a>
+</td>
+<td>
+<span class="listing-reading-time">3 min</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
