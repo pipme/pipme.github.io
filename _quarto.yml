@@ -45,7 +45,9 @@ website:
       category-id: DIC_kwDOJtreTM4CXLJm
       mapping: pathname
       loading: lazy
-      # dark theme issue will be fixed in quarto 1.4
+      theme:
+        light: light # giscus theme used for light website theme
+        dark: dark_dimmed # giscus theme used for dark website theme
   page-footer:
     center:
       - text: "{{< ai google-scholar >}}"
@@ -67,5 +69,5 @@ format:
   html:
     theme:
       light: cosmo
-      dark: darkly  # https://github.com/quarto-dev/quarto-cli/issues/6741
+      dark: solar  # https://github.com/quarto-dev/quarto-cli/issues/6741
     css: styles.css
