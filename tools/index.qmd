@@ -3,4 +3,6 @@ title: "Tools"
 comments: false
 ---
 
+[千里马送福 - 马年贺岁](./horse-greeting/index.qmd)
+
 [Array memory size calculator](./np/index.qmd)
