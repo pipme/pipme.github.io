@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>千里马送福 - 马年贺岁</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&family=ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
     <style>
-        body, html {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #F5F5DC;
+            background: linear-gradient(180deg, #FFF8DC 0%, #F5DEB3 50%, #D2B48C 100%);
             font-family: "Noto Serif SC", serif;
         }
 
@@ -20,18 +28,66 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            background-color: #F5F5DC;
-            border: 10px solid #8B4513;
-            box-sizing: border-box;
+            background: linear-gradient(180deg,
+                    rgba(255, 248, 220, 0.9) 0%,
+                    rgba(245, 222, 179, 0.8) 40%,
+                    rgba(238, 232, 170, 0.9) 70%,
+                    rgba(210, 180, 140, 0.8) 100%);
             overflow: hidden;
+            box-shadow: inset 0 0 100px rgba(139, 69, 19, 0.1);
+            transition: background 0.5s;
+        }
+
+        #game-container.fever-mode {
+            background: linear-gradient(45deg, #FF0000, #B22222, #FFD700);
+            background-size: 400% 400%;
+            animation: feverBackground 2s ease infinite;
+        }
+
+        @keyframes feverBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #fever-bar-container {
+            position: absolute;
+            bottom: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 105;
+        }
+
+        #fever-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #FF6347);
+            border-radius: 5px;
+            transition: width 0.3s;
         }
 
         #game-container::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
-            opacity: 0.3;
+            opacity: 0.2;
             pointer-events: none;
             z-index: 1;
         }
@@ -46,7 +102,10 @@
 
         #ui-overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,248 +113,790 @@
             z-index: 10;
         }
 
-        #score {
+        #hud {
             position: absolute;
-            top: 25px;
-            right: 30px;
-            font-size: 28px;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            padding: 15px 25px;
+            border-radius: 15px;
+            border: 2px solid #B22222;
+            box-shadow: 0 4px 15px rgba(178, 34, 34, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        #score-display {
+            font-size: 32px;
             color: #8B0000;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: "Ma Shan Zheng", cursive;
+        }
+
+        #combo-display {
+            font-size: 24px;
+            color: #DAA520;
+            margin-top: 5px;
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        #timer {
+            font-size: 28px;
+            color: #B22222;
+            font-weight: bold;
+            font-family: "Ma Shan Zheng", cursive;
         }
 
         .seal {
             position: absolute;
-            top: 25px;
+            bottom: 30px;
             left: 30px;
-            width: 65px;
-            height: 65px;
+            width: 70px;
+            height: 70px;
             border: 3px solid #B22222;
             color: #B22222;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: "Ma Shan Zheng", cursive;
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.2;
             text-align: center;
             padding: 5px;
-            background: rgba(178, 34, 34, 0.05);
-            transform: rotate(-5deg);
+            background: radial-gradient(circle, rgba(178, 34, 34, 0.15), rgba(178, 34, 34, 0.05));
+            transform: rotate(-8deg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
         }
 
-        #start-screen, #end-screen {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border: 4px double #B22222;
+        #start-screen,
+        #end-screen {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 220, 0.95));
+            padding: 50px;
+            border: 5px double #B22222;
+            border-radius: 20px;
             text-align: center;
             pointer-events: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            max-width: 80%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-out;
         }
 
-        h1 { color: #B22222; font-size: 36px; margin-top: 0; font-family: "Ma Shan Zheng", cursive; }
-        h2 { color: #B22222; font-size: 28px; }
-        p { color: #555; font-size: 18px; }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            color: #B22222;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: "Ma Shan Zheng", cursive;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #B22222, #8B0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            color: #B22222;
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-family: "Ma Shan Zheng", cursive;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #DAA520;
+            font-weight: bold;
+            font-size: 24px;
+        }
 
         button {
-            background-color: #B22222;
+            background: linear-gradient(135deg, #B22222, #8B0000);
             color: #FFD700;
             border: none;
-            padding: 12px 30px;
-            font-size: 20px;
+            padding: 15px 40px;
+            font-size: 22px;
             cursor: pointer;
-            margin-top: 20px;
-            font-family: inherit;
-            box-shadow: 0 4px 0 #8B0000;
-            transition: all 0.2s;
+            margin-top: 25px;
+            font-family: "Ma Shan Zheng", cursive;
+            border-radius: 30px;
+            box-shadow: 0 6px 0 #5C0000, 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.15s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 #5C0000, 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         button:active {
-            transform: translateY(2px);
-            box-shadow: 0 2px 0 #8B0000;
+            transform: translateY(3px);
+            box-shadow: 0 3px 0 #5C0000, 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .cloud {
             position: absolute;
-            background: rgba(0, 0, 0, 0.03);
             border-radius: 50%;
-            filter: blur(30px);
+            filter: blur(40px);
             z-index: 0;
             animation: moveClouds var(--speed) linear infinite;
+            opacity: 0.6;
         }
 
         @keyframes moveClouds {
-            from { left: -250px; }
-            to { left: 100%; }
+            from {
+                left: -300px;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.6;
+            }
+
+            90% {
+                opacity: 0.6;
+            }
+
+            to {
+                left: 110%;
+                opacity: 0;
+            }
+        }
+
+        .particle {
+            position: absolute;
+            pointer-events: none;
+            z-index: 5;
+            animation: particleFade 1s ease-out forwards;
+        }
+
+        @keyframes particleFade {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(0.5);
+            }
+        }
+
+        #instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(218, 165, 32, 0.1);
+            border-radius: 10px;
+            border: 1px dashed #DAA520;
+        }
+
+        .instruction-item {
+            margin: 8px 0;
+            color: #666;
         }
     </style>
 </head>
+
 <body>
+    <div id="game-container">
+        <div class="seal">马年<br>大吉</div>
+        <div id="fever-bar-container">
+            <div id="fever-bar-fill"></div>
+        </div>
 
-<div id="game-container">
-    <div class="seal">马年<br>大吉</div>
-    <div id="score">得分: 0</div>
-    
-    <div id="ui-overlay">
-        <div id="start-screen">
-            <h1>千里马送福</h1>
-            <p>点击/拖动下方千里马，收集掉落的祈福文字</p>
-            <button id="start-btn">开启祥瑞</button>
+        <div id="hud">
+            <div class="stat-box">
+                <div id="score-display">福: 0</div>
+                <div id="combo-display" style="display:none;">连击 x<span id="combo-num">0</span></div>
+            </div>
+            <div class="stat-box">
+                <div id="timer">30s</div>
+            </div>
         </div>
-        <div id="end-screen" style="display: none;">
-            <h2 id="final-greeting">龙腾虎跃，马到成功！</h2>
-            <p>您的福气值: <span id="final-score">0</span></p>
-            <button id="restart-btn">再续前缘</button>
+
+        <div id="ui-overlay">
+            <div id="start-screen">
+                <h1>千里马送福</h1>
+                <p>移动鼠标或触摸屏幕，驾驭神骏<br>收集天降祥瑞，祈福纳祥</p>
+                <div id="instructions">
+                    <div class="instruction-item">🔥 积攒能量，开启【天马下凡】狂暴模式</div>
+                    <div class="instruction-item">🧲 祥瑞自带磁力，离马近点它会飞向你！</div>
+                    <div class="instruction-item">⭐ 金色福字、高连击可大幅拉升评价</div>
+                </div>
+                <button id="start-btn">启程纳福</button>
+            </div>
+            <div id="end-screen" style="display: none;">
+                <h2 id="final-greeting">马踏飞燕，福满人间！</h2>
+                <p>总福气值: <span class="highlight" id="final-score">0</span></p>
+                <p>最高连击: <span class="highlight" id="max-combo">0</span></p>
+                <p id="rank-text"></p>
+                <button id="restart-btn">再战一回</button>
+            </div>
         </div>
+
+        <canvas id="gameCanvas"></canvas>
     </div>
-    
-    <canvas id="gameCanvas"></canvas>
-</div>
 
-<script>
-    const canvas = document.getElementById('gameCanvas');
-    const ctx = canvas.getContext('2d');
-    const scoreElement = document.getElementById('score');
-    const startScreen = document.getElementById('start-screen');
-    const endScreen = document.getElementById('end-screen');
-    const finalScore = document.getElementById('final-score');
-    const startBtn = document.getElementById('start-btn');
-    const restartBtn = document.getElementById('restart-btn');
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreDisplay = document.getElementById('score-display');
+        const comboDisplay = document.getElementById('combo-display');
+        const comboNum = document.getElementById('combo-num');
+        const timerDisplay = document.getElementById('timer');
+        const startScreen = document.getElementById('start-screen');
+        const endScreen = document.getElementById('end-screen');
+        const finalScore = document.getElementById('final-score');
+        const maxComboDisplay = document.getElementById('max-combo');
+        const rankText = document.getElementById('rank-text');
+        const startBtn = document.getElementById('start-btn');
+        const restartBtn = document.getElementById('restart-btn');
 
-    let score = 0;
-    let gameActive = false;
-    let items = [];
-    const horse = {
-        x: 0,
-        y: 0,
-        width: 80,
-        height: 80,
-        symbol: '🐎'
-    };
+        let score = 0;
+        let combo = 0;
+        let maxCombo = 0;
+        let comboTimer = null;
+        let gameActive = false;
+        let gameTime = 30;
+        let items = [];
+        let particles = [];
+        let lastSpawn = 0;
+        let achievements = [];
+        let screenShake = 0;
+        let fever = 0;
+        let feverMode = false;
+        let feverTimer = null;
 
-    const blessings = ['福', '吉', '祥', '丰', '乐', '禧', '康', '顺'];
-    const colors = ['#B22222', '#8B0000', '#DAA520', '#CD7F32', '#A0522D'];
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        horse.y = canvas.height - 120;
-        horse.x = canvas.width / 2 - horse.width / 2;
-    }
-
-    function createClouds() {
-        const container = document.getElementById('game-container');
-        for (let i = 0; i < 8; i++) {
-            const cloud = document.createElement('div');
-            cloud.className = 'cloud';
-            cloud.style.width = (150 + Math.random() * 300) + 'px';
-            cloud.style.height = (80 + Math.random() * 150) + 'px';
-            cloud.style.top = (Math.random() * 80) + '%';
-            cloud.style.setProperty('--speed', (20 + Math.random() * 40) + 's');
-            cloud.style.animationDelay = (Math.random() * 20) + 's';
-            container.appendChild(cloud);
-        }
-    }
-
-    const updateMouse = (x) => {
-        if (!gameActive) return;
-        horse.x = x - horse.width / 2;
-        // Keep in bounds
-        if (horse.x < 0) horse.x = 0;
-        if (horse.x > canvas.width - horse.width) horse.x = canvas.width - horse.width;
-    };
-
-    window.addEventListener('mousemove', (e) => updateMouse(e.clientX));
-    window.addEventListener('touchmove', (e) => {
-        updateMouse(e.touches[0].clientX);
-        e.preventDefault();
-    }, { passive: false });
-
-    function spawnItem() {
-        if (!gameActive) return;
-        const item = {
-            x: Math.random() * (canvas.width - 50),
-            y: -60,
-            speed: 3 + Math.random() * 4 + (score / 10),
-            symbol: blessings[Math.floor(Math.random() * blessings.length)],
-            color: colors[Math.floor(Math.random() * colors.length)],
-            size: 35 + Math.random() * 25
+        const horse = {
+            x: 0,
+            y: 0,
+            targetX: 0,
+            width: 90,
+            height: 90,
+            symbol: '🐎',
+            rotation: 0
         };
-        items.push(item);
-        setTimeout(spawnItem, Math.max(200, 900 - score * 10));
-    }
 
-    function update() {
-        if (!gameActive) return;
+        const blessings = ['福', '吉', '祥', '丰', '乐', '禧', '康', '顺', '安', '宁'];
+        const colors = ['#B22222', '#8B0000', '#DAA520', '#CD7F32', '#A0522D', '#DC143C'];
 
-        for (let i = items.length - 1; i >= 0; i--) {
-            items[i].y += items[i].speed;
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            // 在移动设备上提高马的位置，避免被底部遮挡
+            const isMobile = window.innerWidth < 768;
+            horse.y = canvas.height - (isMobile ? 200 : 150);
+            horse.x = canvas.width / 2 - horse.width / 2;
+            horse.targetX = horse.x;
+        }
 
-            // Collision
-            if (
-                items[i].y + items[i].size > horse.y + 20 &&
-                items[i].y < horse.y + horse.height &&
-                items[i].x + items[i].size > horse.x &&
-                items[i].x < horse.x + horse.width
-            ) {
-                score++;
-                scoreElement.innerText = `得分: ${score}`;
-                items.splice(i, 1);
-                continue;
-            }
+        function createClouds() {
+            const container = document.getElementById('game-container');
+            const existingClouds = container.querySelectorAll('.cloud');
+            existingClouds.forEach(cloud => cloud.remove());
 
-            if (items[i].y > canvas.height) {
-                items.splice(i, 1);
+            for (let i = 0; i < 12; i++) {
+                const cloud = document.createElement('div');
+                cloud.className = 'cloud';
+                const size = 200 + Math.random() * 400;
+                cloud.style.width = size + 'px';
+                cloud.style.height = size * 0.6 + 'px';
+                cloud.style.top = (Math.random() * 90) + '%';
+                cloud.style.background = `radial-gradient(circle, 
+                    rgba(${139 + Math.random() * 50}, ${69 + Math.random() * 30}, 19, 0.08), 
+                    transparent)`;
+                cloud.style.setProperty('--speed', (25 + Math.random() * 50) + 's');
+                cloud.style.animationDelay = (Math.random() * 25) + 's';
+                container.appendChild(cloud);
             }
         }
 
-        draw();
-        requestAnimationFrame(update);
-    }
+        const updateMouse = (x) => {
+            if (!gameActive) return;
+            horse.targetX = x - horse.width / 2;
+            if (horse.targetX < 0) horse.targetX = 0;
+            if (horse.targetX > canvas.width - horse.width) {
+                horse.targetX = canvas.width - horse.width;
+            }
+        };
 
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        window.addEventListener('mousemove', (e) => updateMouse(e.clientX));
+        window.addEventListener('touchmove', (e) => {
+            updateMouse(e.touches[0].clientX);
+            e.preventDefault();
+        }, { passive: false });
 
-        // Draw Items
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        items.forEach(item => {
-            ctx.fillStyle = item.color;
-            ctx.font = `${item.size}px "Noto Serif SC", serif`;
-            ctx.fillText(item.symbol, item.x + item.size/2, item.y + item.size/2);
+        function spawnItem(timestamp) {
+            if (!gameActive) return;
+
+            // 动态调整速度与频率：随着得分增加，频率变高，但速度设上限
+            const difficultyScale = Math.min(1, score / 500); // 500分达到最高难度
+            const baseInterval = feverMode ? 120 : (800 - 600 * difficultyScale);
+            const spawnInterval = Math.max(feverMode ? 60 : 150, baseInterval);
+
+            if (timestamp - lastSpawn < spawnInterval) return;
+            lastSpawn = timestamp;
+
+            const isGolden = feverMode || Math.random() < 0.15;
+            const x = Math.random() * (canvas.width - 60);
+
+            // 速度上限设定，防止由于掉落过快穿透判定区
+            const maxSpeed = feverMode ? 14 : 10;
+            const currentSpeed = Math.min(maxSpeed, 3.5 + Math.random() * 3.5 + (score / 40));
+
+            const item = {
+                x: x,
+                y: -100,
+                speed: currentSpeed,
+                rotation: Math.random() * 360,
+                rotationSpeed: (Math.random() - 0.5) * 8,
+                symbol: blessings[Math.floor(Math.random() * blessings.length)],
+                color: isGolden ? '#FFD700' : colors[Math.floor(Math.random() * colors.length)],
+                size: 40 + Math.random() * 25,
+                golden: isGolden,
+                opacity: 1,
+                wobble: Math.random() * Math.PI * 2
+            };
+            items.push(item);
+        }
+
+        function createParticles(x, y, color, count = 8) {
+            for (let i = 0; i < count; i++) {
+                const angle = (Math.PI * 2 * i) / count;
+                const particle = {
+                    x: x,
+                    y: y,
+                    vx: Math.cos(angle) * (2 + Math.random() * 3),
+                    vy: Math.sin(angle) * (2 + Math.random() * 3) - 2,
+                    size: 3 + Math.random() * 5,
+                    color: color,
+                    life: 1,
+                    decay: 0.02 + Math.random() * 0.02
+                };
+                particles.push(particle);
+            }
+        }
+
+        function createFirework(x, y) {
+            const colors = ['#FFD700', '#FF6347', '#FF69B4', '#00CED1', '#FF8C00'];
+            for (let i = 0; i < 30; i++) {
+                const angle = (Math.PI * 2 * i) / 30;
+                const speed = 3 + Math.random() * 4;
+                const particle = {
+                    x: x,
+                    y: y,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    size: 4 + Math.random() * 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 1,
+                    decay: 0.015
+                };
+                particles.push(particle);
+            }
+        }
+
+        function showComboText(comboCount) {
+            const container = document.getElementById('game-container');
+            const comboFlash = document.createElement('div');
+            comboFlash.className = 'combo-flash';
+
+            let text = '';
+            if (comboCount >= 20) text = '神乎其技！';
+            else if (comboCount >= 15) text = '所向披靡！';
+            else if (comboCount >= 10) text = '势如破竹！';
+            else if (comboCount >= 5) text = '连击！';
+
+            comboFlash.textContent = text;
+            container.appendChild(comboFlash);
+
+            setTimeout(() => comboFlash.remove(), 1000);
+        }
+
+        function triggerScreenShake() {
+            screenShake = 10;
+            const container = document.getElementById('game-container');
+            container.classList.add('shake');
+            setTimeout(() => container.classList.remove('shake'), 500);
+        }
+
+        function activateFeverMode() {
+            if (feverMode) return;
+            feverMode = true;
+            document.getElementById('game-container').classList.add('fever-mode');
+            showComboText('FEVER TIME!');
+            triggerScreenShake();
+
+            // Fever power: horse speed increases, spawn rate explodes
+            const originalY = horse.y;
+
+            feverTimer = setTimeout(() => {
+                feverMode = false;
+                fever = 0;
+                document.getElementById('fever-bar-fill').style.width = '0%';
+                document.getElementById('game-container').classList.remove('fever-mode');
+            }, 5000); // 5 seconds of madness
+        }
+
+        function updateCombo() {
+            combo++;
+            if (combo > maxCombo) maxCombo = combo;
+
+            // Fever system
+            if (!feverMode) {
+                fever = Math.min(100, fever + 5);
+                document.getElementById('fever-bar-fill').style.width = fever + '%';
+                if (fever >= 100) activateFeverMode();
+            }
+
+            if (combo > 1) {
+                comboDisplay.style.display = 'block';
+                comboNum.textContent = combo;
+                comboDisplay.style.animation = 'none';
+                setTimeout(() => comboDisplay.style.animation = 'pulse 0.3s ease-in-out', 10);
+            }
+
+            // 特殊连击效果
+            if (combo === 5) {
+                showComboText(5);
+            } else if (combo === 10) {
+                showComboText(10);
+                createFirework(canvas.width / 2, canvas.height / 2);
+            } else if (combo === 15) {
+                showComboText(15);
+                triggerScreenShake();
+                createFirework(canvas.width / 3, canvas.height / 3);
+                createFirework(canvas.width * 2 / 3, canvas.height / 3);
+            } else if (combo >= 20 && combo % 5 === 0) {
+                showComboText(combo);
+                triggerScreenShake();
+                for (let i = 0; i < 3; i++) {
+                    createFirework(
+                        Math.random() * canvas.width,
+                        Math.random() * canvas.height / 2
+                    );
+                }
+            }
+
+            clearTimeout(comboTimer);
+            comboTimer = setTimeout(() => {
+                combo = 0;
+                comboDisplay.style.display = 'none';
+            }, 1500);
+        }
+
+        function update(timestamp) {
+            if (!gameActive) return;
+
+            const dx = horse.targetX - horse.x;
+            horse.x += dx * 0.15;
+            horse.rotation = dx * 0.05;
+
+            // Spawn items
+            spawnItem(timestamp);
+
+            // Update items
+            for (let i = items.length - 1; i >= 0; i--) {
+                const item = items[i];
+                item.y += item.speed;
+                item.rotation += item.rotationSpeed;
+                item.wobble += 0.1;
+                item.x += Math.sin(item.wobble) * 0.5;
+
+                // Collision detection with improved hitbox
+                const itemCenterX = item.x + item.size / 2;
+                const itemCenterY = item.y + item.size / 2;
+                const horseCenterX = horse.x + horse.width / 2;
+                const horseCenterY = horse.y + horse.height / 2;
+
+                const distance = Math.sqrt(
+                    Math.pow(itemCenterX - horseCenterX, 2) +
+                    Math.pow(itemCenterY - horseCenterY, 2)
+                );
+
+                // 祥瑞磁铁效果：距离越近吸力越强，且在高难度下给予更多帮助
+                if (distance < 280) {
+                    const pullFactor = (1 - distance / 280); // 0 (far) to 1 (close)
+                    const baseStrength = feverMode ? 0.3 : 0.12;
+                    const finalPull = baseStrength * pullFactor;
+
+                    item.x += (horseCenterX - itemCenterX) * finalPull;
+
+                    // 当极接近时，纵向也给予微弱吸引力，确保护符准确掉入“囊中”
+                    if (distance < 120) {
+                        item.y += (horseCenterY - itemCenterY) * finalPull;
+                    }
+                }
+
+                // 动态判定区：速度越快，判定范围稍微扩大，补偿反应时间
+                const hitBoxBonus = Math.max(0, (item.speed - 5) * 3);
+                const threshold = (item.size + horse.width) / 2.5 + hitBoxBonus;
+
+                if (distance < threshold) {
+                    const points = item.golden ? 2 : 1;
+                    const bonusPoints = Math.floor(combo / 3);
+                    score += points + bonusPoints;
+
+                    scoreDisplay.textContent = `福: ${score}`;
+                    updateCombo();
+                    createParticles(itemCenterX, itemCenterY, item.color, item.golden ? 12 : 8);
+                    items.splice(i, 1);
+                    continue;
+                }
+
+                if (item.y > canvas.height) {
+                    items.splice(i, 1);
+                }
+            }
+
+            // Update particles
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy += 0.15; // gravity
+                p.life -= p.decay;
+
+                if (p.life <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+
+            draw();
+            requestAnimationFrame(update);
+        }
+
+        function draw() {
+            // Clear canvas first
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Apply screen shake
+            ctx.save();
+            if (screenShake > 0) {
+                ctx.translate(
+                    (Math.random() - 0.5) * screenShake,
+                    (Math.random() - 0.5) * screenShake
+                );
+                screenShake *= 0.9;
+            }
+
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, 'rgba(255, 248, 220, 0.3)');
+            gradient.addColorStop(0.5, 'rgba(245, 222, 179, 0.2)');
+            gradient.addColorStop(1, 'rgba(210, 180, 140, 0.3)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw particles
+            particles.forEach(p => {
+                ctx.globalAlpha = p.life;
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            ctx.globalAlpha = 1;
+
+            // Draw items with effects
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            items.forEach(item => {
+                ctx.save();
+                ctx.translate(item.x + item.size / 2, item.y + item.size / 2);
+                ctx.rotate((item.rotation * Math.PI) / 180);
+
+                ctx.font = `bold ${item.size}px "Noto Serif SC", serif`;
+
+                // Glow effect for golden items
+                if (item.golden) {
+                    ctx.shadowBlur = 20;
+                    ctx.shadowColor = '#FFD700';
+                }
+
+                // 先绘制描边
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.lineWidth = 4;
+                ctx.strokeText(item.symbol, 0, 0);
+
+                // 再绘制填充
+                ctx.shadowBlur = 0;
+                ctx.fillStyle = item.color;
+                ctx.fillText(item.symbol, 0, 0);
+
+                ctx.restore();
+            });
+
+            // Draw horse
+            ctx.save();
+            ctx.translate(horse.x + horse.width / 2, horse.y + horse.height / 2);
+            ctx.rotate(horse.rotation * (feverMode ? 0.3 : 0.1));
+
+            if (feverMode) {
+                ctx.shadowBlur = 30;
+                ctx.shadowColor = '#FFD700';
+                // Add extreme tilt on move
+                horse.width = 110;
+                horse.height = 110;
+            } else {
+                horse.width = 90;
+                horse.height = 90;
+            }
+
+            ctx.font = `${horse.width}px serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(horse.symbol, 0, 0);
+            ctx.restore();
+
+            ctx.restore(); // Restore screen shake
+        }
+
+        function startGame() {
+            score = 0;
+            combo = 0;
+            maxCombo = 0;
+            fever = 0;
+            feverMode = false;
+            document.getElementById('fever-bar-fill').style.width = '0%';
+            document.getElementById('game-container').classList.remove('fever-mode');
+            gameTime = 30;
+            items = [];
+            particles = [];
+            lastSpawn = 0;
+            gameActive = true;
+
+            scoreDisplay.textContent = '福: 0';
+            comboDisplay.style.display = 'none';
+            timerDisplay.textContent = '30s';
+            startScreen.style.display = 'none';
+            endScreen.style.display = 'none';
+
+            resize();
+            createClouds();
+
+            const timerInterval = setInterval(() => {
+                if (!gameActive) {
+                    clearInterval(timerInterval);
+                    return;
+                }
+                gameTime--;
+                timerDisplay.textContent = gameTime + 's';
+
+                if (gameTime <= 5) {
+                    timerDisplay.style.color = '#DC143C';
+                    timerDisplay.style.animation = 'pulse 0.5s ease-in-out infinite';
+                } else {
+                    timerDisplay.style.color = '#B22222';
+                    timerDisplay.style.animation = 'none';
+                }
+
+                if (gameTime <= 0) {
+                    endGame();
+                    clearInterval(timerInterval);
+                }
+            }, 1000);
+
+            requestAnimationFrame(update);
+        }
+
+        function endGame() {
+            gameActive = false;
+            endScreen.style.display = 'block';
+            finalScore.textContent = score;
+            maxComboDisplay.textContent = maxCombo;
+
+            let rank = '';
+            let greeting = '';
+            if (score >= 100) {
+                rank = '🏆 神骏天降';
+                greeting = '马踏飞燕，福运亨通！';
+            } else if (score >= 70) {
+                rank = '🌟 千里追风';
+                greeting = '一马当先，吉祥如意！';
+            } else if (score >= 50) {
+                rank = '⭐ 骏马奔腾';
+                greeting = '马到成功，喜气洋洋！';
+            } else if (score >= 30) {
+                rank = '✨ 良驹可期';
+                greeting = '福星高照，步步高升！';
+            } else {
+                rank = '🎯 初露锋芒';
+                greeting = '继续努力，必有所成！';
+            }
+
+            rankText.innerHTML = `<strong style="font-size: 20px; color: #DAA520;">${rank}</strong><br><span style="color: #666;">${greeting}</span>`;
+            document.getElementById('final-greeting').textContent = greeting;
+        }
+
+        startBtn.addEventListener('click', startGame);
+        restartBtn.addEventListener('click', startGame);
+        window.addEventListener('resize', () => {
+            if (!gameActive) resize();
         });
 
-        // Draw Horse
-        ctx.font = `${horse.width}px serif`;
-        ctx.fillText(horse.symbol, horse.x + horse.width / 2, horse.y + horse.height / 2);
-    }
-
-    function startGame() {
-        score = 0;
-        items = [];
-        gameActive = true;
-        scoreElement.innerText = `得分: 0`;
-        startScreen.style.display = 'none';
-        endScreen.style.display = 'none';
+        createClouds();
         resize();
-        spawnItem();
-        update();
-        setTimeout(endGame, 30000); // 30 seconds game
-    }
-
-    function endGame() {
-        gameActive = false;
-        endScreen.style.display = 'block';
-        finalScore.innerText = score;
-    }
-
-    startBtn.addEventListener('click', startGame);
-    restartBtn.addEventListener('click', startGame);
-    window.addEventListener('resize', resize);
-    createClouds();
-    resize();
-</script>
+    </script>
 
 </body>
+
 </html>
