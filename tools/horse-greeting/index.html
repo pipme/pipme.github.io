@@ -35,6 +35,48 @@
                     rgba(210, 180, 140, 0.8) 100%);
             overflow: hidden;
             box-shadow: inset 0 0 100px rgba(139, 69, 19, 0.1);
+            transition: background 0.5s;
+        }
+
+        #game-container.fever-mode {
+            background: linear-gradient(45deg, #FF0000, #B22222, #FFD700);
+            background-size: 400% 400%;
+            animation: feverBackground 2s ease infinite;
+        }
+
+        @keyframes feverBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #fever-bar-container {
+            position: absolute;
+            bottom: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 105;
+        }
+
+        #fever-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #FF6347);
+            border-radius: 5px;
+            transition: width 0.3s;
         }
 
         #game-container::before {
@@ -316,6 +358,9 @@
 <body>
     <div id="game-container">
         <div class="seal">马年<br>大吉</div>
+        <div id="fever-bar-container">
+            <div id="fever-bar-fill"></div>
+        </div>
 
         <div id="hud">
             <div class="stat-box">
@@ -332,9 +377,9 @@
                 <h1>千里马送福</h1>
                 <p>移动鼠标或触摸屏幕，驾驭神骏<br>收集天降祥瑞，祈福纳祥</p>
                 <div id="instructions">
-                    <div class="instruction-item">🎯 连续收集获得连击加分</div>
-                    <div class="instruction-item">⭐ 金色福字价值双倍</div>
-                    <div class="instruction-item">⚡ 速度会随分数提升</div>
+                    <div class="instruction-item">🔥 积攒能量，开启【天马下凡】狂暴模式</div>
+                    <div class="instruction-item">🧲 祥瑞自带磁力，离马近点它会飞向你！</div>
+                    <div class="instruction-item">⭐ 金色福字、高连击可大幅拉升评价</div>
                 </div>
                 <button id="start-btn">启程纳福</button>
             </div>
@@ -376,6 +421,9 @@
         let lastSpawn = 0;
         let achievements = [];
         let screenShake = 0;
+        let fever = 0;
+        let feverMode = false;
+        let feverTimer = null;
 
         const horse = {
             x: 0,
@@ -439,11 +487,12 @@
         function spawnItem(timestamp) {
             if (!gameActive) return;
 
-            const spawnInterval = Math.max(300, 800 - score * 8);
+            const baseRate = feverMode ? 100 : 800;
+            const spawnInterval = Math.max(feverMode ? 50 : 300, baseRate - score * 8);
             if (timestamp - lastSpawn < spawnInterval) return;
             lastSpawn = timestamp;
 
-            const isGolden = Math.random() < 0.15; // 15% chance for golden
+            const isGolden = feverMode || Math.random() < 0.15; // All golden in fever mode
             const item = {
                 x: Math.random() * (canvas.width - 60),
                 y: -80,
@@ -520,9 +569,34 @@
             setTimeout(() => container.classList.remove('shake'), 500);
         }
 
+        function activateFeverMode() {
+            if (feverMode) return;
+            feverMode = true;
+            document.getElementById('game-container').classList.add('fever-mode');
+            showComboText('FEVER TIME!');
+            triggerScreenShake();
+
+            // Fever power: horse speed increases, spawn rate explodes
+            const originalY = horse.y;
+
+            feverTimer = setTimeout(() => {
+                feverMode = false;
+                fever = 0;
+                document.getElementById('fever-bar-fill').style.width = '0%';
+                document.getElementById('game-container').classList.remove('fever-mode');
+            }, 5000); // 5 seconds of madness
+        }
+
         function updateCombo() {
             combo++;
             if (combo > maxCombo) maxCombo = combo;
+
+            // Fever system
+            if (!feverMode) {
+                fever = Math.min(100, fever + 5);
+                document.getElementById('fever-bar-fill').style.width = fever + '%';
+                if (fever >= 100) activateFeverMode();
+            }
 
             if (combo > 1) {
                 comboDisplay.style.display = 'block';
@@ -589,7 +663,18 @@
                     Math.pow(itemCenterY - horseCenterY, 2)
                 );
 
-                if (distance < (item.size + horse.width) / 2.5) {
+                // 祥瑞磁铁效果：当距离较近或处于狂暴模式时，物品会被马“吸”过去
+                // 这样在高速下玩家更有“掌控感”
+                if (distance < 250) {
+                    const pullStrength = feverMode ? 0.2 : 0.08;
+                    item.x += (horseCenterX - itemCenterX) * pullStrength;
+                }
+
+                // 动态判定区：速度越快，判定范围稍微扩大，补偿反应时间
+                const hitBoxBonus = Math.max(0, (item.speed - 5) * 3);
+                const threshold = (item.size + horse.width) / 2.5 + hitBoxBonus;
+
+                if (distance < threshold) {
                     const points = item.golden ? 2 : 1;
                     const bonusPoints = Math.floor(combo / 3);
                     score += points + bonusPoints;
@@ -687,7 +772,19 @@
             // Draw horse
             ctx.save();
             ctx.translate(horse.x + horse.width / 2, horse.y + horse.height / 2);
-            ctx.rotate(horse.rotation * 0.1);
+            ctx.rotate(horse.rotation * (feverMode ? 0.3 : 0.1));
+
+            if (feverMode) {
+                ctx.shadowBlur = 30;
+                ctx.shadowColor = '#FFD700';
+                // Add extreme tilt on move
+                horse.width = 110;
+                horse.height = 110;
+            } else {
+                horse.width = 90;
+                horse.height = 90;
+            }
+
             ctx.font = `${horse.width}px serif`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -701,6 +798,10 @@
             score = 0;
             combo = 0;
             maxCombo = 0;
+            fever = 0;
+            feverMode = false;
+            document.getElementById('fever-bar-fill').style.width = '0%';
+            document.getElementById('game-container').classList.remove('fever-mode');
             gameTime = 30;
             items = [];
             particles = [];
