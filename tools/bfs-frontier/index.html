@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS 空间复杂度可视化</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 React 和 Babel (用于浏览器内解析 JSX) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引入 Lucide 图标库 -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-pulse-custom {
+            animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useCallback } = React;
+
+        // 简单的图标组件适配器
+        const Icon = ({ name, size = 18, ...props }) => {
+            useEffect(() => {
+                lucide.createIcons();
+            }, [name]);
+            return <i data-lucide={name} style={{ width: size, height: size }} {...props}></i>;
+        };
+
+        const App = () => {
+            const [rows, setRows] = useState(12);
+            const [cols, setCols] = useState(24);
+            const [grid, setGrid] = useState([]);
+            const [queue, setQueue] = useState([]);
+            const [visited, setVisited] = useState(new Set());
+            const [active, setActive] = useState(false);
+            const [speed, setSpeed] = useState(80);
+            const [maxQueueSize, setMaxQueueSize] = useState(0);
+            const [history, setHistory] = useState([]);
+            const [startPos, setStartPos] = useState({ r: 6, c: 12 });
+            const [lang, setLang] = useState('zh');
+
+            const t = {
+                zh: {
+                    title: "BFS 空间复杂度可视化",
+                    desc: "点击网格选择任意起点。观察从不同位置扩散时“前沿”队列的变化。",
+                    rows: "行数 (M)",
+                    cols: "列数 (N)",
+                    start: "开始",
+                    pause: "暂停",
+                    reset: "重置",
+                    next: "单步执行",
+                    langBtn: "English",
+                    currQueue: "当前队列长度",
+                    peak: "历史峰值",
+                    theory: "理论上限",
+                    analysis: "核心原理解析",
+                    p1: "扩散方向：从中心开始会有 4 条“边”同时扩张，初期队列增长比角落快。",
+                    p2: "峰值观察：虽然峰值数值会变大（约 2 * min），但它依然受限于短边。",
+                    p3: "结论：无论起点在哪，空间复杂度在渐进意义上依然是 O(min(M, N))。",
+                    graphTitle: "队列长度趋势图",
+                    wait: "等待数据...",
+                    interactiveHint: "交互式网格（点击修改起点）"
+                },
+                en: {
+                    title: "BFS Space Complexity Visualizer",
+                    desc: "Click any cell to set start point. Watch how the 'Frontier' changes.",
+                    rows: "Rows (M)",
+                    cols: "Cols (N)",
+                    start: "Start",
+                    pause: "Pause",
+                    reset: "Reset",
+                    next: "Step",
+                    langBtn: "中文",
+                    currQueue: "Current Queue",
+                    peak: "Peak Size",
+                    theory: "Theory Limit",
+                    analysis: "Core Analysis",
+                    p1: "Expansion: Center start expands 4 edges, growing faster initially.",
+                    p2: "Observation: Peak values are higher (~2 * min) but bounded by short side.",
+                    p3: "Conclusion: Space complexity remains O(min(M, N)) asymptotically.",
+                    graphTitle: "Queue Size Trend",
+                    wait: "Waiting...",
+                    interactiveHint: "Click grid to change start"
+                }
+            };
+
+            const content = t[lang];
+
+            const initGrid = useCallback((newStart = startPos) => {
+                const newGrid = Array(rows).fill().map(() => Array(cols).fill(0));
+                setGrid(newGrid);
+                setVisited(new Set());
+                setQueue([{ r: newStart.r, c: newStart.c, dist: 0 }]);
+                setMaxQueueSize(0);
+                setHistory([]);
+                setActive(false);
+                setStartPos(newStart);
+            }, [rows, cols, startPos]);
+
+            useEffect(() => { initGrid(); }, [rows, cols]);
+
+            const performStep = () => {
+                if (queue.length === 0) {
+                    setActive(false);
+                    return false;
+                }
+                const currentQueue = [...queue];
+                const newMax = Math.max(maxQueueSize, currentQueue.length);
+                setMaxQueueSize(newMax);
+                setHistory(prev => [...prev, currentQueue.length]);
+
+                const head = currentQueue.shift();
+                const key = `${head.r},${head.c}`;
+                if (visited.has(key)) { setQueue(currentQueue); return true; }
+
+                const newVisited = new Set(visited);
+                newVisited.add(key);
+                const newGrid = [...grid];
+                newGrid[head.r] = [...newGrid[head.r]];
+                newGrid[head.r][head.c] = 2;
+
+                const directions = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+                for (const [dr, dc] of directions) {
+                    const nr = head.r + dr;
+                    const nc = head.c + dc;
+                    const nKey = `${nr},${nc}`;
+                    if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && !newVisited.has(nKey)) {
+                        if (!currentQueue.some(item => item.r === nr && item.c === nc)) {
+                            currentQueue.push({ r: nr, c: nc, dist: head.dist + 1 });
+                            newGrid[nr] = [...newGrid[nr]];
+                            newGrid[nr][nc] = 1;
+                        }
+                    }
+                }
+                setGrid(newGrid);
+                setVisited(newVisited);
+                setQueue(currentQueue);
+                return true;
+            };
+
+            useEffect(() => {
+                let timer;
+                if (active && queue.length > 0) { timer = setTimeout(performStep, speed); }
+                return () => clearTimeout(timer);
+            }, [active, queue, speed]);
+
+            return (
+                <div className="flex flex-col items-center p-4 md:p-6 bg-slate-50 min-h-screen font-sans">
+                    <div className="max-w-6xl w-full bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-slate-200">
+
+                        <div className="flex justify-between items-start mb-6">
+                            <div className="flex-1">
+                                <h1 className="text-2xl md:text-3xl font-black text-slate-800 mb-2">{content.title}</h1>
+                                <p className="text-slate-500 text-sm">{content.desc}</p>
+                            </div>
+                            <button onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')} className="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl transition-all font-bold text-sm">
+                                <Icon name="languages" /> {content.langBtn}
+                            </button>
+                        </div>
+
+                        <div className="flex flex-wrap gap-4 mb-8 justify-center items-center bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <div className="flex flex-col gap-1">
+                                <label className="text-[10px] font-bold uppercase text-slate-400">{content.rows}</label>
+                                <div className="flex items-center gap-3">
+                                    <input type="range" min="5" max="20" value={rows} onChange={(e) => setRows(parseInt(e.target.value))} className="w-24 md:w-32" />
+                                    <span className="text-slate-700 font-mono font-bold w-6">{rows}</span>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="text-[10px] font-bold uppercase text-slate-400">{content.cols}</label>
+                                <div className="flex items-center gap-3">
+                                    <input type="range" min="5" max="40" value={cols} onChange={(e) => setCols(parseInt(e.target.value))} className="w-24 md:w-32" />
+                                    <span className="text-slate-700 font-mono font-bold w-6">{cols}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <button onClick={() => setActive(!active)} className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg active:scale-95 ${active ? 'bg-amber-500 text-white' : 'bg-emerald-600 text-white'}`}>
+                                    <Icon name={active ? "pause" : "play"} />
+                                    <span className="hidden sm:inline">{active ? content.pause : content.start}</span>
+                                </button>
+                                <button onClick={() => { setActive(false); performStep(); }} disabled={active || queue.length === 0} className={`flex items-center gap-2 px-4 py-3 rounded-xl font-bold border transition-all active:scale-95 ${active || queue.length === 0 ? 'bg-slate-50 text-slate-300 border-slate-100' : 'bg-white text-sky-600 border-sky-200 hover:bg-sky-50 shadow-sm'}`}>
+                                    <Icon name="skip-forward" />
+                                    <span className="hidden sm:inline">{content.next}</span>
+                                </button>
+                                <button onClick={() => initGrid()} className="p-3 bg-white text-slate-400 rounded-xl border border-slate-200 hover:bg-slate-50 shadow-sm"><Icon name="rotate-ccw" /></button>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col xl:flex-row gap-8">
+                            <div className="flex-1 overflow-hidden bg-slate-900 p-4 md:p-8 rounded-3xl shadow-2xl relative">
+                                <div className="absolute top-4 left-6 text-[10px] text-slate-400 font-mono uppercase tracking-widest z-10 bg-slate-900/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-700">
+                                    {content.interactiveHint}
+                                </div>
+                                <div className="grid gap-[2px] mx-auto py-4" style={{ gridTemplateColumns: `repeat(${cols}, minmax(10px, 1fr))`, width: 'fit-content' }}>
+                                    {grid.map((row, r) => row.map((cell, c) => (
+                                        <div key={`${r}-${c}`} onClick={() => handleCellClick(r, c)} className={`w-3.5 h-3.5 md:w-4 md:h-4 rounded-[1px] cursor-pointer transition-all duration-300 ${r === startPos.r && c === startPos.c ? 'ring-2 ring-white scale-110 z-10 shadow-[0_0_15px_white]' : ''} ${cell === 0 ? 'bg-slate-800 hover:bg-slate-700' : cell === 1 ? 'bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.8)] animate-pulse-custom' : 'bg-slate-600 opacity-30'}`} />
+                                    )))}
+                                </div>
+                            </div>
+
+                            <div className="w-full xl:w-80 flex flex-col gap-4">
+                                <div className="grid grid-cols-2 xl:grid-cols-1 gap-4">
+                                    <div className="p-5 bg-sky-600 rounded-2xl text-white shadow-lg">
+                                        <div className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">{content.currQueue}</div>
+                                        <div className="text-4xl font-mono font-black">{queue.length}</div>
+                                    </div>
+                                    <div className="p-5 bg-amber-500 rounded-2xl text-white shadow-lg">
+                                        <div className="text-[10px] font-black uppercase tracking-wider opacity-80 mb-1">{content.peak}</div>
+                                        <div className="text-4xl font-mono font-black">{maxQueueSize}</div>
+                                        <div className="text-[10px] mt-2 opacity-90">{content.theory}: ≈ 2 * min({rows}, {cols})</div>
+                                    </div>
+                                </div>
+                                <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm flex-1 text-xs text-slate-500 space-y-4">
+                                    <h4 className="text-sm font-black text-slate-800 uppercase flex items-center gap-2 border-b pb-2"><Icon name="info" className="text-sky-500" /> {content.analysis}</h4>
+                                    <p>1. {content.p1}</p>
+                                    <p>2. {content.p2}</p>
+                                    <p className="font-bold text-slate-700">✓ {content.p3}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 pt-6 border-t border-slate-100">
+                            <div className="flex justify-between items-center mb-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <div>{content.graphTitle}</div>
+                                <div>PEAK: {maxQueueSize}</div>
+                            </div>
+                            <div className="h-24 w-full flex items-end gap-[1px] bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                {history.map((h, i) => (
+                                    <div key={i} className="bg-sky-500 w-full rounded-t-sm opacity-70" style={{ height: `${(h / (Math.max(...history, 5))) * 100}%`, minWidth: '2px' }} />
+                                ))}
+                                {history.length === 0 && <div className="text-slate-300 text-xs w-full text-center pb-6 italic">{content.wait}</div>}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
