@@ -1,0 +1,12 @@
+{
+  "hash": "39d5a7022ea59efde60d09688c9455e9",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"A Numpy caveat when referencing elements of an array\"\ndate: \"2024-02-23\"\ndate-modified: last-modified\ncategories: [Numpy, Python]\nformat:\n  html: default\n---\n\n\n\n\nUnderstanding when a view or copy for a Numpy array is returned is important, or else the array may be modified in place by mistake. An example below:\n\n::: {#dcc125f3 .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\n\nprint(\"Numpy version: \", np.__version__)\n\n\ndef print_result(test_array):\n    a = test_array.copy()\n    b = a[0]\n    b += 1\n    print(\n        f'b = a[0], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n    a = test_array.copy()\n    b = a[[0]]\n    b += 1\n    print(\n        f'b = a[[0]], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n    a = test_array.copy()\n    b = a[0:1]\n    b += 1\n    print(\n        f'b = a[0:1], {\"unchanged\" if np.allclose(a, test_array) else \"changed\"}',\n    )\n\n\nprint(\"For 1D array:\")\nprint_result(np.zeros(2))\nprint(\"-\" * 10)\nprint(\"For 2D array:\")\nprint_result(np.zeros((2, 2)))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nNumpy version:  1.24.4\nFor 1D array:\nb = a[0], unchanged\nb = a[[0]], unchanged\nb = a[0:1], changed\n----------\nFor 2D array:\nb = a[0], changed\nb = a[[0]], unchanged\nb = a[0:1], changed\n```\n:::\n:::\n\n\nNote that the result is different for 1D or 2D Numpy arrays.\n\nFor more, check Numpy docs [Copies and views](https://numpy.org/doc/stable/user/basics.copies.html).\n\n",
+    "supporting": [
+      "index-gist_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

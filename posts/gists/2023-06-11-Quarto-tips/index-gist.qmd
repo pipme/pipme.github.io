@@ -1,0 +1,76 @@
+---
+title: "Quarto tips"
+date: "2023-06-11"
+date-modified: last-modified
+categories: [tips]
+format:
+  html: default
+  ipynb: default
+  revealjs: 
+    output-file: rjs.html
+  pdf:
+    toc: false
+    cite-method: biblatex
+    biblatexoptions:
+      - "backend=biber"
+      - "sorting=none"
+      - "backref=true"
+      - "backrefstyle=three"
+      - "hyperref=true"
+    keep-tex: true
+    include-in-header:
+      text: |
+        \usepackage{algorithm2e}
+format-links: [pdf, revealjs]
+---
+
+## Building the website
+Unicode `\u200B` for zero width space, e.g., in `_quarto.yml` I used it for an item with only an icon <i class="bi bi-card-list"></i> in the navigation bar. Note that I tried HTML's `&#8203;` but it doesn't work.
+
+Extensions for adding icons such as google scholar {{< ai google-scholar >}} and 500px {{< fa brands 500px >}} (see the website's footer):
+```bash
+.
+├── quarto-ext
+│   └── fontawesome
+└── schochastics
+    └── academicons
+```
+
+For publishing a Quarto website, I recommend using the second option in the [official documentation](https://quarto.org/docs/publishing/github-pages.html). After set up, simply call:
+```bash
+quarto publish gh-pages --no-prompt
+```
+
+## Known issues
+No option to hide `Edit this page` or enforce it to be on the left sidebar when the table of contents is empty. [Issue#5283](https://github.com/quarto-dev/quarto-cli/issues/5283)
+
+## For trials
+[@gentonClassesKernelsMachine2001]
+
+::: {.content-visible unless-format="pdf"}
+## LaTeX
+
+Visible in pdf only.
+### plain LaTeX
+Just a sample algorithm:
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+\While{While condition}{
+    instructions\;
+    \eIf{condition}{
+        instructions1\;
+        instructions2\;
+    }{
+        instructions3\;
+    }
+}
+\caption{While loop with If/Else condition}
+\end{algorithm} 
+:::

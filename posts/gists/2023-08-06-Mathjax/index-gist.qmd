@@ -1,0 +1,23 @@
+---
+title: "MathJax macros in Quarto"
+date: "2023-08-06"
+date-modified: last-modified
+categories: [tips, MathJax, Quarto]
+format:
+  html: default
+---
+
+As a MathJax and javascript noob, it seems the most convenient way to define MathJax macros is to write a [preamble file](https://github.com/pipme/pipme.github.io/blob/main/_utils/mathjax_preamble.html) and include it by:
+```yaml
+format:
+  html:
+    include-in-header: ../_utils/mathjax_preamble.html
+```
+
+Example: 
+$$
+\pdv{\rho}{t} + \div (\rho \u) = 0
+$$
+
+
+

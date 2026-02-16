@@ -1,0 +1,13 @@
+---
+title: "Search frequentist and Bayesian in GitHub"
+date: "2024-02-11"
+date-modified: last-modified
+categories: [github]
+format:
+  html: default
+---
+
+Search results of keywords "frequentist" and "Bayesian" in Github. Are Bayesians coding more?
+
+![Search result](./image.png)
+

@@ -1,0 +1,27 @@
+---
+title: "Tobit likelihood"
+date: "2023-06-16"
+date-modified: last-modified
+categories: [likelihood]
+format:
+  html: default
+---
+
+## Definition
+
+- Latent variable: $f_i$
+- Observation: $y_i$
+
+Suppose the observation is censored from above at $y_U$ and below at $y_L$ (type I Tobit model),  i.e.,
+$$
+y_i= \begin{cases}y_i^* & \text { if } y_L<y_i^*<y_U, \\ y_L & \text { if } y_i^* \leq y_L, \\ y_U & \text { if } y_i^* \geq y_U. \end{cases}
+$$
+If $y_i^\star \sim \mathcal{N}(f_i,\sigma_i^2)$, then the Tobit likelihood is, 
+$$
+p(y_i | f_i) = \begin{cases}
+\mathcal{N}(y_i|f_i, \sigma_i^2) & \text { if } y_L<y_i <y_U, \\
+\Phi(y_L | f_i, \sigma_i^2) & \text { if } y_i = y_L, \\
+1 - \Phi(y_U | f_i, \sigma_i^2) & \text { if } y_i = y_U,
+\end{cases}
+$$
+where $\Phi$ is the CDF of standard normal, $\Phi(y_L | f_i, \sigma_i^2) \triangleq \Phi(\frac{y_L - f_i}{\sigma_i})$.
