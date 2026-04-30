@@ -12,7 +12,7 @@ aliases:
   - "./index.html"
 ---
 
-I am Chengkun. I recently defended my [PhD thesis](https://helda.helsinki.fi/items/428f3579-5f1f-45a6-8cde-482a2147d7c5) at the University of Helsinki, where I was supervised by [Luigi Acerbi](https://lacerbi.github.io/). My research lies at the intersection of machine learning and Bayesian computation, with a focus on improving computational efficiency in challenging posterior inference settings. Prior to this, I worked in computer vision and robotics during my master's and undergraduate studies. *I am currently open to new job opportunities. If you're interested in discussing potential collaboration, feel free to reach out! (email: [sjtulck@gmail.com](mailto:sjtulck@gmail.com))*
+I am Chengkun. I recently defended my [PhD thesis](https://helda.helsinki.fi/items/428f3579-5f1f-45a6-8cde-482a2147d7c5) at the University of Helsinki, where I was supervised by [Luigi Acerbi](https://lacerbi.github.io/). My research lies at the intersection of machine learning and Bayesian computation, with a focus on improving computational efficiency in challenging posterior inference settings. Prior to this, I worked in computer vision and robotics during my master's and undergraduate studies. **I am currently open to new job opportunities. If you're interested in discussing potential collaboration, feel free to reach out! (email: [sjtulck@gmail.com](mailto:sjtulck@gmail.com))**
 
 
 
