@@ -1,0 +1,4 @@
+/* Hide the "Edit this page" repo action on pages that include this stylesheet */
+.toc-actions {
+  display: none !important;
+}
