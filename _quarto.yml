@@ -1,14 +1,14 @@
 project:
   type: website
   resources:
-     - "tools/**/*.html"
+    - "tools/**/*.html"
 
 website:
   # favicon:
   title: "Chengkun Li"
   site-url: https://pipme.github.io
   repo-url: https://github.com/pipme/pipme.github.io
-  repo-actions: [edit]
+  repo-actions: []
   description: "Personal Blog"
   open-graph: true
   navbar:
@@ -60,14 +60,14 @@ website:
         href: https://500px.com/p/sjtulck
       - text: "{{< fa envelope >}}"
         href: "mailto:sjtulck@gmail.com"
-  search: 
+  search:
     location: navbar
     type: textbox
     keyboard-shortcut: "?"
-  back-to-top-navigation: true
+  back-to-top-navigation: false
 format:
   html:
     theme:
       light: cosmo
-      dark: solar  # https://github.com/quarto-dev/quarto-cli/issues/6741
+      dark: solar # https://github.com/quarto-dev/quarto-cli/issues/6741
     css: styles.css
