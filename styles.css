@@ -2,3 +2,13 @@
 /* p {
     text-align: justify
 } */
+
+/* Make footer icons larger */
+.footer-items svg {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.footer-items i {
+  font-size: 1.8em;
+}
