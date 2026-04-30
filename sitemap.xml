@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pipme.github.io/tools/np/index.html</loc>
-    <lastmod>2024-09-26T19:46:00.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/about.html</loc>
-    <lastmod>2025-04-16T11:02:33.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/blog+gist.html</loc>
+    <loc>https://pipme.github.io/gist.html</loc>
     <lastmod>2026-02-16T19:21:15.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2024-09-26-Float64/index-gist.html</loc>
-    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+    <loc>https://pipme.github.io/about.html</loc>
+    <lastmod>2026-04-30T08:16:26.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2023-08-06-Mathjax/index-gist.html</loc>
-    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/gists/2023-06-16-Tobit-likelihood/index-gist.html</loc>
-    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/posts/gists/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html</loc>
+    <loc>https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/index.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
@@ -33,15 +17,43 @@
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/index.html</loc>
+    <loc>https://pipme.github.io/posts/gists/2023-07-17-Python-tools/index-gist.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/gists/2023-08-06-Mathjax/index-gist.html</loc>
+    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/gists/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
+    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/gists/2024-03-10-Mac-font/index-gist.html</loc>
+    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/tools/index.html</loc>
+    <lastmod>2026-02-16T18:05:42.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/redirects/qr-code-nfr.html</loc>
+    <lastmod>2025-04-17T05:38:21.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/tools/np/index.html</loc>
+    <lastmod>2024-09-26T19:46:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://pipme.github.io/blog.html</loc>
     <lastmod>2026-02-16T19:21:15.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/index.html</loc>
+    <loc>https://pipme.github.io/posts/gists/2024-09-26-Float64/index-gist.html</loc>
+    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pipme.github.io/posts/gists/2024-02-23-Numpy-caveat/index-gist.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
@@ -57,31 +69,19 @@
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2024-03-10-Mac-font/index-gist.html</loc>
+    <loc>https://pipme.github.io/posts/gists/2023-06-16-Tobit-likelihood/index-gist.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2023-06-11-De-Finetti-theorem/index-gist.html</loc>
+    <loc>https://pipme.github.io/posts/gists/2024-02-11-Github-search-frequentist-Bayesian/index-gist.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2024-02-23-Numpy-caveat/index-gist.html</loc>
+    <loc>https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/index.html</loc>
     <lastmod>2026-02-16T19:21:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://pipme.github.io/posts/gists/2023-07-17-Python-tools/index-gist.html</loc>
-    <lastmod>2026-02-16T19:21:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/gist.html</loc>
+    <loc>https://pipme.github.io/blog+gist.html</loc>
     <lastmod>2026-02-16T19:21:15.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/redirects/qr-code-nfr.html</loc>
-    <lastmod>2025-04-17T05:38:21.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://pipme.github.io/tools/index.html</loc>
-    <lastmod>2026-02-16T18:05:42.000Z</lastmod>
   </url>
 </urlset>

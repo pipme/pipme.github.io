@@ -9,7 +9,7 @@
 <link>https://pipme.github.io/blog.html</link>
 <atom:link href="https://pipme.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Personal Blog</description>
-<generator>quarto-1.8.27</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Start Blogging with Quarto</title>
@@ -34,9 +34,9 @@
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-navarro2022" class="csl-entry">
-Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20, 2022. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
+Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> April 20. <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto">https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto</a>.
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{li2023,
   author = {Li, Chengkun},
@@ -46,8 +46,8 @@ Navarro, Danielle. 2022. <span>“Porting a Distill Blog to Quarto.”</span> Ap
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2023" class="csl-entry quarto-appendix-citeas">
-Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10,
-2023. <a href="https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/">https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</a>.
+Li, Chengkun. 2023. <span>“Start Blogging with Quarto.”</span> June 10.
+<a href="https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/">https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</a>.
 </div></div></section></div> ]]></description>
   <category>news</category>
   <guid>https://pipme.github.io/posts/blogs/2023-06-10-Quarto-set-up/</guid>
@@ -497,7 +497,7 @@ font-style: inherit;">=</span> v</span>
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-li2020" class="csl-entry quarto-appendix-citeas">
 Li, Chengkun. 2020. <span>“The Cantor Pairing Function.”</span> April
-25, 2020. <a href="https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/">https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/</a>.
+25. <a href="https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/">https://pipme.github.io/posts/blogs/2020-04-25-Cantor-pairing/</a>.
 </div></div></section></div> ]]></description>
   <category>hashing</category>
   <category>set theory</category>

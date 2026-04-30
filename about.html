@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Hi, – Chengkun Li</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,19 +37,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9190bd66a26edbfbf5c92b861ccc1d4f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-29c5e3efc4b3ad43c5cde687a7f59ad3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
@@ -89,10 +91,10 @@ gtag('config', 'G-K0VMSWF7B9', { 'anonymize_ip': true});
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"implied",
+  "consent_type":"express",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "page_load_consent_levels":["strictly-necessary"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -103,37 +105,9 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="_styles/hide_edit.css">
 <meta property="og:title" content="Hi, – Chengkun Li">
 <meta property="og:description" content="Personal Blog">
 <meta property="og:site_name" content="Chengkun Li">
@@ -394,17 +368,18 @@ window.Quarto = {
 </header>
 
 
-<p>I am Chengkun, currently a PhD student at the <a href="https://www.helsinki.fi/en/researchgroups/machine-and-human-intelligence">University of Helsinki</a>, supervised by <a href="https://lacerbi.github.io/">Luigi Acerbi</a>. My research focuses on Bayesian posterior computation, namely, <span class="math display">\[p(\text{parameters})p(\text{data}|\text{parameters}) \rightarrow p(\text{parameters}|\text{data}),\]</span> exploring an alternative path other than direct MCMC sampling and variational inference. I used to work on computer vision and robotics too.</p>
-<section id="about-the-site" class="level1">
-<h1>About the site</h1>
-<p>This website is a personal initiative to encourage more writing, both as a tool for memory retention and to deepen my understanding of reality. As Richard Feynman once said:</p>
-<blockquote class="blockquote">
-<p>What I cannot create, I do not understand.</p>
-</blockquote>
-</section>
-<section id="contact" class="level1">
-<h1>Contact</h1>
-<p>Feel free to reach me via email: <a href="mailto:sjtulck@gmail.com">sjtulck@gmail.com</a>. 😉</p>
+<p>I am Chengkun. I recently defended my <a href="https://helda.helsinki.fi/items/428f3579-5f1f-45a6-8cde-482a2147d7c5">PhD thesis</a> at the University of Helsinki, where I was supervised by <a href="https://lacerbi.github.io/">Luigi Acerbi</a>. My research lies at the intersection of machine learning and Bayesian computation, with a focus on improving computational efficiency in challenging posterior inference settings. Prior to this, I worked in computer vision and robotics during my master’s and undergraduate studies. <em>I am currently open to new job opportunities. If you’re interested in discussing potential collaboration, feel free to reach out! (email: <a href="mailto:sjtulck@gmail.com">sjtulck@gmail.com</a>)</em></p>
+<!-- # About the site
+
+This website is a personal initiative to encourage writing, both as a tool for memory retention and to deepen my understanding of reality. As Richard Feynman famously remarked:
+
+> What I cannot create, I do not understand.  -->
+<section id="resume" class="level1">
+<h1>Resume</h1>
+<div style="width: 100%; height: 1000px;">
+  <iframe src="cv/resume_Chengkun_Li.pdf" style="width: 100%; height: 100%; border: none;" title="CV of Chengkun Li">
+  </iframe>
+</div>
 
 
 </section>
